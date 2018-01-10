@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+#ignore files
+storage.ide
+
+#igonere direcory
+/.vs/
+/AutomobileApp/obj/
+/AutomobileApp/bin/
+/AutomobileWebAPI/obj/
+/AutomobileWebAPI/bin/
+/AutomobileWebService.Tests/obj/
+/AutomobileWebService.Tests/bin/

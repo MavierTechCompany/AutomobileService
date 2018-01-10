@@ -1,0 +1,28 @@
+﻿.container__input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+
+.check {
+    display: flex;
+    flex-direction: row;
+}
+
+.container__button-block {
+    padding-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+.register-form {
+
+}
+
+
+
+@media (min-width: 510px) {
+    .container__button-block {
+        text-align: left;
+    }
+}
