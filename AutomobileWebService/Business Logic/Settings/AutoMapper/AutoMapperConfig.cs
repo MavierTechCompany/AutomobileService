@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutomobileWebService.Business_Logic.Infrastructure.DTO;
 using AutomobileWebService.Business_Logic.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace AutomobileWebService.Business_Logic.Settings.AutoMapper
         public static IMapper Initialize()
             => new MapperConfiguration(cfg =>
             {
-                //cfg.CreateMap<User, UserDto>();
+                cfg.CreateMap<User, UserDto>();
             })
             .CreateMapper();
     }
