@@ -7,9 +7,7 @@ storage.ide
 
 #igonere direcory
 /.vs/
-/AutomobileApp/obj/
-/AutomobileApp/bin/
-/AutomobileWebAPI/obj/
-/AutomobileWebAPI/bin/
-/AutomobileWebService.Tests/obj/
-/AutomobileWebService.Tests/bin/
+/AutomobileWebService/obj/
+/AutomobileWebService/bin/
+/AutomobileWebService.Test/obj/
+/AutomobileWebService.Test/bin/
