@@ -14161,9 +14161,9 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\C#\\GitHub\\AutomobileService\\AutomobileWebService.Test\\AutomobileWebService.Test.csproj",
-      "projectName": "AutomobileWebService.Test",
-      "projectPath": "D:\\C#\\GitHub\\AutomobileService\\AutomobileWebService.Test\\AutomobileWebService.Test.csproj",
+      "projectUniqueName": "D:\\C#\\GitHub\\AutomobileService\\AutomobileWebService.Test\\AutomobileWebService.Tests.csproj",
+      "projectName": "AutomobileWebService.Tests",
+      "projectPath": "D:\\C#\\GitHub\\AutomobileService\\AutomobileWebService.Test\\AutomobileWebService.Tests.csproj",
       "packagesPath": "C:\\Users\\Cyber\\.nuget\\packages\\",
       "outputPath": "D:\\C#\\GitHub\\AutomobileService\\AutomobileWebService.Test\\obj\\",
       "projectStyle": "PackageReference",

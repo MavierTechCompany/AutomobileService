@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomobileWebService", "AutomobileWebService\AutomobileWebService.csproj", "{CC9828FA-60F1-46B6-95C6-C0014779CCC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomobileWebService.Test", "AutomobileWebService.Test\AutomobileWebService.Test.csproj", "{CCA34758-A6CC-4C2F-934B-FC265DBABD2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutomobileWebService.Tests", "AutomobileWebService.Test\AutomobileWebService.Tests.csproj", "{CCA34758-A6CC-4C2F-934B-FC265DBABD2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

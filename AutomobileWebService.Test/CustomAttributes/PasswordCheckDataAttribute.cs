@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using Xunit.Sdk;
 
-namespace AutomobileWebService.Test.CustomAttributes
+namespace AutomobileWebService.Tests.CustomAttributes
 {
     public class PasswordCheckDataAttribute : DataAttribute
     {
