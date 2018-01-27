@@ -1,0 +1,16 @@
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\AutomobileWebService.Test.deps.json
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\AutomobileWebService.Test.runtimeconfig.json
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\AutomobileWebService.Test.runtimeconfig.dev.json
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\AutomobileWebService.Test.dll
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\AutomobileWebService.Test.pdb
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\AutomobileWebService.dll
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\bin\Debug\netcoreapp2.0\AutomobileWebService.pdb
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\obj\Debug\netcoreapp2.0\AutomobileWebService.Test.csprojResolveAssemblyReference.cache
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\obj\Debug\netcoreapp2.0\AutomobileWebService.Test.csproj.CoreCompileInputs.cache
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\obj\Debug\netcoreapp2.0\AutomobileWebService.Test.AssemblyInfoInputs.cache
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\obj\Debug\netcoreapp2.0\AutomobileWebService.Test.AssemblyInfo.cs
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\obj\Debug\netcoreapp2.0\AutomobileWebService.Test.dll
+D:\C#\GitHub\AutomobileService\AutomobileWebService.Test\obj\Debug\netcoreapp2.0\AutomobileWebService.Test.pdb
