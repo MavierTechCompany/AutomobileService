@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "build",
+            "label": "build",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -10,6 +10,14 @@
                 "${workspaceFolder}/AutomobileWebService/AutomobileWebService.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "grunt",
+            "command": "grunt",
+            "type": "shell",
+            "problemMatcher": [
+                "$node-sass"
+            ]
         }
     ]
 }
