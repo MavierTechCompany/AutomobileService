@@ -4,7 +4,7 @@ using AutomobileWebService.Tests.CustomAttributes;
 using System;
 using Xunit;
 
-namespace AutomobileWebService.Tests.Models
+namespace AutomobileWebService.Tests.Extras
 {
     public class PasswordManagerShould
     {
