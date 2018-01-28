@@ -12,6 +12,16 @@
             "problemMatcher": "$msCompile"
         },
         {
+            "label": "buitdTests",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/AutomobileWebService.Test/AutomobileWebService.Tests.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
             "label": "grunt",
             "command": "grunt",
             "type": "shell",
