@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "build AutomobileWebService",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -12,7 +12,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "buitdTests",
+            "label": "build AutomobileWebService.Tests",
             "command": "dotnet",
             "type": "process",
             "args": [
@@ -22,7 +22,7 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "grunt",
+            "label": "grunt SASS",
             "command": "grunt",
             "type": "shell",
             "problemMatcher": [
