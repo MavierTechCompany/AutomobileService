@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "regulations.css",
+	"sources": [
+		"../../../Styles/Home/regulations.scss"
+	],
+	"names": [],
+	"mappings": "AAOA,AAAA,iBAAiB,AAAC,CACd,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,KAAK,CACd,UAAU,CAAE,MAAM,CACrB,AAMD,MAAM,EAAE,SAAS,EAAE,KAAK,EAEpB,AAAA,iBAAiB,AAAC,CACd,UAAU,CAAE,KAAK,CACpB,CAGL,MAAM,EAAE,SAAS,EAAE,KAAK,EAEpB,AAAA,KAAK,AAAA,CACD,MAAM,CAAE,KAAK,CACb,QAAQ,CAAE,IAAI,CACjB"
+}

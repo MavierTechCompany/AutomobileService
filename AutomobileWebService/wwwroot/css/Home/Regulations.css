@@ -1,34 +1,3 @@
-﻿
+.button-container{margin-top:25px;display:block;text-align:center}@media (min-width: 768px){.button-container{text-align:right}}@media (min-width: 900px){.text{height:400px;overflow:auto}}
 
-
-
-
-
-
-.button-container {
-    margin-top: 25px;
-    display: block;
-    text-align: center;
-} 
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@-RESPONSIVE-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
-
-@media (min-width: 768px) {
-    
-    .button-container {
-        text-align: right;
-    } 
-}
-
-@media (min-width: 900px) {
-
-    .text{
-        height: 400px;
-        overflow: auto;
-    } 
-
-}
-
-
+/*# sourceMappingURL=regulations.css.map */
