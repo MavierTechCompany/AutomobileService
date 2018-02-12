@@ -69,5 +69,29 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             return await Task.FromResult(cars);
         }
+
+        public static async Task CreateOrFailAsnc(this ICarRepository repository, Car _car)
+        {
+            var car = await repository.GetAsync(_car.BrandName, _car.Model, _car.Generation);
+
+            if (car == _car)
+            {
+                throw new ForbiddenValueException($"That car already exists.");                
+            }
+
+            await repository.CreateAsync(_car);
+        }
+
+        public static async Task UpdateOrFailAsync(this ICarRepository repository, Car _car)
+        {
+            var car = await repository.GetAsync(_car.Id);
+
+            if (car == null)
+            {
+                throw new ForbiddenValueException($"There isn't any car with ID: {_car.Id}");   
+            }
+
+            await repository.UpdateAsync(_car);
+        }
     }
 }
