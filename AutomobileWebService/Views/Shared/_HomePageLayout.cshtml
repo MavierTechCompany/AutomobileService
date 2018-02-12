@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
+        <nav class="navbar fixed-top navbar-expand-md navbar-dark">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a href="@Url.Action("index")"><img class="navbar-brand" src="~/images/logos/ServiceLogo.svg" alt="AutomotiveService"></a>
@@ -114,7 +114,7 @@
             
         </nav>   
     </header>
-    <main class="page-content"></mainc>
+    <main class="page-content"></main>
         @RenderBody()
     </main>
     <footer>
@@ -150,6 +150,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <!-- Material Design 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/js/mdb.min.js"></script> -->
+    <!-- custom script -->
+    <script src="~/js/Shared/layout.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
