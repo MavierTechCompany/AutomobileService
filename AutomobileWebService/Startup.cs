@@ -14,6 +14,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using AutomobileWebService.Services.Interfaces;
 using AutomobileWebService.Services;
+using AutomobileWebService.Framework;
 
 namespace AutomobileWebService
 {
@@ -76,7 +77,8 @@ namespace AutomobileWebService
             }
 
             app.UseStaticFiles();
-
+            app.UseErrorHandler();
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
