@@ -1,11 +1,11 @@
 using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
 using AutomobileWebService.Business_Logic.Models;
-using AutomobileWebService.Tests.CustomAttributes;
+using AutomobileWebService.Test.CustomAttributes;
 using Moq;
 using System;
 using Xunit;
 
-namespace AutomobileWebService.Tests.Models
+namespace AutomobileWebService.Test.Models
 {
     public class CarShould
     {

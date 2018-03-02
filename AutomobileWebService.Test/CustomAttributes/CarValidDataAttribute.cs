@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using Xunit.Sdk;
 
-namespace AutomobileWebService.Tests.CustomAttributes
+namespace AutomobileWebService.Test.CustomAttributes
 {
     public class CarValidDataAttribute : DataAttribute
     {

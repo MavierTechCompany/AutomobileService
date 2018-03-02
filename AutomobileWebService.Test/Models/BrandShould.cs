@@ -1,12 +1,12 @@
 ﻿using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
 using AutomobileWebService.Business_Logic.Models;
-using AutomobileWebService.Tests.CustomAttributes;
+using AutomobileWebService.Test.CustomAttributes;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace AutomobileWebService.Tests.Models
+namespace AutomobileWebService.Test.Models
 {
     public class BrandShould
     {
