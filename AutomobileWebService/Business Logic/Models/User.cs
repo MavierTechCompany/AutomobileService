@@ -33,7 +33,6 @@ namespace AutomobileWebService.Business_Logic.Models
         {
             Id = id;
             CreatedAt = DateTime.UtcNow;
-            Deleted = false;
 
             SetLogin(login);
             SetEmail(email);

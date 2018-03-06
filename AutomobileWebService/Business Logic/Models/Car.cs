@@ -35,7 +35,6 @@ namespace AutomobileWebService.Business_Logic.Models
         public Car(Guid id, string model, int horsepower, int generation, DateTime productionDate, Brand brand)
         {
             Id = id;
-            Deleted = false;
 
             SetBrandName(brand.Name);
             SetModel(model);

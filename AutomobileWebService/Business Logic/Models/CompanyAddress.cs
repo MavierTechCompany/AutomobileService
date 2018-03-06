@@ -40,7 +40,6 @@ namespace AutomobileWebService.Business_Logic.Models
         {
             Id = id;
             CompanyId = company.Id;
-            Deleted = false;
 
             SetCountry(country);
             SetState(state);

@@ -33,7 +33,6 @@ namespace AutomobileWebService.Business_Logic.Models
             Id = id;
             CommenterId = user.Id;
             ProjectId = project.Id;
-            Deleted = false;
             CreatedAt = DateTime.UtcNow;
 
             SetCommentText(commentText);

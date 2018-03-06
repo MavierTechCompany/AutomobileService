@@ -28,7 +28,6 @@ namespace AutomobileWebService.Business_Logic.Models
         public Company(Guid id, string name, string phone, CompanyAddress headQuartersAddress)
         {
             Id = id;
-            Deleted = false;
 
             SetName(name);
             SetPhone(phone);

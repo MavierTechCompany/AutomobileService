@@ -28,43 +28,43 @@ namespace AutomobileWebService.Business_Logic.Repositories.DAL
 
             modelBuilder.Entity<Car>(x =>
             {
-                x.Property(z => z.Id).IsRequired();
+                x.HasKey(z => z.Id);
                 x.HasMany(z => z.Projects).WithOne(y => y.Car).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<User>(x =>
             {
-                x.Property(z => z.Id).IsRequired();
+                x.HasKey(z => z.Id);
             });
 
             modelBuilder.Entity<Brand>(x =>
             {
-                x.Property(z => z.Id).IsRequired();
+                x.HasKey(z => z.Id);
                 x.HasMany(z => z.Cars).WithOne(y => y.Brand).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<Project>(x =>
             {
-                x.Property(z => z.Id).IsRequired();
+                x.HasKey(z => z.Id);
                 x.HasOne(z => z.User).WithMany(y => y.Projects).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<Comment>(x =>
             {
-                x.Property(z => z.Id).IsRequired();
+                x.HasKey(z => z.Id);
                 x.HasOne(z => z.Commenter).WithMany(y => y.Comments).OnDelete(DeleteBehavior.Restrict);
                 x.HasOne(z => z.Project).WithMany(y => y.Comments).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<Company>(x =>
             {
-                x.Property(z => z.Id).IsRequired();
+                x.HasKey(z => z.Id);
                 x.HasOne(z => z.CompanyAddress).WithOne(z => z.Company).HasForeignKey<CompanyAddress>(y => y.CompanyId).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<CompanyAddress>(x =>
             {
-                x.Property(z => z.Id).IsRequired();
+                x.HasKey(z => z.Id);
             });
 
             base.OnModelCreating(modelBuilder);

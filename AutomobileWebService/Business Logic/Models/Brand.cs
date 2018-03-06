@@ -25,7 +25,7 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Brand(Guid id, string name, DateTime startDate, DateTime? endDate)
+        public Brand(Guid id, string name, DateTime startDate, DateTime? endDate) : base()
         {
             Id = id;
             SetName(name);

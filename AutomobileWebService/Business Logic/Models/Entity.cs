@@ -16,7 +16,7 @@ namespace AutomobileWebService.Business_Logic.Models
 
         protected Entity()
         {
-            Id = Guid.NewGuid();
+            Deleted = false;
         }
 
     }

@@ -53,7 +53,6 @@ namespace AutomobileWebService.Business_Logic.Models
             Id = id;
             CarId = car.Id;
             UserId = user.Id;
-            Deleted = false;
             HasTurbochager = hasTurbocharger;
             HasSupercharger = hasSupercharger;
 
