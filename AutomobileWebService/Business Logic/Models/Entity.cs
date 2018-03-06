@@ -12,6 +12,7 @@ namespace AutomobileWebService.Business_Logic.Models
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; protected set; }
+        public bool Deleted {get; protected set;}
 
         protected Entity()
         {

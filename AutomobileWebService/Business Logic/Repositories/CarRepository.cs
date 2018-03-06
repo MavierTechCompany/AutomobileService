@@ -73,5 +73,12 @@ namespace AutomobileWebService.Business_Logic.Repositories
             await Task.FromResult(_context.Cars.Update(car));
             await _context.SaveChangesAsync();
         }
+
+        public async Task DeleteAsync(Car car)
+        {
+            car.Delete();
+            await Task.FromResult(_context.Cars.Update(car));
+            await _context.SaveChangesAsync();
+        }
     }
 }

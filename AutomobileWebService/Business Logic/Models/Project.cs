@@ -30,8 +30,6 @@ namespace AutomobileWebService.Business_Logic.Models
         [Required]
         public bool HasSupercharger { get; protected set; }
         [Required]
-        public bool Deleted { get; protected set; }
-        [Required]
         public Guid CarId { get; protected set; }
         [Required]
         public Guid UserId { get; protected set; }

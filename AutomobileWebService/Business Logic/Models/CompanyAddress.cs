@@ -25,8 +25,6 @@ namespace AutomobileWebService.Business_Logic.Models
         [Required]
         public string ZipCode { get; protected set; }
         [Required]
-        public bool Deleted { get; protected set; }
-        [Required]
         public Guid CompanyId { get; protected set; }
 
         public virtual Company Company { get; set; }

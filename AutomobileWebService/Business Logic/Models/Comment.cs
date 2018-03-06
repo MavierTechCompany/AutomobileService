@@ -16,8 +16,6 @@ namespace AutomobileWebService.Business_Logic.Models
         [Required]
         public DateTime CreatedAt { get; protected set; }
         [Required]
-        public bool Deleted { get; protected set; }
-        [Required]
         public Guid CommenterId { get; protected set; }
         [Required]
         public Guid ProjectId { get; protected set; }

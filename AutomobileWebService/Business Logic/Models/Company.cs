@@ -17,8 +17,6 @@ namespace AutomobileWebService.Business_Logic.Models
         public string Phone { get; protected set; }
         [Required]
         public Guid CompanyAddressId { get; protected set; }
-        [Required]
-        public bool Deleted { get; protected set; }
 
         public virtual CompanyAddress CompanyAddress { get; set; }
 

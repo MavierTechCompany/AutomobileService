@@ -35,6 +35,7 @@ namespace AutomobileWebService.Business_Logic.Models
         public Car(Guid id, string model, int horsepower, int generation, DateTime productionDate, Brand brand)
         {
             Id = id;
+            Deleted = false;
 
             SetBrandName(brand.Name);
             SetModel(model);
@@ -51,6 +52,11 @@ namespace AutomobileWebService.Business_Logic.Models
             SetHorsepower(horsepower);
             SetGeneration(generation);
             SetProductionDate(productionDate);
+        }
+
+        public void Delete()
+        {
+            Deleted = true;
         }
 
         private void SetBrandName(string brandName)

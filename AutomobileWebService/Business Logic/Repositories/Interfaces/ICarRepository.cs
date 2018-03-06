@@ -16,5 +16,6 @@ namespace AutomobileWebService.Business_Logic.Repositories.Interfaces
         Task<IEnumerable<Car>> BrowseAsync(DateTime? productionDate = null);
         Task CreateAsync(Car car);
         Task UpdateAsync(Car car);
+        Task DeleteAsync(Car car);
     }
 }

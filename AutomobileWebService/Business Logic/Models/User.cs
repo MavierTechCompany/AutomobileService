@@ -20,8 +20,6 @@ namespace AutomobileWebService.Business_Logic.Models
         public string HashedPassword { get; protected set; }
         [Required]
         public DateTime CreatedAt { get; protected set; }
-        [Required]
-        public bool Deleted { get; protected set; }
 
         public virtual List<Project> Projects { get; set; }
         public virtual List<Comment> Comments { get; set; }

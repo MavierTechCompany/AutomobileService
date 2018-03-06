@@ -93,5 +93,17 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             await repository.UpdateAsync(_car);
         }
+
+        public static async Task DeleteOrFailAsync(this ICarRepository repository, Guid id)
+        {
+            var car = await repository.GetAsync(id);
+
+            if (car == null)
+            {
+                throw new Exception($"There isn't any car with ID: {id}");
+            }
+
+            await repository.DeleteAsync(car);
+        }
     }
 }
