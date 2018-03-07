@@ -25,7 +25,8 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Company(Guid id, string name, string phone, CompanyAddress headQuartersAddress)
+        public Company(Guid id, string name, string phone,
+            CompanyAddress headQuartersAddress) : base()
         {
             Id = id;
 

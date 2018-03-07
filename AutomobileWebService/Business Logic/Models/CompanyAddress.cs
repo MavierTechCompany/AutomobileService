@@ -36,7 +36,7 @@ namespace AutomobileWebService.Business_Logic.Models
         }
 
         public CompanyAddress(Guid id, string country, string state, string town, string street, int buildingNumber,
-            int flatNumber, string zipCode, Company company)
+            int flatNumber, string zipCode, Company company) : base()
         {
             Id = id;
             CompanyId = company.Id;

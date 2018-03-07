@@ -14,8 +14,6 @@ namespace AutomobileWebService.Business_Logic.Models
         [Required]
         public string CommentText { get; protected set; }
         [Required]
-        public DateTime CreatedAt { get; protected set; }
-        [Required]
         public Guid CommenterId { get; protected set; }
         [Required]
         public Guid ProjectId { get; protected set; }
@@ -28,12 +26,12 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Comment(Guid id, string commentText, bool delete, User user, Project project)
+        public Comment(Guid id, string commentText, bool delete,
+            User user, Project project) : base()
         {
             Id = id;
             CommenterId = user.Id;
             ProjectId = project.Id;
-            CreatedAt = DateTime.UtcNow;
 
             SetCommentText(commentText);
         }  

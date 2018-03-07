@@ -32,7 +32,8 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Car(Guid id, string model, int horsepower, int generation, DateTime productionDate, Brand brand)
+        public Car(Guid id, string model, int horsepower, int generation,
+            DateTime productionDate, Brand brand) : base()
         {
             Id = id;
 

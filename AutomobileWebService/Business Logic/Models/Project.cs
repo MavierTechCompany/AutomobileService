@@ -47,8 +47,10 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Project(Guid id, string projectName, string category, int horsepower, float topSpeedInKilometers, float topSpeedInMiles,
-            float zeroToHundreds, float zeroToSixty, string engineModel, bool hasTurbocharger, bool hasSupercharger, Car car, User user)
+        public Project(Guid id, string projectName, string category, int horsepower,
+            float topSpeedInKilometers, float topSpeedInMiles, float zeroToHundreds,
+            float zeroToSixty, string engineModel, bool hasTurbocharger, bool hasSupercharger,
+            Car car, User user) : base()
         {
             Id = id;
             CarId = car.Id;
