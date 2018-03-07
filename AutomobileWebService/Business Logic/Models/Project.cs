@@ -70,8 +70,9 @@ namespace AutomobileWebService.Business_Logic.Models
 
         #region Public
 
-        public void Update(int horsepower, float topSpeedInKilometers, float topSpeedInMiles, float zeroToHundreds,
-            float zeroToSixty, string engineModel, bool hasTurbocharger, bool hasSupercharger)
+        public void Update(int horsepower, float topSpeedInKilometers, float topSpeedInMiles,
+            float zeroToHundreds, float zeroToSixty, string engineModel, bool hasTurbocharger,
+            bool hasSupercharger)
         {
             HasTurbochager = hasTurbocharger;
             HasSupercharger = hasSupercharger;
@@ -84,10 +85,9 @@ namespace AutomobileWebService.Business_Logic.Models
             SetEngineModel(engineModel);
         }
 
-        public static Project Delete(Project project)
+        public void Delete()
         {
-            project.Deleted = true;
-            return project;
+            Deleted = true;
         }
 
         #endregion

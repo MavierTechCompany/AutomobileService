@@ -62,10 +62,9 @@ namespace AutomobileWebService.Business_Logic.Models
             SetZipCode(zipCode);
         }
 
-        public static CompanyAddress Delete(CompanyAddress address)
+        public void Delete()
         {
-            address.Deleted = true;
-            return address;
+            Deleted = true;
         }
 
         private void SetCountry(string country)

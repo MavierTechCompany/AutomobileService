@@ -44,10 +44,9 @@ namespace AutomobileWebService.Business_Logic.Models
             SetPhone(phone);
         }
 
-        public static Company Delete(Company company)
+        public void Delete()
         {
-            company.Deleted = true;
-            return company;
+            Deleted = true;
         }
 
         #endregion

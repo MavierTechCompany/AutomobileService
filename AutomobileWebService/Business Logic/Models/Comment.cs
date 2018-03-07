@@ -45,10 +45,9 @@ namespace AutomobileWebService.Business_Logic.Models
             CommentText = text;
         }
 
-        public static Comment Delete(Comment comment)
+        public void Delete()
         {
-            comment.Deleted = true;
-            return comment;  
+            Deleted = true;  
         }
     }
 }

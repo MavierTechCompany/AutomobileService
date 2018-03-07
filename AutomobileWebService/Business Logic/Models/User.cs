@@ -36,7 +36,6 @@ namespace AutomobileWebService.Business_Logic.Models
             SetEmail(email);
             SetMobilePhone(mobilePhone);
             SetPassword(password);
-
         }
 
         #region Public
@@ -45,17 +44,18 @@ namespace AutomobileWebService.Business_Logic.Models
         {
             SetLogin(login);
             SetMobilePhone(mobilePhone);
+            UpdatedAt = DateTime.UtcNow;
         }
 
         public void UpdatePassword(string password)
         {
             SetPassword(password);
+            UpdatedAt = DateTime.UtcNow;
         }
 
-        public static User Delete(User user)
+        public void Delete()
         {
-            user.Deleted = true;
-            return user;
+            Deleted = true;
         }
 
         #endregion

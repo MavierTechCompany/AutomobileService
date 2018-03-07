@@ -40,8 +40,8 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
         public async Task DeleteAsync(Comment comment)
         {
-            var deletedComment = Comment.Delete(comment);
-            await Task.FromResult(_context.Comments.Update(deletedComment));
+            comment.Delete();
+            await Task.FromResult(_context.Comments.Update(comment));
             await _context.SaveChangesAsync();
         }
     }

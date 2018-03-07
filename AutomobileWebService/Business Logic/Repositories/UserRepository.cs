@@ -52,8 +52,8 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
         public async Task DeleteAsync(User user)
         {
-            var deletedUser = User.Delete(user);
-            await Task.FromResult(_context.Users.Update(deletedUser));
+            user.Delete();
+            await Task.FromResult(_context.Users.Update(user));
             await _context.SaveChangesAsync();
         }
     }
