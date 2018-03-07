@@ -29,29 +29,34 @@ namespace AutomobileWebService.Business_Logic.Repositories.DAL
             modelBuilder.Entity<Car>(x =>
             {
                 x.HasKey(z => z.Id);
+                x.Property(z => z.Id).ValueGeneratedOnAdd();
                 x.HasMany(z => z.Projects).WithOne(y => y.Car).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<User>(x =>
             {
                 x.HasKey(z => z.Id);
+                x.Property(z => z.Id).ValueGeneratedOnAdd();                
             });
 
             modelBuilder.Entity<Brand>(x =>
             {
                 x.HasKey(z => z.Id);
+                x.Property(z => z.Id).ValueGeneratedOnAdd();                
                 x.HasMany(z => z.Cars).WithOne(y => y.Brand).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<Project>(x =>
             {
                 x.HasKey(z => z.Id);
+                x.Property(z => z.Id).ValueGeneratedOnAdd();                
                 x.HasOne(z => z.User).WithMany(y => y.Projects).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<Comment>(x =>
             {
                 x.HasKey(z => z.Id);
+                x.Property(z => z.Id).ValueGeneratedOnAdd();                
                 x.HasOne(z => z.Commenter).WithMany(y => y.Comments).OnDelete(DeleteBehavior.Restrict);
                 x.HasOne(z => z.Project).WithMany(y => y.Comments).OnDelete(DeleteBehavior.Restrict);
             });
@@ -59,12 +64,14 @@ namespace AutomobileWebService.Business_Logic.Repositories.DAL
             modelBuilder.Entity<Company>(x =>
             {
                 x.HasKey(z => z.Id);
+                x.Property(z => z.Id).ValueGeneratedOnAdd();                
                 x.HasOne(z => z.CompanyAddress).WithOne(z => z.Company).HasForeignKey<CompanyAddress>(y => y.CompanyId).OnDelete(DeleteBehavior.Restrict);
             });
 
             modelBuilder.Entity<CompanyAddress>(x =>
             {
                 x.HasKey(z => z.Id);
+                x.Property(z => z.Id).ValueGeneratedOnAdd();                
             });
 
             base.OnModelCreating(modelBuilder);

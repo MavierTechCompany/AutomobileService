@@ -10,13 +10,9 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class User : Entity
     {
-        [Required]
         public string Login { get; protected set; }
-        [Required]
         public string Email { get; protected set; }
-        [Required]
         public string MobilePhone { get; protected set; }
-        [Required]
         public string HashedPassword { get; protected set; }
 
         public virtual List<Project> Projects { get; set; }
@@ -27,11 +23,8 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public User(Guid id, string login, string email, string mobilePhone,
-            string password) : base()
+        public User(string login, string email, string mobilePhone, string password) : base()
         {
-            Id = id;
-
             SetLogin(login);
             SetEmail(email);
             SetMobilePhone(mobilePhone);

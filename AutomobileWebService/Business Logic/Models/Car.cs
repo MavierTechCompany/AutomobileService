@@ -11,18 +11,12 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class Car : Entity
     {
-        [Required]
         public string BrandName { get; protected set; }
-        [Required]
         public string Model { get; protected set; }
-        [Required]
         public int Horsepower { get; protected set; }
-        [Required]
         public int Generation { get; protected set; }
-        [Required]
         public DateTime ProdutionDate { get; protected set; }
-        [Required]
-        public Guid BrandId { get; protected set; }
+        public int BrandId { get; protected set; }
 
         public virtual Brand Brand { get; set; }
         public virtual List<Project> Projects { get; set; }
@@ -32,10 +26,9 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Car(Guid id, string model, int horsepower, int generation,
+        public Car(string model, int horsepower, int generation,
             DateTime productionDate, Brand brand) : base()
         {
-            Id = id;
 
             SetBrandName(brand.Name);
             SetModel(model);

@@ -10,7 +10,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 {
     public static class CommpanyExtensions
     {
-        public static async Task<Company> GetOrFailAsync(this ICompanyRepository repository, Guid id)
+        public static async Task<Company> GetOrFailAsync(this ICompanyRepository repository, int id)
         {
             var company = await repository.GetAsync(id);
 

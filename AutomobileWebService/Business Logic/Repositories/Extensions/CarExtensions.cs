@@ -10,7 +10,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 {
     public static class CarExtensions
     {
-        public static async Task<Car> GetOrFailAsync(this ICarRepository repository, Guid id)
+        public static async Task<Car> GetOrFailAsync(this ICarRepository repository, int id)
         {
             var car = await repository.GetAsync(id);
 
@@ -94,7 +94,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             await repository.UpdateAsync(_car);
         }
 
-        public static async Task DeleteOrFailAsync(this ICarRepository repository, Guid id)
+        public static async Task DeleteOrFailAsync(this ICarRepository repository, int id)
         {
             var car = await repository.GetAsync(id);
 

@@ -17,7 +17,7 @@ namespace AutomobileWebService.Business_Logic.Repositories
             _context = context;
         }
 
-        public async Task<Company> GetAsync(Guid id)
+        public async Task<Company> GetAsync(int id)
             => await Task.FromResult(_context.Companies.SingleOrDefault(x => x.Id == id && x.Deleted == false));
 
         public async Task<Company> GetAsync(string name)

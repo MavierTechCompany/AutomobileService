@@ -9,7 +9,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Interfaces
 {
     public interface IUserRepository
     {
-        Task<User> GetAsync(Guid id);
+        Task<User> GetAsync(int id);
         Task<User> GetAsync(string login);
         Task<User> GetByEmailAsync(string email);
         Task<IEnumerable<User>> BrowseAsync(string login = null);

@@ -15,14 +15,12 @@ namespace AutomobileWebService.Test.Models
         public void CreateItself(string model, int horsepower, int generation, DateTime productionDate)
         {
             //Arrange
-            var brandMock = Mock.Of<Brand>(x => x.Id == Guid.NewGuid() && x.Name == "Brand");
-            var sutId = Guid.NewGuid();
+            var brandMock = Mock.Of<Brand>(x => x.Id == 1 && x.Name == "Brand");
 
             //Act
-            Car sut = new Car(sutId, model, horsepower, generation, productionDate, brandMock);
+            Car sut = new Car(model, horsepower, generation, productionDate, brandMock);
 
             //Assert
-            Assert.Equal(sutId, sut.Id);
             Assert.Equal(model, sut.Model);
             Assert.Equal(brandMock.Id, sut.BrandId);
             Assert.Equal(horsepower, sut.Horsepower);
@@ -36,10 +34,10 @@ namespace AutomobileWebService.Test.Models
         public void ThrowsExceptionDuringCreation(string model, int horsepower, int generation, DateTime productionDate)
         {
             //Arrange
-            var brandMock = Mock.Of<Brand>(x => x.Id == Guid.NewGuid() && x.Name == "Brand");
+            var brandMock = Mock.Of<Brand>(x => x.Id == 1 && x.Name == "Brand");
 
             //Act and Assert
-            Assert.Throws<ForbiddenValueException>(() => new Car(Guid.NewGuid(),model, horsepower, generation, productionDate, brandMock));
+            Assert.Throws<ForbiddenValueException>(() => new Car(model, horsepower, generation, productionDate, brandMock));
         }
 
         [Theory]
@@ -47,8 +45,8 @@ namespace AutomobileWebService.Test.Models
         public void UpdateItself(string model, int horsepower, int generation, DateTime productionDate)
         {
             //Arrange
-            var brandMock = Mock.Of<Brand>(x => x.Id == Guid.NewGuid() && x.Name == "Brand");
-            Car sut = new Car(Guid.NewGuid(), "Test", 90, 1, new DateTime(1950, 1, 1), brandMock);
+            var brandMock = Mock.Of<Brand>(x => x.Id == 1 && x.Name == "Brand");
+            Car sut = new Car("Test", 90, 1, new DateTime(1950, 1, 1), brandMock);
 
             //Act
             sut.Update(model, horsepower, generation, productionDate);
@@ -65,8 +63,8 @@ namespace AutomobileWebService.Test.Models
         public void ThrowsExceptionDuringUpdate(string model, int horsepower, int generation, DateTime productionDate)
         {
             //Arrange
-            var brandMock = Mock.Of<Brand>(x => x.Id == Guid.NewGuid() && x.Name == "Brand");
-            Car sut = new Car(Guid.NewGuid(), "Test", 90, 1, new DateTime(1950, 1, 1), brandMock);
+            var brandMock = Mock.Of<Brand>(x => x.Id == 1 && x.Name == "Brand");
+            Car sut = new Car("Test", 90, 1, new DateTime(1950, 1, 1), brandMock);
 
             //Act and Assert
             Assert.Throws<ForbiddenValueException>(() => sut.Update(model, horsepower, generation, productionDate));

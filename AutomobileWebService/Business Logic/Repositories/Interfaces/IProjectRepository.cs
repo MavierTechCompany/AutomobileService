@@ -8,7 +8,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Interfaces
 {
     public interface IProjectRepository
     {
-        Task<Project> GetAsync(Guid id);
+        Task<Project> GetAsync(int id);
         Task<Project> GetAsync(string projectName);
         Task<IEnumerable<Project>> BrowseAsync(string projectName = null);
         Task<IEnumerable<Project>> BrowseAsync(int horsepower);

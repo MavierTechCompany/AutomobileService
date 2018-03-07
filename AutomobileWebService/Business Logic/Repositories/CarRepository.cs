@@ -61,7 +61,7 @@ namespace AutomobileWebService.Business_Logic.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Car> GetAsync(Guid id)
+        public async Task<Car> GetAsync(int id)
             => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.Id == id));
 
         public async Task<Car> GetAsync(string brandName, string model, int generation)

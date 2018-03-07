@@ -10,7 +10,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 {
     public static class UserExtensions
     {
-        public static async Task<User> GetOrFailAsync(this IUserRepository repository, Guid id)
+        public static async Task<User> GetOrFailAsync(this IUserRepository repository, int id)
         {
             var user = await repository.GetAsync(id);
 

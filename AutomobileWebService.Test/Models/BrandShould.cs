@@ -14,14 +14,10 @@ namespace AutomobileWebService.Test.Models
         [BrandValidData]
         public void CreateItself(string name, DateTime startDate, DateTime? endDate)
         {
-            //Arrange
-            var sutId = Guid.NewGuid();
-
-            //Act
-            var sut = new Brand(sutId, name, startDate, endDate);
+            //Arrange nad Act
+            var sut = new Brand(name, startDate, endDate);
 
             //Assert
-            Assert.Equal(sutId, sut.Id);
             Assert.Equal(name, sut.Name);
             Assert.Equal(startDate, sut.StartDate);
             Assert.Equal(endDate, sut.EndDate);
@@ -32,7 +28,7 @@ namespace AutomobileWebService.Test.Models
         public void ThrowsExceptionDuringCreation(string name, DateTime startDate, DateTime? endDate)
         {
             //Arrange, Act and Assert
-            Assert.Throws<ForbiddenValueException>(() => new Brand(Guid.NewGuid(), name, startDate, endDate));
+            Assert.Throws<ForbiddenValueException>(() => new Brand(name, startDate, endDate));
         }
 
         [Theory]
@@ -40,7 +36,7 @@ namespace AutomobileWebService.Test.Models
         public void UpdateItself(string name, DateTime startDate, DateTime? endDate)
         {
             //Arrange
-            Brand sut = new Brand(Guid.NewGuid(), "Brand", new DateTime(2000, 10, 5), null);
+            Brand sut = new Brand("Brand", new DateTime(2000, 10, 5), null);
 
             //Act
             sut.Update(name, startDate, endDate);
@@ -56,7 +52,7 @@ namespace AutomobileWebService.Test.Models
         public void ThrowsExceptionDuringUpdate(string name, DateTime startDate, DateTime? endDate)
         {
             //Arrange
-            Brand sut = new Brand(Guid.NewGuid(), "Brand", new DateTime(2000, 10, 5), null);
+            Brand sut = new Brand("Brand", new DateTime(2000, 10, 5), null);
 
             //Act and Assert
             Assert.Throws<ForbiddenValueException>(() => sut.Update(name, startDate, endDate));

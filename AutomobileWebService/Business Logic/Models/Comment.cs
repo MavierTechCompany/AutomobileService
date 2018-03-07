@@ -11,12 +11,9 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class Comment : Entity
     {
-        [Required]
         public string CommentText { get; protected set; }
-        [Required]
-        public Guid CommenterId { get; protected set; }
-        [Required]
-        public Guid ProjectId { get; protected set; }
+        public int CommenterId { get; protected set; }
+        public int ProjectId { get; protected set; }
 
         public virtual User Commenter { get; set; }
         public virtual Project Project { get; set; }
@@ -26,10 +23,9 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Comment(Guid id, string commentText, bool delete,
+        public Comment(string commentText, bool delete,
             User user, Project project) : base()
         {
-            Id = id;
             CommenterId = user.Id;
             ProjectId = project.Id;
 

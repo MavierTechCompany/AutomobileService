@@ -9,30 +9,18 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class Project : Entity
     {
-        [Required]
         public string ProjectName { get; protected set; }
-        [Required]
         public string Category { get; protected set; }
-        [Required]
         public int Horsepower { get; protected set; }
-        [Required]
         public float TopSpeedInKilometers { get; protected set; }
-        [Required]
         public float TopSpeedInMiles { get; protected set; }
-        [Required]
         public float ZeroToHundreds { get; protected set; }
-        [Required]
         public float ZeroToSixty { get; protected set; }
-        [Required]
         public string EngineModel { get; protected set; }
-        [Required]
         public bool HasTurbochager { get; protected set; }
-        [Required]
         public bool HasSupercharger { get; protected set; }
-        [Required]
-        public Guid CarId { get; protected set; }
-        [Required]
-        public Guid UserId { get; protected set; }
+        public int CarId { get; protected set; }
+        public int UserId { get; protected set; }
 
         //zdjęcie projektu
 
@@ -47,12 +35,11 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Project(Guid id, string projectName, string category, int horsepower,
+        public Project(string projectName, string category, int horsepower,
             float topSpeedInKilometers, float topSpeedInMiles, float zeroToHundreds,
             float zeroToSixty, string engineModel, bool hasTurbocharger, bool hasSupercharger,
             Car car, User user) : base()
         {
-            Id = id;
             CarId = car.Id;
             UserId = user.Id;
             HasTurbochager = hasTurbocharger;

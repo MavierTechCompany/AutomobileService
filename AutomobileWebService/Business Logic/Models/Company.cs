@@ -11,12 +11,9 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class Company : Entity
     {
-        [Required]
         public string Name { get; protected set; }
-        [Required]
         public string Phone { get; protected set; }
-        [Required]
-        public Guid CompanyAddressId { get; protected set; }
+        public int CompanyAddressId { get; protected set; }
 
         public virtual CompanyAddress CompanyAddress { get; set; }
 
@@ -25,11 +22,9 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Company(Guid id, string name, string phone,
+        public Company(string name, string phone,
             CompanyAddress headQuartersAddress) : base()
         {
-            Id = id;
-
             SetName(name);
             SetPhone(phone);
 
