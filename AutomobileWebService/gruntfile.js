@@ -5,6 +5,12 @@
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        watch: {
+            sass: {
+                files: "app/scss/*.scss",
+                tasks: ['sass']
+            }
+        },
         // Sass
         sass: {
             options: {
@@ -27,6 +33,8 @@
 
     // Load the plugin
     grunt.loadNpmTasks('grunt-sass');
+    //grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
     grunt.registerTask('default', ['sass']);
