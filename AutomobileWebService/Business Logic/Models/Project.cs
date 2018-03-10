@@ -15,7 +15,6 @@ namespace AutomobileWebService.Business_Logic.Models
         public float TopSpeedInKilometers { get; protected set; }
         public float TopSpeedInMiles { get; protected set; }
         public float ZeroToHundreds { get; protected set; }
-        public float ZeroToSixty { get; protected set; }
         public string EngineModel { get; protected set; }
         public bool HasTurbochager { get; protected set; }
         public bool HasSupercharger { get; protected set; }
@@ -37,7 +36,7 @@ namespace AutomobileWebService.Business_Logic.Models
 
         public Project(string projectName, string category, int horsepower,
             float topSpeedInKilometers, float topSpeedInMiles, float zeroToHundreds,
-            float zeroToSixty, string engineModel, bool hasTurbocharger, bool hasSupercharger,
+            string engineModel, bool hasTurbocharger, bool hasSupercharger,
             Car car, User user) : base()
         {
             CarId = car.Id;
@@ -51,25 +50,25 @@ namespace AutomobileWebService.Business_Logic.Models
             SetTopSpeedInKilometers(topSpeedInKilometers);
             SetTopSpeedInMiles(topSpeedInMiles);
             SetZeroToHundreds(zeroToHundreds);
-            SetZeroToSixty(zeroToSixty);
-            SetEngineModel(engineModel);            
+            SetEngineModel(engineModel);      
         }
 
         #region Public
 
-        public void Update(int horsepower, float topSpeedInKilometers, float topSpeedInMiles,
-            float zeroToHundreds, float zeroToSixty, string engineModel, bool hasTurbocharger,
-            bool hasSupercharger)
+        public void Update(string projectName, string category, int horsepower,
+            float topSpeedInKilometers, float topSpeedInMiles, float zeroToHundreds,
+            string engineModel, bool hasTurbocharger, bool hasSupercharger)
         {
             HasTurbochager = hasTurbocharger;
             HasSupercharger = hasSupercharger;
 
+            SetProjectName(projectName);
+            SetCategory(category);
             SetHorsepower(horsepower);
             SetTopSpeedInKilometers(topSpeedInKilometers);
             SetTopSpeedInMiles(topSpeedInMiles);
             SetZeroToHundreds(zeroToHundreds);
-            SetZeroToSixty(zeroToSixty);
-            SetEngineModel(engineModel);
+            SetEngineModel(engineModel);  
         }
 
         public void Delete()
@@ -139,16 +138,6 @@ namespace AutomobileWebService.Business_Logic.Models
             }
 
             ZeroToHundreds = zeroToHundreds;
-        }
-
-        private void SetZeroToSixty(float zeroToSixty)
-        {
-            if (zeroToSixty < 1.0)
-            {
-                throw new ForbiddenValueException($"Project with id {Id} can't have zero to sixty less than one!");
-            }
-
-            ZeroToSixty = zeroToSixty;
         }
 
         private void SetEngineModel(string engineModel)
