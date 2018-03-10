@@ -1,6 +1,8 @@
+$color: #ff8067;
+
 body {
     background: linear-gradient(to right, #3f3956, #373739);
-    padding-top: 65px;
+    margin: 0px;
     
 }
 
@@ -8,60 +10,37 @@ body {
     margin-top: 20px;
     
 }
-/*Git test*/
 
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVBAR @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@-NAVBAR-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+nav{
+    background-color: $color;
+}
 
 .navbar {
-    background-color: #ff8067;
-}
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto;
+    
+    &__hamburger{
 
-.nav-link {
-    color: #373739 !important;
-}
+    }
+    &__search{
+        margin-left: 80px;
 
-.nav-hamburger-button {
-    color: #373739 !important;
-    border: 0;
-    position: absolute;
-    top: 16px;
-    left: 20px;
-}
-
-
-.fa-user-circle:before {
-    color: #373739;
-}
-
-.fa-user-circle {
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-}
-
-.dropdown-toggle:after {
-    display: none;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #af4339;
-    border-color: #ffa391;
-}
-
-.btn-primary:hover {
-    color: #fff;
-    background-color: #98352b;
-    border-color: #ffa391;
+        &__input{
+            width: 300px;
+        }
+    }
+    &__user-menu{
+        margin-left: auto;
+    }
 }
 
 
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-FOOTER-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
 
 footer {
@@ -78,68 +57,16 @@ footer {
 }
 
 .footer-links:hover {
-    color: #ff8067;
+    color: $color;
 }
 
 
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@-RESPONSIVE-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RESPONSIVE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
-
-/* Small devices (tablets, 768px and down) */
-@media (max-width: 767px) {
-
-    .navbar-header {
-        float: left;
-        /*padding: 10px;*/
-        text-align: center;
-        width: 100%;
-
-    }
-
-    .navbar-brand {
-        float: none;
-    }
-
-    .user-nav-right-menu-button{
+@media (max-width: 700px){
+    .navbar__search{
         display: none;
-    }
-
-    .dropdown-toggle {
-        display: none;
-    }
-
-    .login-button-mobile {
-        color: #fff;
-        background: #373739;
-        border: 0px;
-        border-radius: 50px;
-        -moz-border-radius: 50px;
-        -webkit-border-radius: 50px;
-        max-height: 200px;
-        padding: 10px;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-}
-
-@media (min-width: 768px){
-   
-    .login-button-mobile{
-        display: none;
-    }
-}
-
-@media (min-width: 1213px) {
-
-
-    .footer-left-text {
-        text-align: right;
-    }
-
-    .footer-right-text {
-        text-align: left;
     }
 }

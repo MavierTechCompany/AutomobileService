@@ -3,144 +3,47 @@
 <head>
     <title>AutomobileService</title>
     <meta charset="utf-8" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
-    <!-- Material Design 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" /> -->
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />-->
+    <!-- Font Awesome 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/css/Home/main.css" type="text/css" />
     <link rel="stylesheet" href="~/css/Shared/layout.css" type="text/css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">  
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-md navbar-dark">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a href="@Url.Action("index")"><img class="navbar-brand" src="~/images/logos/ServiceLogo.svg" alt="AutomotiveService"></a>
+        <nav>
+            <div class="navbar">
+                <div class="navbar__hamburger">
+                    <button>
+                        hamburger
+                    </button>
                 </div>
-                <button class="navbar-toggler nav-hamburger-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projekty</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Baza wiedzy</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="container">
-                                <button class="login-button-mobile" data-toggle="modal" data-target="#myModal">Zaloguj</button>
-                                <div class="modal fade" id="myModal" role="dialog">
-                                    <div class="modal-dialog modal-md">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>                                                
-                                                <div>
-                                                    <form class="px-4 py-3">
-                                                        <div class="form-group">
-                                                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="form-check">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input">
-                                                                        Zapamiętaj mnie
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <button type="submit" class="button button--white">Zaloguj</button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <a class="dropdown-item" href="@Url.Action("registration","Home")">Zarejestruj się</a>
-                                                    </div>
-                                                    <div class="col">
-                                                        <a class="dropdown-item" href="#">Zapomniałeś hasła?</a>                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="navbar__search">
+                    <input class="navbar__search__input" placeholder="Wyszukaj">
                 </div>
-                <ul class="navbar-nav ml-auto nav-flex-icons">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <button class="fa fa-user-circle fa-2x user-nav-right-menu-button" aria-hidden="true"></button> 
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink" style="position: absolute;">
-                                <form class="px-4 py-3">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Zapamiętaj mnie
-                                        </label>
-                                    </div>
-                                    <button type="submit" class="button button--white">Zaloguj</button>
-                                </form>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="@Url.Action("registration","Home")">Zarejestruj się</a>
-                                <a class="dropdown-item" href="#">Zapomniałeś hasła?</a>
-                            </div>
-                        </li>
-                    </ul>
-
+                <div class="navbar__user-menu">
+                    <button>
+                        user-menu
+                    </button>
+                </div>
             </div>
-            
-        </nav>   
+        </nav>
     </header>
     <main class="page-content"></main>
         @RenderBody()
     </main>
     <footer>
         <p>&copy; 2017 - AutomobileService</p>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-3">
-                </div>
-                <div class="col-6">
-                    <div class="row footer-texts">
-                        <div class="col-sm footer-left-text">
-                            <a class="footer-links" href="#">O nas</a>
-                        </div>
-                        <div class="col-sm">
-                            <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
-                        </div>
-                        <div class="col-sm footer-right-text">
-                            <a class="footer-links" href="#">Kontakt</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                </div>
-            </div>
+        <div class="footer-texts">
+            <a class="footer-links footer-left-text" href="#">O nas</a>
+            <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
+            <a class="footer-links footer-right-text" href="#">Kontakt</a>
         </div>
-
     </footer>
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -148,8 +51,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <!-- Material Design 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/js/mdb.min.js"></script> -->
     <!-- custom script -->
     <script src="~/js/Shared/layout.js"></script>
     @RenderSection("Scripts", required: false)
