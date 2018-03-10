@@ -47,11 +47,6 @@ namespace AutomobileWebService.Business_Logic.Models
             SetProductionDate(productionDate);
         }
 
-        public void Delete()
-        {
-            Deleted = true;
-        }
-
         private void SetBrandName(string brandName)
         {
             if (string.IsNullOrWhiteSpace(brandName))

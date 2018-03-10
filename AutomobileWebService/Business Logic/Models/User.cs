@@ -46,11 +46,6 @@ namespace AutomobileWebService.Business_Logic.Models
             UpdatedAt = DateTime.UtcNow;
         }
 
-        public void Delete()
-        {
-            Deleted = true;
-        }
-
         #endregion
 
         #region Private

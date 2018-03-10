@@ -39,11 +39,6 @@ namespace AutomobileWebService.Business_Logic.Models
             SetPhone(phone);
         }
 
-        public void Delete()
-        {
-            Deleted = true;
-        }
-
         #endregion
 
         #region Private

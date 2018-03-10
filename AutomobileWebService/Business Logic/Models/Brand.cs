@@ -36,11 +36,6 @@ namespace AutomobileWebService.Business_Logic.Models
             SetEndDate(endDate);
         }
 
-        public void Delete()
-        {
-            Deleted = true;
-        }
-
         private void SetName(string name)
         {
             if (string.IsNullOrWhiteSpace(name))

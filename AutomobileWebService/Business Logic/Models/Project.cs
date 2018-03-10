@@ -71,11 +71,6 @@ namespace AutomobileWebService.Business_Logic.Models
             SetEngineModel(engineModel);  
         }
 
-        public void Delete()
-        {
-            Deleted = true;
-        }
-
         #endregion
 
         #region Private

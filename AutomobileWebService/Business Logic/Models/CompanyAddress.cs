@@ -53,11 +53,6 @@ namespace AutomobileWebService.Business_Logic.Models
             SetZipCode(zipCode);
         }
 
-        public void Delete()
-        {
-            Deleted = true;
-        }
-
         private void SetCountry(string country)
         {
             if (string.IsNullOrWhiteSpace(country))
