@@ -46,14 +46,23 @@ namespace AutomobileWebService.Business_Logic.Repositories
             return await Task.FromResult(projects);
         }
 
-        public Task CreateAsync(Project project)
+        public async Task CreateAsync(Project project)
         {
-            throw new NotImplementedException();
+            await _context.Projects.AddAsync(project);
+            await _context.SaveChangesAsync();
         }
 
-        public Task UpdateAsync(Project project)
+        public async Task UpdateAsync(Project project)
         {
-            throw new NotImplementedException();
+            await Task.FromResult(_context.Projects.Update(project));
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Project project)
+        {
+            project.Delete();
+            await Task.FromResult(_context.Projects.Update(project));
+            await _context.SaveChangesAsync();
         }
     }
 }

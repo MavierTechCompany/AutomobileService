@@ -14,5 +14,6 @@ namespace AutomobileWebService.Business_Logic.Repositories.Interfaces
         Task<IEnumerable<Project>> BrowseAsync(int horsepower);
         Task CreateAsync(Project project);
         Task UpdateAsync(Project project);
+        Task DeleteAsync(Project project);
     }
 }
