@@ -19,9 +19,15 @@
         <nav id="navigation">
             <div class="navbar">
                 <div class="navbar__hamburger">
-                    <button>
-                        hamburger
-                    </button>
+                    <span class="open-slide">
+                    <a href="#" onclick="openSlideMenu()">
+                        <svg width="30" height="30">
+                            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                        </svg>
+                    </a>
+                    </span>
                 </div>
                 <a href="@Url.Action("index")"><img class="navbar__brand" src="~/images/logos/ServiceLogo.svg" alt="AutomotiveService"></a>
                 <div class="navbar__search">
@@ -35,8 +41,17 @@
             </div>
         </nav>
     </header>
-    <main class="page-content"></main>
-        @RenderBody()
+    <main>
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
     </main>
     <footer>
         <p>&copy; 2017 - AutomobileService</p>
