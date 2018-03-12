@@ -20,15 +20,20 @@ function stickyNavigation() {
 
 window.addEventListener('scroll', stickyNavigation);
 
+
+
 //sidebar
 
 
-function openSlideMenu(){
-  document.getElementById('side-menu').style.width = '250px';
-  document.getElementById('main').style.marginLeft = '250px';
-}
-
-function closeSlideMenu(){
-  document.getElementById('side-menu').style.width = '0';
-  document.getElementById('main').style.marginLeft = '0';
+function SlideMenu(){
+  if(document.getElementById('hamburger--close')){
+    document.getElementById('hamburger--close').id="hamburger--open"
+    document.getElementById('side-menu').style.width = '250px';
+    document.getElementById('scale').style.marginLeft = '250px';
+  }
+  else if(document.getElementById('hamburger--open')){
+    document.getElementById('hamburger--open').id="hamburger--close"
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('scale').style.marginLeft = '0';
+  }
 }

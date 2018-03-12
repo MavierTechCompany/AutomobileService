@@ -18,10 +18,10 @@
     <header>
         <nav id="navigation">
             <div class="navbar">
-                <div class="navbar__hamburger">
+                <div class="navbar__hamburger" id="hamburger--close">
                     <span class="open-slide">
-                    <a href="#" onclick="openSlideMenu()">
-                        <svg width="30" height="30">
+                    <a href="#" onclick="SlideMenu()">
+                        <svg width="30" height="26">
                             <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
                             <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
                             <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
@@ -29,9 +29,12 @@
                     </a>
                     </span>
                 </div>
-                <a href="@Url.Action("index")"><img class="navbar__brand" src="~/images/logos/ServiceLogo.svg" alt="AutomotiveService"></a>
+                <div class="navbar__brand">
+                    <a href="@Url.Action("index")"><img src="~/images/logos/ServiceLogo.svg" alt="AutomotiveService"></a>
+                </div>
                 <div class="navbar__search">
                     <input class="navbar__search__input" placeholder="Wyszukaj">
+                    <button>Wyszukaj</button>
                 </div>
                 <div class="navbar__user-menu">
                     <button>
@@ -43,13 +46,13 @@
     </header>
     <main>
         <div id="side-menu" class="side-nav">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
         </div>
-        <div id="main">
+        <div class="page-content" id="scale">
             @RenderBody()
         </div>
     </main>
