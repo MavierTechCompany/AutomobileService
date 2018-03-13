@@ -41,7 +41,10 @@ namespace AutomobileWebService.Framework
                     statusCode = 422;
                     break;
 
-                //new exception types in order from most specyfic to general
+                case Exception ex when exceptionType == typeof(NullResponseException):
+                    response = "There is no content with given arguments.";
+                    statusCode = 404;
+                    break;
             }
 
             var payload = JsonConvert.SerializeObject(response);

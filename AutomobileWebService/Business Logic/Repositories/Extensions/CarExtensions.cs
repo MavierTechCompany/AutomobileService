@@ -16,7 +16,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (car == null)
             {
-                throw new ForbiddenValueException($"There is no car with id: {id}.");
+                throw new NullResponseException($"There is no car with id: {id}.");
             }
 
             return await Task.FromResult(car);
@@ -28,7 +28,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (car == null)
             {
-                throw new ForbiddenValueException($"There is no car with given arguments.");
+                throw new NullResponseException($"There is no car with given arguments.");
             }
 
             return await Task.FromResult(car);
@@ -40,7 +40,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (cars == null)
             {
-                throw new ForbiddenValueException($"There isn't any car with brand: {brand}");
+                throw new NullResponseException($"There isn't any car with brand: {brand}");
             }
 
             return await Task.FromResult(cars);
@@ -52,7 +52,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (cars == null)
             {
-                throw new ForbiddenValueException($"There isn't any car with horsepower: {horsepower}");
+                throw new NullResponseException($"There isn't any car with horsepower: {horsepower}");
             }
 
             return await Task.FromResult(cars);
@@ -64,7 +64,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (cars == null)
             {
-                throw new ForbiddenValueException($"There isn't any car with production date: {productionDate}");
+                throw new NullResponseException($"There isn't any car with production date: {productionDate}");
             }
 
             return await Task.FromResult(cars);
@@ -88,7 +88,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (car == null)
             {
-                throw new ForbiddenValueException($"There isn't any car with ID: {_car.Id}");   
+                throw new NullResponseException($"There isn't any car with ID: {_car.Id}");   
             }
 
             await repository.UpdateAsync(_car);
@@ -100,7 +100,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (car == null)
             {
-                throw new Exception($"There isn't any car with ID: {id}");
+                throw new NullResponseException($"There isn't any car with ID: {id}");
             }
 
             await repository.DeleteAsync(car);
