@@ -1,8 +1,15 @@
-$color: #ff8067;
+$orange: #ff8067;
+$brown: #af4339;
+$black: #373739;
+$grey: #ccc;
+
+*{font-family: 'Titillium Web', sans-serif;}
 
 body {
-    background: linear-gradient(to right, #3f3956, #373739);
+    //background: linear-gradient(to right, #3f3956, #373739);
+    background: #373739;
     margin: 0px;
+    
     
 }
 
@@ -14,7 +21,7 @@ body {
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVBAR @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
 nav{
-    background-color: $color;
+    background-color: $orange;
 }
 
 .navbar {
@@ -40,10 +47,30 @@ nav{
         margin-top: auto; 
         margin-bottom: auto;
         &__input{
-            width: 300px;
+            width: 400px;
+            height: 30px;
+            margin-right: 0;
+            background: lighten($orange, 10%);
+            border: 0;
+            border-radius: 3px;
+            padding-left: 10px;
+            // outline-color: $grey;
+            // border-top-left-radius: 50px;
+            // border-bottom-left-radius: 50px;
+            
+        }
+        &__button{
+            width: 40px;
+            height: 30px;
+            margin-left: 0;
+            background: $brown;
+            border: 0;
+            color: lighten($orange, 20%);
+            border-radius: 3px;
         }
     }
     &__user-menu{
+        display: none;
         margin-left: auto;
         margin-right: 5%;
         margin-top: auto; 
@@ -52,10 +79,12 @@ nav{
 }
 
 
-@media (max-width: 700px){
+@media (max-width: 720px){
     .navbar{
-        width: 95%;
-
+        // width: 95%;
+        &__brand{
+            text-align: center;
+        }
         &__search{
             display: none;
         }
@@ -89,8 +118,8 @@ nav{
     z-index:1;
     top:56px;
     left:0;
-    background-color:#111;
-    // opacity:0.9;
+    background-color: darken($black, 9%);
+    //opacity:0.9;
     overflow-x:hidden;
     padding-top:60px;
     transition:0.5s;
@@ -147,7 +176,7 @@ footer {
 }
 
 .footer-links:hover {
-    color: $color;
+    color: $orange;
 }
 
 

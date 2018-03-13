@@ -25,15 +25,27 @@ window.addEventListener('scroll', stickyNavigation);
 //sidebar
 
 
+
+
+
+
 function SlideMenu(){
   if(document.getElementById('hamburger--close')){
     document.getElementById('hamburger--close').id="hamburger--open"
-    document.getElementById('side-menu').style.width = '250px';
-    document.getElementById('scale').style.marginLeft = '250px';
+    
+    const mq = window.matchMedia( "(max-width: 720px)" );
+    if (mq.matches) {
+      // window width is at least 720px
+      document.getElementById('side-menu').style.width = '100%';
+    } else {
+      // window width is less than 720px
+      document.getElementById('side-menu').style.width = '250px';
+    }
+    //document.getElementById('scale').style.marginLeft = '250px';
   }
   else if(document.getElementById('hamburger--open')){
     document.getElementById('hamburger--open').id="hamburger--close"
     document.getElementById('side-menu').style.width = '0';
-    document.getElementById('scale').style.marginLeft = '0';
+    //document.getElementById('scale').style.marginLeft = '0';
   }
 }

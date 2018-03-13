@@ -3,6 +3,7 @@
 <head>
     <title>AutomobileService</title>
     <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <!-- Bootstrap CSS
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />-->
     <!-- Font Awesome 
@@ -22,19 +23,19 @@
                     <span class="open-slide">
                     <a href="#" onclick="SlideMenu()">
                         <svg width="30" height="26">
-                            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-                            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-                            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                            <path d="M0,5 30,5" stroke="#af4339" stroke-width="5"/>
+                            <path d="M0,14 30,14" stroke="#af4339" stroke-width="5"/>
+                            <path d="M0,23 30,23" stroke="#af4339" stroke-width="5"/>
                         </svg>
                     </a>
                     </span>
                 </div>
                 <div class="navbar__brand">
-                    <a href="@Url.Action("index")"><img src="~/images/logos/ServiceLogo.svg" alt="AutomotiveService"></a>
+                    <a href="@Url.Action("index")"><img src="~/images/logos/ServiceLogoBlack.svg" alt="AutomotiveService"></a>
                 </div>
                 <div class="navbar__search">
-                    <input class="navbar__search__input" placeholder="Wyszukaj">
-                    <button>Wyszukaj</button>
+                    <input class="navbar__search__input" placeholder="Szukaj">
+                    <button class="navbar__search__button"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="navbar__user-menu">
                     <button>
@@ -57,7 +58,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2017 - AutomobileService</p>
+        <p>&copy; 2018 - AutomobileService</p>
         <div class="footer-texts">
             <a class="footer-links footer-left-text" href="#">O nas</a>
             <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
@@ -70,6 +71,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <!--Font awesome icons-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <!-- custom script -->
     <script src="~/js/Shared/layout.js"></script>
     @RenderSection("Scripts", required: false)
