@@ -40,10 +40,22 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
 			if (comment == null)
 			{
-				throw new ForbiddenValueException($"There is no comment with commenter id: {commenterId}.");
+				throw new NullResponseException($"There is no comment with commenter id: {commenterId}.");
 			}
 
 			return await Task.FromResult(comment);
+		}
+
+		public static async Task DeleteOrFailAsync(this ICommentRepository repository, int id)
+		{
+			var comment = await repository.GetAsync(id);
+
+			if (comment == null)
+			{
+				throw new NullResponseException($"There is no comment with id: {id}.");
+			}
+
+			await repository.DeleteAsync(comment);
 		}
 	}
 }	
