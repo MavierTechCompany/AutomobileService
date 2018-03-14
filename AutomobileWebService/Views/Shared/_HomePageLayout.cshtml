@@ -37,9 +37,14 @@
                     <input class="navbar__search__input" placeholder="Szukaj">
                     <button class="navbar__search__button"><i class="fas fa-search"></i></button>
                 </div>
+                <div class="navbar__links">
+                    <a>Projekty</a>
+                    <a>Baza wiedzy</a>
+                </div>
                 <div class="navbar__user-menu">
-                    <button>
-                        user-menu
+                    <p class="navbar__user-menu__text">Moje konto</p>
+                    <button class="navbar__user-menu__button">
+                        <i class="fas fa-chevron-down"></i>
                     </button>
                 </div>
             </div>
@@ -47,11 +52,17 @@
     </header>
     <main>
         <div id="side-menu" class="side-nav">
-            
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+                <div class="sidebar__search">
+                    <input class="sidebar__search__input" placeholder="Szukaj">
+                    <button class="sidebar__search__button"><i class="fas fa-search"></i></button>
+                </div>
+            <div class="side-nav__mobile-links">
+                <a href="#">Projekty</a>
+                <a href="#">Baza wiedzy</a>
+            </div>
+            <a href="#">O nas</a>
+            <a href="@Url.Action("regulations","Home")">Regulamin</a>
+            <a href="#">Kontakt</a>
         </div>
         <div class="page-content" id="scale">
             @RenderBody()
@@ -66,11 +77,11 @@
         </div>
     </footer>
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
     <!-- ajax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>-->
     <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>-->
     <!--Font awesome icons-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <!-- custom script -->

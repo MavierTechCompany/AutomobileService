@@ -2,6 +2,7 @@ $orange: #ff8067;
 $brown: #af4339;
 $black: #373739;
 $grey: #ccc;
+$white: #fff;
 
 *{font-family: 'Titillium Web', sans-serif;}
 
@@ -14,7 +15,9 @@ body {
 }
 
 .page-content {
-    margin-top: 20px;  
+    margin-top: 20px;
+    // filter: blur(3px);
+    // filter: none;  
 }
 
 
@@ -34,7 +37,7 @@ nav{
     
     &__hamburger{
         margin-left: 30px;
-        padding-right: 4%;        
+        padding-right: 40px;        
         margin-top: auto; 
         margin-bottom: auto;
     }
@@ -43,7 +46,7 @@ nav{
         margin-bottom: auto;
     }
     &__search{
-        margin-left: 80px;
+        margin-left: 50px;
         margin-top: auto; 
         margin-bottom: auto;
         &__input{
@@ -69,14 +72,37 @@ nav{
             border-radius: 3px;
         }
     }
+    &__links{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
     &__user-menu{
-        display: none;
+        //display: none;
         margin-left: auto;
         margin-right: 5%;
         margin-top: auto; 
         margin-bottom: auto;
+        display: flex;
+        &__text{
+            color: $black;
+            margin-right: 0;
+        }
+        &__button{
+            width: 30px;
+            height: 40px;
+            margin-top: auto; 
+            margin-bottom: auto;
+            margin-left: 0;
+            color: $brown;
+            background: none;
+            border: 0;
+        }
     }
 }
+
+
 
 
 @media (max-width: 720px){
@@ -88,10 +114,46 @@ nav{
         &__search{
             display: none;
         }
+        &__links{
+            display: none;
+        }
         &__user-menu{
             display: none;
         }
 
+    }
+}
+
+@media (max-width: 820px){
+    .navbar{
+        &__user-menu{
+            &__button{
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 880px){
+    .navbar{
+        &__user-menu{
+            &__text{
+                display: none;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 1020px){
+    .navbar{
+        &__links{
+            display: none;
+        }
+        &__user-menu{
+            
+        }
     }
 }
 
@@ -118,45 +180,93 @@ nav{
     z-index:1;
     top:56px;
     left:0;
-    background-color: darken($black, 9%);
-    //opacity:0.9;
+    background: linear-gradient(to right, darken($black, 5%), $black);
+    opacity:0.95;
     overflow-x:hidden;
-    padding-top:60px;
-    transition:0.5s;
-  }
+    text-align: center;
+    padding-top:30px;
+    
+}
   
-  .side-nav a{
-    padding:10px 10px 10px 30px;
+.side-nav a{
     text-decoration:none;
     font-size:22px;
-    color:#ccc;
+    color: $grey;
     display:block;
-    transition:0.3s;
-  }
+}
   
-  .side-nav a:hover{
-    color:#fff;
-  }
-  
-  .side-nav .btn-close{
-    position:absolute;
-    top:0;
-    right:22px;
-    font-size:36px;
-    margin-left:50px;
-  }
-  
-@media (min-width: 700px){
-    #scale{
-        transition:margin-left 0.5s;
-        padding:20px;
-        overflow:hidden;
+.side-nav a:hover{
+    color: $white;
+}
+
+.sidebar {
+    &__search{
+        &__input{
+            width: 60%;
+            height: 30px;
+            margin-right: 0;
+            background: $white;
+            border: 0;
+            border-radius: 3px;
+            padding-left: 10px;
+            // outline-color: $grey;
+            // border-top-left-radius: 50px;
+            // border-bottom-left-radius: 50px;
+            
+        }
+        &__button{
+            width: 40px;
+            height: 30px;
+            margin-left: 0;
+            background: $brown;
+            border: 0;
+            color: lighten($orange, 20%);
+            border-radius: 3px;
+        }
+    } 
+}
+    
+@media (min-width: 720px){
+    // #scale{
+    //     transition:margin-left 0.5s;
+    //     padding:20px;
+    //     overflow:hidden;
+    // }
+    .side-nav{
+        background: darken($black, 9%);
+        opacity: 1;
+        transition:0.5s;
+        text-align: left;
+        
+    }
+    .side-nav a{
+        color: $grey;
+        padding-left: 30px;
+    }
+
+    .sidebar {
+        &__search{
+            display: none;
+        } 
+    }
+}
+
+@media (min-width: 1020px){
+    .side-nav{
+        &__mobile-links{
+            display: none;
+        }
     }
 }
 
 
-
-
+@media (max-width: 720px){
+    .side-nav{
+        &__mobile-links{
+            padding-top: 30px;
+        }
+    }
+}
 
 
 /*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
@@ -173,14 +283,10 @@ footer {
 
 .footer-links{
     color: #fff;
+    text-decoration:none;
 }
 
 .footer-links:hover {
     color: $orange;
 }
-
-
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RESPONSIVE @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
