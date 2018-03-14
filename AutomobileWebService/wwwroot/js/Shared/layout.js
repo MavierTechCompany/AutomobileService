@@ -50,3 +50,8 @@ function SlideMenu(){
         //document.getElementById('scale').style.marginLeft = '0';
     }
 }
+
+function pageMenu(){
+    document.getElementById('hamburger--open').id="hamburger--close"
+    document.getElementById('side-menu').style.width = '0';
+}
