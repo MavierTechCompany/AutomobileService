@@ -26,17 +26,21 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
         public async Task CreateAsync(Brand brand)
         {
-
+            await _context.Brands.AddAsync(brand);
+            await _context.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(Brand brand)
         {
-
+            await Task.FromResult(_context.Brands.Update(brand));
+            await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(Brand brand)
         {
-
+            brand.Delete();
+            await Task.FromResult(_context.Brands.Update(brand));
+            await _context.SaveChangesAsync();
         }
     }
 }
