@@ -17,6 +17,13 @@ namespace AutomobileWebService.Business_Logic.Repositories
             _context = context;
         }
 
+        public async Task<Car> GetAsync(int id)
+            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.Id == id));
+
+        public async Task<Car> GetAsync(string brandName, string model, int generation)
+            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.BrandName.ToLowerInvariant() == brandName.ToLowerInvariant() &&
+            x.Model.ToLowerInvariant() == model.ToLowerInvariant() && x.Generation == generation));
+
         public async Task<IEnumerable<Car>> BrowseAsync(string brand = null)
         {
             var cars = _context.Cars.AsEnumerable();
@@ -27,11 +34,6 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
             return await Task.FromResult(cars);
         }
-
-		internal static Task<Comment> GetAsync(string commentText)
-		{
-			throw new NotImplementedException();
-		}
 
 		public async Task<IEnumerable<Car>> BrowseAsync(int? horsepower = null)
         {
@@ -60,13 +62,6 @@ namespace AutomobileWebService.Business_Logic.Repositories
             await _context.Cars.AddAsync(car);
             await _context.SaveChangesAsync();
         }
-
-        public async Task<Car> GetAsync(int id)
-            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.Id == id));
-
-        public async Task<Car> GetAsync(string brandName, string model, int generation)
-            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.BrandName.ToLowerInvariant() == brandName.ToLowerInvariant() &&
-            x.Model.ToLowerInvariant() == model.ToLowerInvariant() && x.Generation == generation));
 
         public async Task UpdateAsync(Car car)
         {

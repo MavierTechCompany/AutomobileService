@@ -49,9 +49,10 @@ namespace AutomobileWebService
 
             #region Repositories
 
-            services.AddScoped<ICarRepository, CarRepository>();
-            services.AddScoped<ICompanyRepository, CompanyRepository>();
+            services.AddScoped<ICarRepository, CarRepository>();                        
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<ICompanyRepository, CompanyRepository>();            
             services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
 
