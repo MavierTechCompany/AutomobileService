@@ -41,20 +41,39 @@
                     <a>Projekty</a>
                     <a>Baza wiedzy</a>
                 </div>
-                <div class="navbar__user-menu">
-                    <p class="navbar__user-menu__text">Moje konto</p>
-                    <button class="navbar__user-menu__button">
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
+                <div class="navbar__user-menu" id="dropdown--close">
+                    <div class="navbar__user-menu__container" onclick="dropdownMenu()">
+                        <p class="navbar__user-menu__container__text" >Moje konto</p>
+                        <i class="fas fa-chevron-down navbar__user-menu__container__button"></i>
+                    </div>
+                    <div class="dropdown__content" id="dropdown__content--close">
+                        <div class="dropdown__content__input">
+                            <input type="email" class="input--white" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
+                            <input type="password" class="input--white" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
+                        </div>
+                        <div class="dropdown__content__check">
+                            <label class="">
+                                <input type="checkbox" class="form-check-input">
+                                Zapamiętaj mnie
+                            </label>
+                        </div>
+                        <div class="dropdown__content__button">
+                            <button type="submit" class="button button--white">Zaloguj</button>
+                        </div>
+                        <div class="dropdown__content__links">
+                            <a class="" href="@Url.Action("registration","Home")">Zarejestruj się</a>
+                            <a class="" href="#">Zapomniałeś hasła?</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <div id="side-menu" class="side-nav">
-                <div class="sidebar__search">
-                    <input class="sidebar__search__input" placeholder="Szukaj">
-                    <button class="sidebar__search__button"><i class="fas fa-search"></i></button>
+                <div class="side-nav__search">
+                    <input class="side-nav__search__input" placeholder="Szukaj">
+                    <button class="side-nav__search__button"><i class="fas fa-search"></i></button>
                 </div>
             <div class="side-nav__mobile-links">
                 <a href="#">Projekty</a>
@@ -64,7 +83,7 @@
             <a href="@Url.Action("regulations","Home")">Regulamin</a>
             <a href="#">Kontakt</a>
         </div>
-        <div class="page-content" id="scale" onclick="pageMenu()">
+        <div class="page-content" id="scale" onclick="elementClose()">
             @RenderBody()
         </div>
     </main>

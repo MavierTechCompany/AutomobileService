@@ -21,13 +21,21 @@ function stickyNavigation() {
 window.addEventListener('scroll', stickyNavigation);
 
 
+//dropdown
+
+function dropdownMenu() {
+    if(document.getElementById('dropdown--close')){
+      document.getElementById('dropdown--close').id="dropdown--open"
+      document.getElementById('dropdown__content--close').id="dropdown__content--open"
+    }
+    else if(document.getElementById('dropdown--open')){
+        document.getElementById('dropdown--open').id="dropdown--close"
+        document.getElementById('dropdown__content--open').id="dropdown__content--close"
+    }
+}
+
 
 //sidebar
-
-
-
-
-
 
 function SlideMenu(){
     if(document.getElementById('hamburger--close')){
@@ -51,7 +59,11 @@ function SlideMenu(){
     }
 }
 
-function pageMenu(){
+
+function elementClose(){
     document.getElementById('hamburger--open').id="hamburger--close"
     document.getElementById('side-menu').style.width = '0';
+
+    document.getElementById('dropdown--open').id="dropdown--close"
+    document.getElementById('dropdown__content--open').id="dropdown__content--close"
 }
