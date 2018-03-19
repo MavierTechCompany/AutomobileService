@@ -19,7 +19,7 @@
     <header>
         <nav id="navigation">
             <div class="navbar">
-                <div class="navbar__hamburger" id="hamburger--close">
+                <div class="navbar__hamburger" id="hamburger--closed">
                     <span class="open-slide">
                     <a href="#" onclick="SlideMenu()">
                         <svg width="30" height="26">
@@ -38,13 +38,14 @@
                     <button class="navbar__search__button"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="navbar__links">
-                    <a>Projekty</a>
-                    <a>Baza wiedzy</a>
+                    <a href="#">Projekty</a>
+                    <a href="#">Baza wiedzy</a>
                 </div>
                 <div class="navbar__user-menu" id="dropdown--close">
                     <div class="navbar__user-menu__container" onclick="dropdownMenu()">
                         <p class="navbar__user-menu__container__text" >Moje konto</p>
                         <i class="fas fa-chevron-down navbar__user-menu__container__button"></i>
+                        <!-- <i class="fas fa-user navbar__user-menu__container__button"></i> -->
                     </div>
                     <div class="dropdown__content" id="dropdown__content--close">
                         <div class="dropdown__content__input">
@@ -57,8 +58,11 @@
                                 Zapamiętaj mnie
                             </label>
                         </div>
-                        <div class="dropdown__content__button">
-                            <button type="submit" class="button button--white">Zaloguj</button>
+                        <div class="dropdown__content__login">
+                            <button type="submit" class="button button--white dropdown__content__login__button">
+                                <!-- <p>Zaloguj</p><img src="~/images/icons/key.svg"> -->
+                                Zaloguj
+                            </button>
                         </div>
                         <div class="dropdown__content__links">
                             <a class="" href="@Url.Action("registration","Home")">Zarejestruj się</a>
@@ -82,8 +86,11 @@
             <a href="#">O nas</a>
             <a href="@Url.Action("regulations","Home")">Regulamin</a>
             <a href="#">Kontakt</a>
+            <button type="submit" class="button button--white dropdown__content__login__button">
+                Zaloguj
+            </button>
         </div>
-        <div class="page-content" id="scale" onclick="elementClose()">
+        <div class="page-content" onclick="elementClose()">
             @RenderBody()
         </div>
     </main>
