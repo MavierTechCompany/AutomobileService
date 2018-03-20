@@ -18,15 +18,19 @@ namespace AutomobileWebService.Business_Logic.Repositories
         }
 
         public async Task<Car> GetAsync(int id)
-            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.Id == id));
+            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.Id == id &&
+                x.Deleted == false));
 
         public async Task<Car> GetAsync(string brandName, string model, int generation)
-            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.BrandName.ToLowerInvariant() == brandName.ToLowerInvariant() &&
-            x.Model.ToLowerInvariant() == model.ToLowerInvariant() && x.Generation == generation));
+            => await Task.FromResult(_context.Cars.SingleOrDefault(x =>
+            x.BrandName.ToLowerInvariant() == brandName.ToLowerInvariant() &&
+            x.Model.ToLowerInvariant() == model.ToLowerInvariant() &&
+            x.Generation == generation && x.Deleted == false));
 
         public async Task<IQueryable<Car>> BrowseAsync(string brand = null)
         {
-            var cars = _context.Cars.AsQueryable();
+            var cars = _context.Cars.Where(x => x.Deleted == false).AsQueryable();
+
             if (!string.IsNullOrWhiteSpace(brand))
             {
                 cars = cars.Where(x => x.BrandName.ToLowerInvariant().
@@ -38,7 +42,7 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
 		public async Task<IQueryable<Car>> BrowseAsync(int? horsepower = null)
         {
-            var cars = _context.Cars.AsQueryable();
+            var cars = _context.Cars.Where(x => x.Deleted == false).AsQueryable();
             if (horsepower != null)
             {
                 cars = cars.Where(x => x.Horsepower == horsepower).AsQueryable();
@@ -49,7 +53,7 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
         public async Task<IQueryable<Car>> BrowseAsync(DateTime? productionDate = null)
         {
-            var cars = _context.Cars.AsQueryable();
+            var cars = _context.Cars.Where(x => x.Deleted == false).AsQueryable();
             if (productionDate != null)
             {
                 cars = cars.Where(x => x.ProdutionDate == productionDate);

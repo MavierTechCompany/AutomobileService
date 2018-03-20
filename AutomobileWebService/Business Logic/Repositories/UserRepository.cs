@@ -22,12 +22,12 @@ namespace AutomobileWebService.Business_Logic.Repositories
                 x.Deleted == false));
 
         public async Task<User> GetAsync(string login)
-            => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Login.
-                ToLowerInvariant() == login.ToLowerInvariant() && x.Deleted == false));
+            => await Task.FromResult(_context.Users.SingleOrDefault(x =>
+            x.Login.ToLowerInvariant() == login.ToLowerInvariant() && x.Deleted == false));
 
         public async Task<User> GetByEmailAsync(string email)
-            => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Email.
-                ToLowerInvariant() == email.ToLowerInvariant() && x.Deleted == false));
+            => await Task.FromResult(_context.Users.SingleOrDefault(x =>
+            x.Email.ToLowerInvariant() == email.ToLowerInvariant() && x.Deleted == false));
 
         public async Task<IQueryable<User>> BrowseAsync(string login = null)
         {

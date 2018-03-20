@@ -22,12 +22,13 @@ namespace AutomobileWebService.Business_Logic.Repositories
                 x.Deleted == false));
 
         public async Task<Company> GetAsync(string name)
-            => await Task.FromResult(_context.Companies.SingleOrDefault(x => x.Name.
-                ToLowerInvariant() == name.ToLowerInvariant() && x.Deleted == false));
+            => await Task.FromResult(_context.Companies.SingleOrDefault(x =>
+            x.Name.ToLowerInvariant() == name.ToLowerInvariant() && x.Deleted == false));
 
         public async Task<Company> GetByPhoneNumberAsync(string phoneNumber)
-            => await Task.FromResult(_context.Companies.SingleOrDefault(x => x.Phone.
-                ToLowerInvariant() == phoneNumber.ToLowerInvariant() && x.Deleted == false));
+            => await Task.FromResult(_context.Companies.SingleOrDefault(x =>
+            x.Phone.ToLowerInvariant() == phoneNumber.ToLowerInvariant() &&
+            x.Deleted == false));
 
         public async Task<IQueryable<Company>> BrowseAsync(string name = null)
         {

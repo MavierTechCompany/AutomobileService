@@ -18,15 +18,17 @@ namespace AutomobileWebService.Business_Logic.Repositories
         }
 
         public async Task<Project> GetAsync(int id)
-            => await Task.FromResult(_context.Projects.SingleOrDefault(x => x.Id == id));
+            => await Task.FromResult(_context.Projects.SingleOrDefault(x =>
+            x.Id == id && x.Deleted == false));
 
         public async Task<Project> GetAsync(string projectName)
-            => await Task.FromResult(_context.Projects.SingleOrDefault(x => x.ProjectName.
-                ToLowerInvariant() == projectName.ToLowerInvariant()));
+            => await Task.FromResult(_context.Projects.SingleOrDefault(x =>
+            x.ProjectName.ToLowerInvariant() == projectName.ToLowerInvariant() &&
+            x.Deleted == false));
 
         public async Task<IQueryable<Project>> BrowseAsync(string projectName = null)
         {
-            var projects = _context.Projects.AsQueryable();
+            var projects = _context.Projects.Where(x => x.Deleted == false).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(projectName))
             {
@@ -39,7 +41,7 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
         public async Task<IQueryable<Project>> BrowseAsync(int horsepower)
         {
-            var projects = _context.Projects.AsQueryable();
+            var projects = _context.Projects.Where(x => x.Deleted == false).AsQueryable();
             if (horsepower > 0)
             {
                 projects = projects.Where(x => x.Horsepower == horsepower);

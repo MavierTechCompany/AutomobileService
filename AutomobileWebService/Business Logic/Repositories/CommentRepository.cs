@@ -26,8 +26,8 @@ namespace AutomobileWebService.Business_Logic.Repositories
                 projectId && x.Deleted == false).AsQueryable());
 
         public async Task<IQueryable<Comment>> GetAllByCommenterAsync(int commenterid)
-               => await Task.FromResult(_context.Comments.Where(x => x.CommenterId ==
-                commenterid && x.Deleted == false).AsQueryable());
+               => await Task.FromResult(_context.Comments.Where(x =>
+               x.CommenterId == commenterid && x.Deleted == false).AsQueryable());
 
         public async Task CreateAsync(Comment comment)
         {
