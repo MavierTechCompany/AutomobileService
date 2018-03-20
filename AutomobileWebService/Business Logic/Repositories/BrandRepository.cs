@@ -20,9 +20,22 @@ namespace AutomobileWebService.Business_Logic.Repositories
         public async Task<Brand> GetAsync(int id)
             => await Task.FromResult(_context.Brands.SingleOrDefault(x => x.Id == id));
 
-        public async Task<Brand> GetAsync(string name)
+        public async Task<Brand> GetAsync(string name = null)
             => await Task.FromResult(_context.Brands.SingleOrDefault(x =>
             x.Name.ToLowerInvariant() == name.ToLowerInvariant()));
+
+        public async Task<IQueryable<Brand>> BrowseAsync(string name = null)
+        {
+            var brands = _context.Brands.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                brands = brands.Where(x => x.Name.ToLowerInvariant().
+                    Contains(name.ToLowerInvariant()));
+            }
+
+            return await Task.FromResult(brands);
+        }
 
         public async Task CreateAsync(Brand brand)
         {

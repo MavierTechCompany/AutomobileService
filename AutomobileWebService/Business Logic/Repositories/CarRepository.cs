@@ -24,31 +24,32 @@ namespace AutomobileWebService.Business_Logic.Repositories
             => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.BrandName.ToLowerInvariant() == brandName.ToLowerInvariant() &&
             x.Model.ToLowerInvariant() == model.ToLowerInvariant() && x.Generation == generation));
 
-        public async Task<IEnumerable<Car>> BrowseAsync(string brand = null)
+        public async Task<IQueryable<Car>> BrowseAsync(string brand = null)
         {
-            var cars = _context.Cars.AsEnumerable();
+            var cars = _context.Cars.AsQueryable();
             if (!string.IsNullOrWhiteSpace(brand))
             {
-                cars = cars.Where(x => x.BrandName.ToLowerInvariant().Contains(brand.ToLowerInvariant())).AsEnumerable();
+                cars = cars.Where(x => x.BrandName.ToLowerInvariant().
+                    Contains(brand.ToLowerInvariant()));
             }
 
             return await Task.FromResult(cars);
         }
 
-		public async Task<IEnumerable<Car>> BrowseAsync(int? horsepower = null)
+		public async Task<IQueryable<Car>> BrowseAsync(int? horsepower = null)
         {
-            var cars = _context.Cars.AsEnumerable();
+            var cars = _context.Cars.AsQueryable();
             if (horsepower != null)
             {
-                cars = cars.Where(x => x.Horsepower == horsepower).AsEnumerable();
+                cars = cars.Where(x => x.Horsepower == horsepower).AsQueryable();
             }
 
             return await Task.FromResult(cars);
         }
 
-        public async Task<IEnumerable<Car>> BrowseAsync(DateTime? productionDate = null)
+        public async Task<IQueryable<Car>> BrowseAsync(DateTime? productionDate = null)
         {
-            var cars = _context.Cars.AsEnumerable();
+            var cars = _context.Cars.AsQueryable();
             if (productionDate != null)
             {
                 cars = cars.Where(x => x.ProdutionDate == productionDate);

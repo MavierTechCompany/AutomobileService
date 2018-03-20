@@ -18,21 +18,25 @@ namespace AutomobileWebService.Business_Logic.Repositories
         }
 
         public async Task<User> GetAsync(int id)
-               => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Id == id && x.Deleted == false));
+               => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Id == id &&
+                x.Deleted == false));
 
         public async Task<User> GetAsync(string login)
-            => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Login.ToLowerInvariant() == login.ToLowerInvariant() && x.Deleted == false));
+            => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Login.
+                ToLowerInvariant() == login.ToLowerInvariant() && x.Deleted == false));
 
         public async Task<User> GetByEmailAsync(string email)
-            => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Email.ToLowerInvariant() == email.ToLowerInvariant() && x.Deleted == false));
+            => await Task.FromResult(_context.Users.SingleOrDefault(x => x.Email.
+                ToLowerInvariant() == email.ToLowerInvariant() && x.Deleted == false));
 
-        public async Task<IEnumerable<User>> BrowseAsync(string login = null)
+        public async Task<IQueryable<User>> BrowseAsync(string login = null)
         {
-            var users = _context.Users.Where(x => x.Deleted == false).AsEnumerable();
+            var users = _context.Users.Where(x => x.Deleted == false).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(login))
             {
-                users = users.Where(x => x.Login.ToLowerInvariant().Contains(login.ToLowerInvariant()));
+                users = users.Where(x => x.Login.ToLowerInvariant().
+                    Contains(login.ToLowerInvariant()));
             }
 
             return await Task.FromResult(users);

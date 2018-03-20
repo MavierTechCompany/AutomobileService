@@ -10,8 +10,8 @@ namespace AutomobileWebService.Business_Logic.Repositories.Interfaces
     {
         Task<Project> GetAsync(int id);
         Task<Project> GetAsync(string projectName);
-        Task<IEnumerable<Project>> BrowseAsync(string projectName = null);
-        Task<IEnumerable<Project>> BrowseAsync(int horsepower);
+        Task<IQueryable<Project>> BrowseAsync(string projectName = null);
+        Task<IQueryable<Project>> BrowseAsync(int horsepower);
         Task CreateAsync(Project project);
         Task UpdateAsync(Project project);
         Task DeleteAsync(Project project);

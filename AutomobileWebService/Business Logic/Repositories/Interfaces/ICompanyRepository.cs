@@ -11,7 +11,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Interfaces
         Task<Company> GetAsync(int id);
         Task<Company> GetAsync(string name);
         Task<Company> GetByPhoneNumberAsync(string phoneNumber);
-        Task<IEnumerable<Company>> BrowseAsync(string name = null);
+        Task<IQueryable<Company>> BrowseAsync(string name = null);
         Task CreateAsync(Company company);
         Task UpdateAsync(Company company);
         Task DeleteAsync(Company company);

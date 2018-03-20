@@ -9,8 +9,8 @@ namespace AutomobileWebService.Business_Logic.Repositories.Interfaces
     public interface ICommentRepository
     {
 		Task<Comment> GetAsync(int id);
-		Task<IEnumerable<Comment>> GetAllByProjectAsync(int projectId);
-		Task<IEnumerable<Comment>> GetAllByCommenterAsync(int commenterId);
+		Task<IQueryable<Comment>> GetAllByProjectAsync(int projectId);
+		Task<IQueryable<Comment>> GetAllByCommenterAsync(int commenterId);
 		Task CreateAsync(Comment comment);
 		Task UpdateAsync(Comment comment);
 		Task DeleteAsync(Comment comment);	

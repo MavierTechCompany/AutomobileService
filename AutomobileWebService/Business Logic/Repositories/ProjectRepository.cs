@@ -21,26 +21,28 @@ namespace AutomobileWebService.Business_Logic.Repositories
             => await Task.FromResult(_context.Projects.SingleOrDefault(x => x.Id == id));
 
         public async Task<Project> GetAsync(string projectName)
-            => await Task.FromResult(_context.Projects.SingleOrDefault(x => x.ProjectName.ToLowerInvariant() == projectName.ToLowerInvariant()));
+            => await Task.FromResult(_context.Projects.SingleOrDefault(x => x.ProjectName.
+                ToLowerInvariant() == projectName.ToLowerInvariant()));
 
-        public async Task<IEnumerable<Project>> BrowseAsync(string projectName = null)
+        public async Task<IQueryable<Project>> BrowseAsync(string projectName = null)
         {
-            var projects = _context.Projects.AsEnumerable();
+            var projects = _context.Projects.AsQueryable();
 
-            if (projectName != null)
+            if (!string.IsNullOrWhiteSpace(projectName))
             {
-                projects = projects.Where(x => x.ProjectName.ToLowerInvariant().Contains(projectName.ToLowerInvariant()));
+                projects = projects.Where(x => x.ProjectName.ToLowerInvariant().
+                    Contains(projectName.ToLowerInvariant()));
             }
 
             return await Task.FromResult(projects);
         }
 
-        public async Task<IEnumerable<Project>> BrowseAsync(int horsepower)
+        public async Task<IQueryable<Project>> BrowseAsync(int horsepower)
         {
-            var projects = _context.Projects.AsEnumerable();
+            var projects = _context.Projects.AsQueryable();
             if (horsepower > 0)
             {
-                projects = projects.Where(x => x.Horsepower == horsepower).AsEnumerable();
+                projects = projects.Where(x => x.Horsepower == horsepower);
             }
 
             return await Task.FromResult(projects);
@@ -62,7 +64,7 @@ namespace AutomobileWebService.Business_Logic.Repositories
         {
             project.Delete();
             await Task.FromResult(_context.Projects.Update(project));
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();  
         }
     }
 }
