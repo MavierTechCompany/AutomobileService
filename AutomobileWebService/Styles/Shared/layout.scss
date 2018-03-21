@@ -245,9 +245,9 @@ nav{
 
 }
 
-#dropdown__content--close{
-  display: none;
-}
+// #dropdown__content--close{
+//   display: none;
+// }
 
 /*----------------- SCROLL -----------------------------*/
 
@@ -271,8 +271,8 @@ nav{
     z-index:1;
     top:56px;
     left:0;
-    background: linear-gradient(to right, darken($black, 5%), $black);
-    opacity:0.95;
+    background: lighten($black, 5%);
+    opacity:0.9;
     overflow-x:hidden;
     text-align: center;
     padding-top:30px;

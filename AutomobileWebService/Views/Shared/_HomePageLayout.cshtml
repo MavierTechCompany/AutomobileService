@@ -21,7 +21,7 @@
             <div class="navbar">
                 <div class="navbar__hamburger" id="hamburger--closed">
                     <span class="open-slide">
-                    <a href="#" onclick="SlideMenu()">
+                    <a href="#" id="hamburger">
                         <svg width="30" height="26">
                             <path d="M0,5 30,5" stroke="#af4339" stroke-width="5"/>
                             <path d="M0,14 30,14" stroke="#af4339" stroke-width="5"/>
@@ -41,13 +41,13 @@
                     <a href="#">Projekty</a>
                     <a href="#">Baza wiedzy</a>
                 </div>
-                <div class="navbar__user-menu" id="dropdown--close">
-                    <div class="navbar__user-menu__container" onclick="dropdownMenu()">
+                <div class="navbar__user-menu" id="dropdown--closed">
+                    <div class="navbar__user-menu__container"  id="navbar__user-menu__container">
                         <p class="navbar__user-menu__container__text" >Moje konto</p>
                         <i class="fas fa-chevron-down navbar__user-menu__container__button"></i>
                         <!-- <i class="fas fa-user navbar__user-menu__container__button"></i> -->
                     </div>
-                    <div class="dropdown__content" id="dropdown__content--close">
+                    <div class="dropdown__content" id="dropdown__content" style="display: none">
                         <div class="dropdown__content__input">
                             <input type="email" class="input--white" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
                             <input type="password" class="input--white" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
@@ -90,7 +90,7 @@
                 Zaloguj
             </button>
         </div>
-        <div class="page-content" onclick="elementClose()">
+        <div class="page-content" id="page-content">
             @RenderBody()
         </div>
     </main>
