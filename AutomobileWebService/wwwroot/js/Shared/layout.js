@@ -23,6 +23,7 @@ function stickyNavigation() {
 var userButton = document.getElementById('navbar__user-menu__container');
 var pageContent = document.getElementById('page-content');
 var pageCover = document.getElementById('page-cover');
+var navbar = document.getElementById('navigation');
 var hamburger = document.getElementById('hamburger');
 
 
