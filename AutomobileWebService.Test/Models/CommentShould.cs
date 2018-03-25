@@ -42,7 +42,7 @@ namespace AutomobileWebService.Test.Models
         public void DeleteItself()
         {
             //Arrange
-            var userMock = Mock.Of<User>(x => x.Id == 1);
+            var userMock = Mock.Of<User>(x => x.Id == 2);
             var projectMock = Mock.Of<Project>(x => x.Id == 1);
             var sut = new Comment("This is test comment!", userMock, projectMock);
 
