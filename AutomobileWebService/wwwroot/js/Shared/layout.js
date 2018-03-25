@@ -50,8 +50,12 @@ function dropdownMenu() {
 
 function dropdownMenuClose(){
     let dropdownOpened = document.querySelector('#dropdown--opened');
+    let arrowDown = document.querySelector('.fa-chevron-down');
+    let arrowUp = document.querySelector('.fa-chevron-up');
     document.querySelector('#dropdown__content').style.display = "none";
     dropdownOpened.id="dropdown--closed";
+    arrowUp.classList.remove("fa-chevron-up");
+    arrowUp.classList.add("fa-chevron-down");
 }
 
 //sidebar
