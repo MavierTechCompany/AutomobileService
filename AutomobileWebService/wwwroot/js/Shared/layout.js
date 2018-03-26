@@ -87,13 +87,23 @@ function sideMenu(){
     }
 }
 
-//esc
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
-        
+function hamburgerClose(){
+    let hamburgerOpened = document.querySelector('#hamburger--opened');
+    let sidebar = document.querySelector('#side-menu');
+    let pageCover = document.querySelector('#page-cover');
+
+    hamburgerOpened.id="hamburger--closed";
+    sidebar.style.width = '0';
+    pageCover.style.width = '0';
+    pageContent.style.cssText = null;
+}
+
+document.addEventListener('keydown', function(event) {
+    if (event.keyCode == 27) {
+        hamburgerClose();
     }
-};
+}, true);
+
 
 
 
