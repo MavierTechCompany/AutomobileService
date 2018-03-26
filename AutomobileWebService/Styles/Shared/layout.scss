@@ -152,7 +152,7 @@ nav{
 }
 
 
-@media (max-width: 720px){
+@media (max-width: 740px){
     .navbar{
         // width: 95%;
         &__brand{
@@ -162,20 +162,11 @@ nav{
             -webkit-transform: translateX(-50%);
             transform: translateX(-50%)
         }
-        &__links{
-            display: none;
-        }
-    }
-}
-
-@media (max-width: 740px){
-    .navbar{
         &__search{
             display: none;
         }
     }
 }
-
 
 @media (max-width: 880px){
     .navbar{
