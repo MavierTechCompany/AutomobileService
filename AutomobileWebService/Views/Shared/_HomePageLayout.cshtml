@@ -19,6 +19,19 @@
     <header>
         <nav id="navigation">
             <div id="page-cover"></div>
+            <div id="side-menu" class="side-nav">
+                    <div class="side-nav__search">
+                        <input class="side-nav__search__input" placeholder="Szukaj">
+                        <button class="side-nav__search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                <div class="side-nav__mobile-links">
+                    <a href="#">Projekty</a>
+                    <a href="#">Baza wiedzy</a>
+                </div>
+                <a href="#">O nas</a>
+                <a href="@Url.Action("regulations","Home")">Regulamin</a>
+                <a href="#">Kontakt</a>
+            </div>            
             <div class="navbar">
                 <div class="navbar__hamburger" id="hamburger--closed">
                     <span class="open-slide">
@@ -75,34 +88,20 @@
         </nav>
     </header>
     <main>
-        <!-- <div id="page-cover"></div> -->
-        <div id="side-menu" class="side-nav">
-                <div class="side-nav__search">
-                    <input class="side-nav__search__input" placeholder="Szukaj">
-                    <button class="side-nav__search__button"><i class="fas fa-search"></i></button>
-                </div>
-            <div class="side-nav__mobile-links">
-                <a href="#">Projekty</a>
-                <a href="#">Baza wiedzy</a>
-            </div>
-            <a href="#">O nas</a>
-            <a href="@Url.Action("regulations","Home")">Regulamin</a>
-            <a href="#">Kontakt</a>
-            <button type="submit" class="button button--white dropdown__content__login__button">
-                Zaloguj
-            </button>
-        </div>
         <div class="page-content" id="page-content">
             @RenderBody()
         </div>
     </main>
     <footer>
-        <p>&copy; 2018 - AutomobileService</p>
-        <div class="footer-texts">
-            <a class="footer-links footer-left-text" href="#">O nas</a>
-            <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
-            <a class="footer-links footer-right-text" href="#">Kontakt</a>
+        <div class="footer">
+            <p>&copy; 2018 - AutomobileService</p>
+            <div class="footer-texts">
+                <a class="footer-links footer-left-text" href="#">O nas</a>
+                <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
+                <a class="footer-links footer-right-text" href="#">Kontakt</a>
+            </div>
         </div>
+
     </footer>
     <!-- JQuery -->
     <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->

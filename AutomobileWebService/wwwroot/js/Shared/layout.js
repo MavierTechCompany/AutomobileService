@@ -32,6 +32,7 @@ function dropdownMenu() {
     let dropdownOpened = document.querySelector('#dropdown--opened');
     let arrowDown = document.querySelector('.fa-chevron-down');
     let arrowUp = document.querySelector('.fa-chevron-up');
+    let mobileWidth = window.matchMedia( "(max-width: 720px)" );
     if(dropdownClosed){
         document.querySelector("#dropdown__content").style.cssText = null;
         dropdownClosed.id="dropdown--opened";
@@ -85,6 +86,15 @@ function sideMenu(){
         pageContent.style.cssText = null;
     }
 }
+
+//esc
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        
+    }
+};
+
 
 
 window.addEventListener('scroll', stickyNavigation);
