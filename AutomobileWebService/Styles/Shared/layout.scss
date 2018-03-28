@@ -232,13 +232,6 @@ nav{
             p{
                 margin-right: 15px;
             }
-            img{
-                
-                margin: auto auto;
-                fill: $orange;
-                fill: currentColor;
-                height: 12px;
-            }
         }
     }
     &__links{
@@ -254,6 +247,46 @@ nav{
         }
     }
 
+}
+
+@media (max-width: 880px){
+    .dropdown__content {
+        left: 5%;
+        right: 5%;
+        margin-top: 20%;
+        position: absolute;
+        padding: 30px 20px 30px 20px;
+        &__input{
+            display: flex;
+            flex-direction: column;
+            input{
+                display: none
+            }
+        }
+        &__check{
+            display: none;
+        }
+        &__login{
+            margin-top: 10px;
+            text-align: center;
+            
+            
+            &__button{
+                display: flex;
+                flex-direction: row;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 1px 1px;
+                p{
+                    margin-right: 15px;
+                }
+            }
+        }
+        &__links{
+            display: none;
+        }
+    
+    }    
 }
 
 

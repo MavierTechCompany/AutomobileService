@@ -1,4 +1,13 @@
-﻿//navbar scroll
+﻿var userButton = document.querySelector('#navbar__user-menu__container');
+var pageContent = document.querySelector('#page-content');
+var pageCover = document.querySelector('#page-cover');
+var navbar = document.querySelector('#navigation');
+var hamburger = document.querySelector('#hamburger');
+
+
+
+
+//navbar scroll
 
 const nav = document.querySelector('#navigation');
 const navTop = nav.offsetTop;
@@ -20,11 +29,7 @@ function stickyNavigation() {
 
 //dropdown
 
-var userButton = document.querySelector('#navbar__user-menu__container');
-var pageContent = document.querySelector('#page-content');
-var pageCover = document.querySelector('#page-cover');
-var navbar = document.querySelector('#navigation');
-var hamburger = document.querySelector('#hamburger');
+
 
 
 function dropdownMenu() {
@@ -38,7 +43,7 @@ function dropdownMenu() {
         dropdownClosed.id="dropdown--opened";
         arrowDown.classList.remove("fa-chevron-down");
         arrowDown.classList.add("fa-chevron-up");
-        
+        hamburgerClose();
     }
     else if(dropdownOpened){
         document.querySelector('#dropdown__content').style.display = "none";
@@ -71,6 +76,7 @@ function sideMenu(){
 
     if (hamburgerClosed){
         hamburgerClosed.id="hamburger--opened";
+        // dropdownMenuClose();
         if (mobileWidth.matches) {
             sidebar.style.width = '100%';
         }
