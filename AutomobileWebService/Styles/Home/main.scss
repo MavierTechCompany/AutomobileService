@@ -1,4 +1,8 @@
+$orange: #ff8067;
+$brown: #af4339;
+$black: #373739;
 $grey: #ccc;
+$white: #fff;
 
 
 .wrapper {
@@ -8,25 +12,35 @@ $grey: #ccc;
 }
 
 .links {
-    color: #ff8067;
+    color: $orange;
+    &--white{
+        text-decoration:none;
+        color: $white;
+        &:hover {
+            color: $orange;
+        }
+
+    }
+    &:hover {
+        color: $orange;
+    }
 }
 
-.links:hover {
-    color: #ff8067;
-}
 
 .container--white {
     margin-top: 20px;
-    background-color: #fff;    
+    background-color: $white;    
     border-radius: 3px;
     padding: 30px
 }
 
 
 .input{
+    border-radius: 3px;
     &--white{
         border: 1px solid $grey;
-        border-radius: 3px;
+        background: $white;
+        
     }
 }
 
@@ -40,40 +54,39 @@ button:focus {
     border-radius: 50px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
+    &--orange {
+        font-size: 95%;
+        color: $white;
+        background-color: $orange;
+        border: 0px;
+        padding: 30px;
+        text-align: center;
+        &:hover {
+            background-color: darken($orange, 3%);
+            color: $white;
+        }
+    }
+    &--white {
+        color: $orange;
+        font-weight: 600;
+        background: $white;
+        border-color: $orange;
+        border-style: solid;
+        padding: 10px 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        &:hover {
+            background: $orange;
+            color: $white;
+        }   
+    }
 }
 
-.button--orange {
-    font-size: 95%;
-    color: #fff;
-    background-color: #e57263;
-    border: 0px;
-    padding: 30px;
-    text-align: center;
-}
 
-.button--orange:hover {
-    background-color: #ff8067;
-}
-
-.button--white {
-    color: #ff8067;
-    font-weight: 600;
-    background: #fff;
-    border-color: #ff8067;
-    border-style: solid;
-    padding: 10px 10px;
-    padding-left: 40px;
-    padding-right: 40px;   
-}
-
-.button--white:hover {
-    background: #ff8067;
-    color: #fff;
-}
 
 .headline {
     
-    color: #fff;
+    color: $white;
     font-size: 300%;
     text-align: center;
 }
@@ -116,10 +129,6 @@ button:focus {
     }
 
 }
-
-
-
-
 
 
 @media (min-width: 1500px) {

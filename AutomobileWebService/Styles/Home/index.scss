@@ -1,4 +1,6 @@
-﻿$black: #373739;
+﻿@import 'main';
+
+$black: #373739;
 $orange: #ff8067;
 
 .progress{
@@ -29,14 +31,6 @@ $orange: #ff8067;
             text-align: left;
             margin-left: 20%;
             margin-right: 20%;
-            a{
-                color: #fff;
-                text-decoration:none;
-            }
-            a:hover{
-                color: $orange;
-            }
-  
         }
     }    
     
