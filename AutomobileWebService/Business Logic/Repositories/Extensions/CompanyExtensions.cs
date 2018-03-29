@@ -46,7 +46,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             return await Task.FromResult(company);
         }
 
-        public static async Task<IEnumerable<Company>> BrowseOrFailAsync(this ICompanyRepository repository, string name = null)
+        public static async Task<IQueryable<Company>> BrowseOrFailAsync(this ICompanyRepository repository, string name = null)
         {
             var companies = await repository.BrowseAsync(name);
 

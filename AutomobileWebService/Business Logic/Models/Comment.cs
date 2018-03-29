@@ -23,8 +23,8 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Comment(string commentText, bool delete,
-            User user, Project project) : base()
+        public Comment(string commentText, User user,
+            Project project) : base()
         {
             CommenterId = user.Id;
             ProjectId = project.Id;

@@ -34,7 +34,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 			return await Task.FromResult(project);
 		}
 
-		public static async Task<IEnumerable<Project>> BrowseOrFailAsync(this IProjectRepository repository, string projectName = null)
+		public static async Task<IQueryable<Project>> BrowseOrFailAsync(this IProjectRepository repository, string projectName = null)
 		{
 			var projects = await repository.BrowseAsync(projectName);
 
@@ -46,7 +46,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 			return await Task.FromResult(projects);
 		}
 
-		public static async Task<IEnumerable<Project>> BrowseOrFailAsync(this IProjectRepository repository, int horsepower)
+		public static async Task<IQueryable<Project>> BrowseOrFailAsync(this IProjectRepository repository, int horsepower)
 		{
 			var projects = await repository.BrowseAsync(horsepower);
 
