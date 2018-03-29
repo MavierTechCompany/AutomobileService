@@ -46,7 +46,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             return await Task.FromResult(user);
         }
 
-        public static async Task<IEnumerable<User>> BrowseOrFailAsync(this IUserRepository repository, string login = null)
+        public static async Task<IQueryable<User>> BrowseOrFailAsync(this IUserRepository repository, string login = null)
         {
             var users = await repository.BrowseAsync(login);
 

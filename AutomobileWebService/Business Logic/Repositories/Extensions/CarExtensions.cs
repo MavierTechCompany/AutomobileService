@@ -34,7 +34,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             return await Task.FromResult(car);
         }
 
-        public static async Task<IEnumerable<Car>> BrowseOrFailAsync(this ICarRepository repository, string brand = null)
+        public static async Task<IQueryable<Car>> BrowseOrFailAsync(this ICarRepository repository, string brand = null)
         {
             var cars = await repository.BrowseAsync(brand);
 
@@ -46,7 +46,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             return await Task.FromResult(cars);
         }
 
-        public static async Task<IEnumerable<Car>> BrowseOrFailAsync(this ICarRepository repository, int? horsepower = null)
+        public static async Task<IQueryable<Car>> BrowseOrFailAsync(this ICarRepository repository, int? horsepower = null)
         {
             var cars = await repository.BrowseAsync(horsepower);
 
@@ -58,7 +58,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             return await Task.FromResult(cars);
         }
 
-        public static async Task<IEnumerable<Car>> BrowseOrFailAsync(this ICarRepository repository, DateTime? productionDate = null)
+        public static async Task<IQueryable<Car>> BrowseOrFailAsync(this ICarRepository repository, DateTime? productionDate = null)
         {
             var cars = await repository.BrowseAsync(productionDate);
 

@@ -22,7 +22,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 			return await Task.FromResult(comment);
 		}
 
-		public static async Task<IEnumerable<Comment>> GeAllByProjectOrFailAsync(this ICommentRepository repository, int projectId)
+		public static async Task<IQueryable<Comment>> GeAllByProjectOrFailAsync(this ICommentRepository repository, int projectId)
 		{
 			var comment = await repository.GetAllByProjectAsync(projectId);
 
@@ -34,7 +34,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 			return await Task.FromResult(comment);
 		}
 
-		public static async Task<IEnumerable<Comment>> GetAllByCommenterOrFailAsync(this ICommentRepository repository, int commenterId)
+		public static async Task<IQueryable<Comment>> GetAllByCommenterOrFailAsync(this ICommentRepository repository, int commenterId)
 		{
 			var comment = await repository.GetAllByCommenterAsync(commenterId);
 
