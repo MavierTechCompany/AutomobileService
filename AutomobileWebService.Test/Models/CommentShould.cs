@@ -1,8 +1,8 @@
+using System;
 using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
 using AutomobileWebService.Business_Logic.Models;
 using AutomobileWebService.Test.CustomAttributes;
 using Moq;
-using System;
 using Xunit;
 
 namespace AutomobileWebService.Test.Models
@@ -50,7 +50,7 @@ namespace AutomobileWebService.Test.Models
             sut.Delete();
 
             //Assert
-            Assert.Equal(true, sut.Deleted);
+            Assert.True(sut.Deleted);
         }
     }
 }

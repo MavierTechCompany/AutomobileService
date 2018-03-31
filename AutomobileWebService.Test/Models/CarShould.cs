@@ -1,8 +1,8 @@
+using System;
 using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
 using AutomobileWebService.Business_Logic.Models;
 using AutomobileWebService.Test.CustomAttributes;
 using Moq;
-using System;
 using Xunit;
 
 namespace AutomobileWebService.Test.Models
@@ -68,6 +68,20 @@ namespace AutomobileWebService.Test.Models
 
             //Act and Assert
             Assert.Throws<ForbiddenValueException>(() => sut.Update(model, horsepower, generation, productionDate));
+        }
+
+        [Fact]
+        public void DeleteItself()
+        {
+            //Arrange
+            var brandMock = Mock.Of<Brand>(x => x.Id == 1 && x.Name == "Brand");
+            Car sut = new Car("Test", 90, 1, new DateTime(1950, 1, 1), brandMock);
+
+            //Act
+            sut.Delete();
+
+            //Assert
+            Assert.True(sut.Deleted);
         }
     }
 }
