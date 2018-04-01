@@ -1,8 +1,8 @@
+using System;
 using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
 using AutomobileWebService.Business_Logic.Models;
 using AutomobileWebService.Test.CustomAttributes;
 using Moq;
-using System;
 using Xunit;
 
 namespace AutomobileWebService.Test.Models
@@ -33,7 +33,7 @@ namespace AutomobileWebService.Test.Models
             Assert.Equal(zeroToHundreds, sut.ZeroToHundreds);
             Assert.Equal(engineModel, sut.EngineModel);
             Assert.Equal(hasTurbocharger, sut.HasSupercharger);
-            Assert.Equal(hasSupercharger, sut.HasSupercharger);        
+            Assert.Equal(hasSupercharger, sut.HasSupercharger);
         }
 
         [Theory]
@@ -46,6 +46,7 @@ namespace AutomobileWebService.Test.Models
             var carMock = Mock.Of<Car>(x => x.Id == 1);
             var userMock = Mock.Of<User>(x => x.Id == 1);
 
+            //Act and Assert
             Assert.Throws<ForbiddenValueException>(() => new Project(projectName, category,
                 horsepower, topSpeedInKilometers, topSpeedInMiles, zeroToHundreds,
                 engineModel, hasTurbocharger, hasSupercharger, carMock, userMock));
@@ -61,11 +62,11 @@ namespace AutomobileWebService.Test.Models
             var carMock = Mock.Of<Car>(x => x.Id == 1);
             var userMock = Mock.Of<User>(x => x.Id == 1);
             var sut = new Project("projectName", "category", 1, 1.0f, 1.0f, 1.0f,
-            "engineModel", false, false, carMock, userMock);
+                "engineModel", false, false, carMock, userMock);
 
             //Act
             sut.Update(projectName, category, horsepower, topSpeedInKilometers, topSpeedInMiles,
-            zeroToHundreds, engineModel, hasTurbocharger, hasSupercharger);
+                zeroToHundreds, engineModel, hasTurbocharger, hasSupercharger);
 
             //Assert
             Assert.Equal(projectName, sut.ProjectName);
@@ -76,7 +77,7 @@ namespace AutomobileWebService.Test.Models
             Assert.Equal(zeroToHundreds, sut.ZeroToHundreds);
             Assert.Equal(engineModel, sut.EngineModel);
             Assert.Equal(hasTurbocharger, sut.HasSupercharger);
-            Assert.Equal(hasSupercharger, sut.HasSupercharger);        
+            Assert.Equal(hasSupercharger, sut.HasSupercharger);
         }
 
         [Theory]
@@ -89,12 +90,12 @@ namespace AutomobileWebService.Test.Models
             var carMock = Mock.Of<Car>(x => x.Id == 1);
             var userMock = Mock.Of<User>(x => x.Id == 1);
             var sut = new Project("projectName", "category", 1, 1.0f, 1.0f, 1.0f,
-            "engineModel", false, false, carMock, userMock);
+                "engineModel", false, false, carMock, userMock);
 
-            //Act & Assert
+            //Act and Assert
             Assert.Throws<ForbiddenValueException>(() => sut.Update(projectName, category,
-            horsepower, topSpeedInKilometers, topSpeedInMiles, zeroToHundreds, engineModel,
-            hasTurbocharger, hasSupercharger));
+                horsepower, topSpeedInKilometers, topSpeedInMiles, zeroToHundreds, engineModel,
+                hasTurbocharger, hasSupercharger));
         }
 
         [Fact]
@@ -104,13 +105,13 @@ namespace AutomobileWebService.Test.Models
             var carMock = Mock.Of<Car>(x => x.Id == 1);
             var userMock = Mock.Of<User>(x => x.Id == 1);
             var sut = new Project("projectName", "category", 1, 1.0f, 1.0f, 1.0f,
-            "engineModel", false, false, carMock, userMock);
+                "engineModel", false, false, carMock, userMock);
 
             //Act
             sut.Delete();
 
             //Assert
-            Assert.Equal(true, sut.Deleted);
+            Assert.True(sut.Deleted);
         }
     }
 }

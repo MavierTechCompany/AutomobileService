@@ -1,9 +1,9 @@
-﻿using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
-using AutomobileWebService.Business_Logic.Models;
-using AutomobileWebService.Test.CustomAttributes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
+using AutomobileWebService.Business_Logic.Models;
+using AutomobileWebService.Test.CustomAttributes;
 using Xunit;
 
 namespace AutomobileWebService.Test.Models
@@ -56,6 +56,19 @@ namespace AutomobileWebService.Test.Models
 
             //Act and Assert
             Assert.Throws<ForbiddenValueException>(() => sut.Update(name, startDate, endDate));
+        }
+
+        [Fact]
+        public void DeleteItself()
+        {
+            //Arrange
+            Brand sut = new Brand("Brand", new DateTime(2000, 10, 5), null);
+
+            //Act
+            sut.Delete();
+
+            //Assert
+            Assert.True(sut.Deleted);
         }
     }
 }

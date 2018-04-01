@@ -1,11 +1,11 @@
-﻿using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
-using AutomobileWebService.Business_Logic.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
+using AutomobileWebService.Business_Logic.Models;
 
 namespace AutomobileWebService.Business_Logic.Models
 {
@@ -33,7 +33,7 @@ namespace AutomobileWebService.Business_Logic.Models
 
         #region Public
 
-        public void Update(string name, DateTime foundationDate, string phone)
+        public void Update(string name, string phone)
         {
             SetName(name);
             SetPhone(phone);
