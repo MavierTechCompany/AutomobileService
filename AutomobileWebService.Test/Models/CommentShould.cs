@@ -35,7 +35,8 @@ namespace AutomobileWebService.Test.Models
             var projectMock = Mock.Of<Project>(x => x.Id == 1);
 
             //Act and Assert
-            Assert.Throws<ForbiddenValueException>(() => new Comment(commentText, userMock, projectMock));
+            Assert.Throws<ForbiddenValueException>(() => new Comment(commentText, userMock,
+                projectMock));
         }
 
         [Fact]
