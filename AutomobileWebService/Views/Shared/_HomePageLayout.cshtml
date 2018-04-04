@@ -73,7 +73,6 @@
                         </div>
                         <div class="dropdown__content__login">
                             <button type="submit" class="button button--white dropdown__content__login__button">
-                                <!-- <p>Zaloguj</p><img src="~/images/icons/key.svg"> -->
                                 Zaloguj
                             </button>
                         </div>
@@ -81,6 +80,31 @@
                             <a class="" href="@Url.Action("registration","Home")">Zarejestruj się</a>
                             <a class="" href="#">Zapomniałeś hasła?</a>
                         </div>
+                    </div>
+                    <div class="dropdown__content-mobile" id="dropdown__content-mobile" style="display: none">
+                        <a href="#">
+                            <div class="dropdown__content-mobile__login border-button">
+                                <p class="">ZALOGUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-key fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="@Url.Action("registration","Home")">
+                            <div class="dropdown__content-mobile__register border-button">
+                                <p class="">ZAREJESTRUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- <div class="dropdown__content-mobile__register">
+                            <a class="" href="@Url.Action("registration","Home")">Zarejestruj</a>
+                        </div>                         -->
                     </div>
                 </div>
             </div>
