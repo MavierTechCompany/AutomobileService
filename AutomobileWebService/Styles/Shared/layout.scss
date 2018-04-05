@@ -66,7 +66,7 @@ nav{
             width: 350px;
             height: 30px;
             margin-right: 0;
-            background: lighten($orange, 10%);
+            background: lighten($orange, 20%);
             border: 0;
             border-radius: 3px;
             padding-left: 10px;    
@@ -75,9 +75,10 @@ nav{
             width: 40px;
             height: 32px;
             margin-left: 0;
-            background: $brown;
+            background: $purple;
             border: 0;
-            color: lighten($orange, 20%);
+            // color: lighten($orange, 20%);
+            color: $white;
             border-radius: 3px;
             cursor: pointer;
         }
@@ -116,7 +117,7 @@ nav{
                 margin-top: auto; 
                 margin-bottom: auto;
                 margin-left: 5px;
-                color: $brown;
+                color: $purple;
                 background: none;
                 border: 0;
             }
@@ -250,44 +251,6 @@ nav{
 }
 
 @media (max-width: 880px){
-    // .dropdown__content {
-    //     left: 5%;
-    //     right: 5%;
-    //     margin-top: 20%;
-    //     position: absolute;
-    //     padding: 30px 20px 30px 20px;
-    //     &__input{
-    //         display: flex;
-    //         flex-direction: column;
-    //         input{
-    //             display: none
-    //         }
-    //     }
-    //     &__check{
-    //         display: none;
-    //     }
-    //     &__login{
-    //         margin-top: 10px;
-    //         text-align: center;
-            
-            
-    //         &__button{
-    //             display: flex;
-    //             flex-direction: row;
-    //             margin-left: auto;
-    //             margin-right: auto;
-    //             padding: 1px 1px;
-    //             p{
-    //                 margin-right: 15px;
-    //             }
-    //         }
-    //     }
-    //     &__links{
-    //         display: none;
-    //     }
-    
-    // }
-    
     .dropdown__content-mobile {
         left: 5%;
         right: 5%;
@@ -398,7 +361,7 @@ nav{
             width: 40px;
             height: 36px;
             margin-left: 0;
-            background: $brown;
+            background: $purple;
             border: 0;
             color: lighten($orange, 20%);
             border-radius: 3px;
