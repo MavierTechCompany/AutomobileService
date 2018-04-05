@@ -1,16 +1,13 @@
 ﻿const userButton = document.querySelector('#navbar__user-menu__container');
 const pageContent = document.querySelector('#page-content');
 const pageCover = document.querySelector('#page-cover');
-const navbar = document.querySelector('#navigation');
 const hamburger = document.querySelector('#hamburger');
 const mobileWidth = window.matchMedia( "(max-width: 720px)" );
-const desktopWidth = window.matchMedia('(min-width: 721px)');
-
-
-//navbar scroll
+const sidebar = document.querySelector('#side-menu');
 
 const nav = document.querySelector('#navigation');
 const navTop = nav.offsetTop;
+
 
 function stickyNavigation() {
     console.log('navTop = ' + navTop);
@@ -28,13 +25,9 @@ function stickyNavigation() {
 }
 
 
-//dropdown
-
 function dropdownMenu() {
     let dropdownClosed = document.querySelector('#dropdown--closed');
     let dropdownOpened = document.querySelector('#dropdown--opened');
-    let arrowDown = document.querySelector('.fa-chevron-down');
-    let arrowUp = document.querySelector('.fa-chevron-up');
     
     if(dropdownClosed){
         dropdownMenuOpen();
@@ -46,9 +39,7 @@ function dropdownMenu() {
 
 function dropdownMenuOpen(){
     let dropdownClosed = document.querySelector('#dropdown--closed');
-    let dropdownOpened = document.querySelector('#dropdown--opened');
     let arrowDown = document.querySelector('.fa-chevron-down');
-    let arrowUp = document.querySelector('.fa-chevron-up');
 
     if (mobileWidth.matches) {
         document.querySelector("#dropdown__content-mobile").style.cssText = null;
@@ -68,7 +59,6 @@ function dropdownMenuOpen(){
 function dropdownMenuClose(){
     let hamburgerClosed = document.querySelector('#hamburger--closed');
     let dropdownOpened = document.querySelector('#dropdown--opened');
-    let arrowDown = document.querySelector('.fa-chevron-down');
     let arrowUp = document.querySelector('.fa-chevron-up');
 
 
@@ -87,13 +77,9 @@ function dropdownMenuClose(){
 }
 
 
-//sidebar
-
 function sideMenu(){
     let hamburgerClosed = document.querySelector('#hamburger--closed');
     let hamburgerOpened = document.querySelector('#hamburger--opened');
-    let sidebar = document.querySelector('#side-menu');
-    // let hamburgerStatus = 'active';
 
     if (hamburgerClosed){
         sideMenuOpen();
@@ -105,8 +91,6 @@ function sideMenu(){
 
 function sideMenuOpen(){
     let hamburgerClosed = document.querySelector('#hamburger--closed');
-    let hamburgerOpened = document.querySelector('#hamburger--opened');
-    let sidebar = document.querySelector('#side-menu');
 
     hamburgerClosed.id="hamburger--opened";
     if (mobileWidth.matches) {
@@ -119,11 +103,9 @@ function sideMenuOpen(){
     dropdownMenuClose();
 }
 
-
 function sideMenuClose(){
     let dropdownClosed = document.querySelector('#dropdown--closed');
     let hamburgerOpened = document.querySelector('#hamburger--opened');
-    let sidebar = document.querySelector('#side-menu');
 
     hamburgerOpened.id="hamburger--closed";
     sidebar.style.width = '0';
@@ -134,9 +116,10 @@ function sideMenuClose(){
 }
 
 
-document.addEventListener('keydown', function(event) { if (event.keyCode == 27) sideMenuClose(); }, true);
+
 window.addEventListener('scroll', stickyNavigation);
-hamburger.onclick = sideMenu;
-pageContent.onclick = dropdownMenuClose;
-pageCover.onclick = sideMenuClose;
 userButton.onclick = dropdownMenu;
+pageContent.onclick = dropdownMenuClose;
+hamburger.onclick = sideMenu;
+pageCover.onclick = sideMenuClose;
+document.addEventListener('keydown', function(event) { if (event.keyCode == 27) sideMenuClose(); }, true);
