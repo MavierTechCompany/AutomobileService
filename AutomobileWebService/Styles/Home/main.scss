@@ -54,8 +54,6 @@ button:focus {
 
 .button {
     border-radius: 50px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
     &--orange {
         font-size: 95%;
         color: $white;
@@ -138,6 +136,6 @@ button:focus {
         max-width: 80%;
     }
     .wrapper--small {
-        max-width: 600px !important;
+        max-width: 600px;
     }
 }
