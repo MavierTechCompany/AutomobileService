@@ -4,6 +4,7 @@ const pageCover = document.querySelector('#page-cover');
 const navbar = document.querySelector('#navigation');
 const hamburger = document.querySelector('#hamburger');
 const mobileWidth = window.matchMedia( "(max-width: 720px)" );
+const desktopWidth = window.matchMedia('(min-width: 721px)');
 
 
 //navbar scroll
@@ -126,7 +127,7 @@ function sideMenuClose(){
 
     hamburgerOpened.id="hamburger--closed";
     sidebar.style.width = '0';
-    if(dropdownClosed){
+    if(dropdownClosed || !mobileWidth.matches){
         pageCover.style.width = '0';
     }
     pageContent.style.cssText = null;
@@ -137,5 +138,5 @@ document.addEventListener('keydown', function(event) { if (event.keyCode == 27) 
 window.addEventListener('scroll', stickyNavigation);
 hamburger.onclick = sideMenu;
 pageContent.onclick = dropdownMenuClose;
-pageCover.onclick = sideMenu;
+pageCover.onclick = sideMenuClose;
 userButton.onclick = dropdownMenu;
