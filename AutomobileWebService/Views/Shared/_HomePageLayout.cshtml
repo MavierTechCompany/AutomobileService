@@ -4,32 +4,35 @@
     <title>AutomobileService</title>
     <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-    <!-- Bootstrap CSS
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />-->
-    <!-- Font Awesome 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/css/Home/main.css" type="text/css" />
     <link rel="stylesheet" href="~/css/Shared/layout.css" type="text/css" />
-
-
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">  
 </head>
 <body>
     <header>
         <nav id="navigation">
             <div id="page-cover"></div>
+            <div id="side-menu" class="side-nav">
+                    <div class="side-nav__search">
+                        <input class="side-nav__search__input" placeholder="Szukaj">
+                        <button class="side-nav__search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                <div class="side-nav__mobile-links">
+                    <a href="#">Projekty</a>
+                    <a href="#">Baza wiedzy</a>
+                </div>
+                <a class="" href="#"></a>
+                <a class="" href="#"></a>
+                <a class="" href="#"></a>
+            </div>            
             <div class="navbar">
                 <div class="navbar__hamburger" id="hamburger--closed">
-                    <span class="open-slide">
-                    <a href="#" id="hamburger">
-                        <svg width="30" height="26">
-                            <path d="M0,5 30,5" stroke="#af4339" stroke-width="5"/>
-                            <path d="M0,14 30,14" stroke="#af4339" stroke-width="5"/>
-                            <path d="M0,23 30,23" stroke="#af4339" stroke-width="5"/>
-                        </svg>
-                    </a>
-                    </span>
+                    <svg width="30" height="26" class="navbar__hamburger__icon" id="hamburger">
+                        <path d="M0,5 30,5" stroke="#324a5e" stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#324a5e" stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#324a5e" stroke-width="5"/>
+                    </svg>
                 </div>
                 <div class="navbar__brand">
                     <a href="@Url.Action("index")"><img src="~/images/logos/ServiceLogoBlack.svg" alt="AutomotiveService"></a>
@@ -46,12 +49,12 @@
                     <div class="navbar__user-menu__container"  id="navbar__user-menu__container">
                         <p class="navbar__user-menu__container__text" >Moje konto</p>
                         <i class="fas fa-chevron-down navbar__user-menu__container__button"></i>
-                        <!-- <i class="fas fa-user navbar__user-menu__container__button"></i> -->
+                        <i class="fas fa-user fa-2x navbar__user-menu__container__button"></i>
                     </div>
                     <div class="dropdown__content" id="dropdown__content" style="display: none">
                         <div class="dropdown__content__input">
-                            <input type="email" class="input--white" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
-                            <input type="password" class="input--white" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
+                            <input type="email" class="input input--white" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
+                            <input type="password" class="input input--white" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
                         </div>
                         <div class="dropdown__content__check">
                             <label class="">
@@ -61,7 +64,6 @@
                         </div>
                         <div class="dropdown__content__login">
                             <button type="submit" class="button button--white dropdown__content__login__button">
-                                <!-- <p>Zaloguj</p><img src="~/images/icons/key.svg"> -->
                                 Zaloguj
                             </button>
                         </div>
@@ -70,46 +72,47 @@
                             <a class="" href="#">Zapomniałeś hasła?</a>
                         </div>
                     </div>
+                    <div class="dropdown__content-mobile" id="dropdown__content-mobile" style="display: none">
+                        <a href="#">
+                            <div class="dropdown__content-mobile__login border-button">
+                                <p class="">ZALOGUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-key fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="@Url.Action("registration","Home")">
+                            <div class="dropdown__content-mobile__register border-button">
+                                <p class="">ZAREJESTRUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <!-- <div id="page-cover"></div> -->
-        <div id="side-menu" class="side-nav">
-                <div class="side-nav__search">
-                    <input class="side-nav__search__input" placeholder="Szukaj">
-                    <button class="side-nav__search__button"><i class="fas fa-search"></i></button>
-                </div>
-            <div class="side-nav__mobile-links">
-                <a href="#">Projekty</a>
-                <a href="#">Baza wiedzy</a>
-            </div>
-            <a href="#">O nas</a>
-            <a href="@Url.Action("regulations","Home")">Regulamin</a>
-            <a href="#">Kontakt</a>
-            <button type="submit" class="button button--white dropdown__content__login__button">
-                Zaloguj
-            </button>
-        </div>
         <div class="page-content" id="page-content">
             @RenderBody()
         </div>
     </main>
     <footer>
-        <p>&copy; 2018 - AutomobileService</p>
-        <div class="footer-texts">
-            <a class="footer-links footer-left-text" href="#">O nas</a>
-            <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
-            <a class="footer-links footer-right-text" href="#">Kontakt</a>
+        <div class="footer">
+            <p>&copy; 2018 - AutomobileService</p>
+            <div class="footer-texts">
+                <a class="footer-links footer-left-text" href="#">O nas</a>
+                <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
+                <a class="footer-links footer-right-text" href="#">Kontakt</a>
+            </div>
         </div>
     </footer>
-    <!-- JQuery -->
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
-    <!-- ajax -->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>-->
-    <!-- Bootstrap JS -->
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>-->
     <!--Font awesome icons-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <!-- custom script -->

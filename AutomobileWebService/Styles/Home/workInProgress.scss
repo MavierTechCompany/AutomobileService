@@ -1,0 +1,64 @@
+@import 'main';
+
+.progress{
+    max-width: 1920px;
+
+    &__title{
+        padding-top: 50px;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        img{
+            height: 200px;
+        }
+        h1{
+            margin-top: -20px;
+        }
+    }
+
+    &__links{
+        margin-top: 30px;
+        padding-top: 20px;
+        color: #fff;
+        text-align: center;
+        li{
+            color: $orange;
+        }
+        ul{
+            text-align: left;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    }
+}
+
+
+@media (min-width: 940px){
+
+    .progress{
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+
+        &__title{
+            margin-right: 10%;
+            img{
+                height: 300px;
+            }
+            h1{
+                margin-top: -20px;
+            }
+            padding-top: 50px;
+            font-size: 40px;
+        }
+        
+        &__links{
+            border-left: 1px solid #fff;
+            padding-left: 10%;
+            ul{
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
