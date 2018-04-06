@@ -4,8 +4,5 @@ using Xunit;
 
 namespace AutomobileWebService.Test.Models
 {
-    public class UserShould
-    {
-        
-    }
+    public class UserShould { }
 }
