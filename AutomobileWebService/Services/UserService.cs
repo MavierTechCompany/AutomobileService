@@ -49,9 +49,6 @@ namespace AutomobileWebService.Services
             return _mapper.Map<IEnumerable<UserDto>>(users);
         }
 
-        public async Task CreateAsync(string login, string email, string mobilePhone, string password)
-        {
-
-        }
+        public async Task CreateAsync(string login, string email, string mobilePhone, string password) { }
     }
 }
