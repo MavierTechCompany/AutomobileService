@@ -10,13 +10,13 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 {
     public static class CarExtensions
     {
-        public static async Task<Car> GetOrFailAsync(this ICarRepository repository, Guid id)
+        public static async Task<Car> GetOrFailAsync(this ICarRepository repository, int id)
         {
             var car = await repository.GetAsync(id);
 
             if (car == null)
             {
-                throw new ForbiddenValueException($"There is no car with id: {id}.");
+                throw new NullResponseException($"There is no car with id: {id}.");
             }
 
             return await Task.FromResult(car);
@@ -28,46 +28,82 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (car == null)
             {
-                throw new ForbiddenValueException($"There is no car with given arguments.");
+                throw new NullResponseException($"There is no car with given arguments.");
             }
 
             return await Task.FromResult(car);
         }
 
-        public static async Task<IEnumerable<Car>> BrowseOrFailAsync(this ICarRepository repository, string brand = null)
+        public static async Task<IQueryable<Car>> BrowseOrFailAsync(this ICarRepository repository, string brand = null)
         {
             var cars = await repository.BrowseAsync(brand);
 
             if (cars == null)
             {
-                throw new ForbiddenValueException($"There isn't any car with brand: {brand}");
+                throw new NullResponseException($"There isn't any car with brand: {brand}");
             }
 
             return await Task.FromResult(cars);
         }
 
-        public static async Task<IEnumerable<Car>> BrowseOrFailAsync(this ICarRepository repository, int? horsepower = null)
+        public static async Task<IQueryable<Car>> BrowseOrFailAsync(this ICarRepository repository, int? horsepower = null)
         {
             var cars = await repository.BrowseAsync(horsepower);
 
             if (cars == null)
             {
-                throw new ForbiddenValueException($"There isn't any car with horsepower: {horsepower}");
+                throw new NullResponseException($"There isn't any car with horsepower: {horsepower}");
             }
 
             return await Task.FromResult(cars);
         }
 
-        public static async Task<IEnumerable<Car>> BrowseOrFailAsync(this ICarRepository repository, DateTime? productionDate = null)
+        public static async Task<IQueryable<Car>> BrowseOrFailAsync(this ICarRepository repository, DateTime? productionDate = null)
         {
             var cars = await repository.BrowseAsync(productionDate);
 
             if (cars == null)
             {
-                throw new ForbiddenValueException($"There isn't any car with production date: {productionDate}");
+                throw new NullResponseException($"There isn't any car with production date: {productionDate}");
             }
 
             return await Task.FromResult(cars);
+        }
+
+        public static async Task CreateOrFailAsnc(this ICarRepository repository, Car _car)
+        {
+            var car = await repository.GetAsync(_car.BrandName, _car.Model, _car.Generation);
+
+            if (car == _car)
+            {
+                throw new ForbiddenValueException($"That car already exists.");                
+            }
+
+            await repository.CreateAsync(_car);
+        }
+
+        public static async Task UpdateOrFailAsync(this ICarRepository repository, Car _car)
+        {
+            var car = await repository.GetAsync(_car.Id);
+
+            if (car == null)
+            {
+                throw new NullResponseException($"There isn't any car with ID: {_car.Id}");   
+            }
+
+            await repository.UpdateAsync(_car);
+        }
+
+        public static async Task DeleteOrFailAsync(this ICarRepository repository, int id)
+        {
+            var car = await repository.GetAsync(id);
+
+            if (car == null)
+            {
+                throw new NullResponseException($"There isn't any car with ID: {id}");
+            }
+
+            await repository.DeleteAsync(car);
         }
     }
 }

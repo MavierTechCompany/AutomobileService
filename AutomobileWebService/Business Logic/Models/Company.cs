@@ -1,24 +1,19 @@
-﻿using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
-using AutomobileWebService.Business_Logic.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
+using AutomobileWebService.Business_Logic.Models;
 
 namespace AutomobileWebService.Business_Logic.Models
 {
     public class Company : Entity
     {
-        [Required]
         public string Name { get; protected set; }
-        [Required]
         public string Phone { get; protected set; }
-        [Required]
-        public Guid CompanyAddressId { get; protected set; }
-        [Required]
-        public bool Deleted { get; protected set; }
+        public int CompanyAddressId { get; protected set; }
 
         public virtual CompanyAddress CompanyAddress { get; set; }
 
@@ -27,11 +22,9 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Company(Guid id, string name, string phone, CompanyAddress headQuartersAddress)
+        public Company(string name, string phone,
+            CompanyAddress headQuartersAddress) : base()
         {
-            Id = id;
-            Deleted = false;
-
             SetName(name);
             SetPhone(phone);
 
@@ -40,16 +33,10 @@ namespace AutomobileWebService.Business_Logic.Models
 
         #region Public
 
-        public void Update(string name, DateTime foundationDate, string phone)
+        public void Update(string name, string phone)
         {
             SetName(name);
             SetPhone(phone);
-        }
-
-        public static Company Delete(Company company)
-        {
-            company.Deleted = true;
-            return company;
         }
 
         #endregion

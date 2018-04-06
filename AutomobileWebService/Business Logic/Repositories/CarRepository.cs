@@ -17,36 +17,43 @@ namespace AutomobileWebService.Business_Logic.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Car>> BrowseAsync(string brand = null)
+        public async Task<Car> GetAsync(int id)
+            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.Id == id &&
+                x.Deleted == false));
+
+        public async Task<Car> GetAsync(string brandName, string model, int generation)
+            => await Task.FromResult(_context.Cars.SingleOrDefault(x =>
+            x.BrandName.ToLowerInvariant() == brandName.ToLowerInvariant() &&
+            x.Model.ToLowerInvariant() == model.ToLowerInvariant() &&
+            x.Generation == generation && x.Deleted == false));
+
+        public async Task<IQueryable<Car>> BrowseAsync(string brand = null)
         {
-            var cars = _context.Cars.AsEnumerable();
+            var cars = _context.Cars.Where(x => x.Deleted == false).AsQueryable();
+
             if (!string.IsNullOrWhiteSpace(brand))
             {
-                cars = cars.Where(x => x.BrandName.ToLowerInvariant().Contains(brand.ToLowerInvariant())).AsEnumerable();
+                cars = cars.Where(x => x.BrandName.ToLowerInvariant().
+                    Contains(brand.ToLowerInvariant()));
             }
 
             return await Task.FromResult(cars);
         }
 
-		internal static Task<Comment> GetAsync(string commentText)
-		{
-			throw new NotImplementedException();
-		}
-
-		public async Task<IEnumerable<Car>> BrowseAsync(int? horsepower = null)
+		public async Task<IQueryable<Car>> BrowseAsync(int? horsepower = null)
         {
-            var cars = _context.Cars.AsEnumerable();
+            var cars = _context.Cars.Where(x => x.Deleted == false).AsQueryable();
             if (horsepower != null)
             {
-                cars = cars.Where(x => x.Horsepower == horsepower).AsEnumerable();
+                cars = cars.Where(x => x.Horsepower == horsepower).AsQueryable();
             }
 
             return await Task.FromResult(cars);
         }
 
-        public async Task<IEnumerable<Car>> BrowseAsync(DateTime? productionDate = null)
+        public async Task<IQueryable<Car>> BrowseAsync(DateTime? productionDate = null)
         {
-            var cars = _context.Cars.AsEnumerable();
+            var cars = _context.Cars.Where(x => x.Deleted == false).AsQueryable();
             if (productionDate != null)
             {
                 cars = cars.Where(x => x.ProdutionDate == productionDate);
@@ -61,15 +68,15 @@ namespace AutomobileWebService.Business_Logic.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<Car> GetAsync(Guid id)
-            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.Id == id));
-
-        public async Task<Car> GetAsync(string brandName, string model, int generation)
-            => await Task.FromResult(_context.Cars.SingleOrDefault(x => x.BrandName.ToLowerInvariant() == brandName.ToLowerInvariant() &&
-            x.Model.ToLowerInvariant() == model.ToLowerInvariant() && x.Generation == generation));
-
         public async Task UpdateAsync(Car car)
         {
+            await Task.FromResult(_context.Cars.Update(car));
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Car car)
+        {
+            car.Delete();
             await Task.FromResult(_context.Cars.Update(car));
             await _context.SaveChangesAsync();
         }

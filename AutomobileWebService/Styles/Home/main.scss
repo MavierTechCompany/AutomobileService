@@ -1,0 +1,135 @@
+$orange: #ff8067;
+$brown: #af4339;
+$purple: #3f3956;
+$dark-blue: #324a5e;
+$black: #373739;
+$grey: #ccc;
+$white: #fff;
+
+
+.wrapper {
+    max-width: 90%;
+    margin: 0 auto;
+
+}
+
+.links {
+    color: $orange;
+    &--white{
+        text-decoration:none;
+        color: $white;
+        &:hover {
+            color: $orange;
+        }
+
+    }
+    &:hover {
+        color: $orange;
+    }
+}
+
+
+.container--white {
+    margin-top: 20px;
+    background-color: $white;
+    border-radius: 3px;
+    padding: 30px
+}
+
+
+.input{
+    border-radius: 3px;
+    &--white{
+        border: 1px solid $grey;
+        background: $white;
+        
+    }
+}
+
+
+button:focus {
+    outline: 0;
+}
+
+
+.button {
+    border-radius: 50px;
+    &--orange {
+        font-size: 95%;
+        color: $white;
+        background-color: $orange;
+        border: 0;
+        padding: 30px;
+        text-align: center;
+        &:hover {
+            background-color: darken($orange, 3%);
+            color: $white;
+        }
+    }
+    &--white {
+        color: $orange;
+        font-weight: 600;
+        background: $white;
+        border-color: $orange;
+        border-style: solid;
+        padding: 10px 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        &:hover {
+            background: $orange;
+            color: $white;
+        }
+    }
+}
+
+
+
+.headline {
+    
+    color: $white;
+    font-size: 300%;
+    text-align: center;
+}
+
+
+@media (min-width: 510px) {
+
+    .wrapper--small {
+        max-width: 500px;
+    }
+
+    .container--small {
+        padding: 50px 30px 30px 50px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .headline {
+        text-align: left;
+        padding-left: 35px;
+    }
+
+    .headline--small {
+        padding-left: 95px;
+    }
+
+    .wrapper--small {
+        max-width: 600px;
+    }
+
+    .container--small {
+        padding: 50px 100px 50px 100px;
+    }
+
+}
+
+
+@media (min-width: 1500px) {
+    .wrapper {
+        max-width: 80%;
+    }
+    .wrapper--small {
+        max-width: 600px;
+    }
+}

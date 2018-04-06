@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Xunit.Sdk;
 
-namespace AutomobileWebService.Tests.CustomAttributes
+namespace AutomobileWebService.Test.CustomAttributes
 {
     public class SecurePasswordDataAttribute : DataAttribute
     {

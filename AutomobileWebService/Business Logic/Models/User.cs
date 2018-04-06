@@ -10,18 +10,10 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class User : Entity
     {
-        [Required]
         public string Login { get; protected set; }
-        [Required]
         public string Email { get; protected set; }
-        [Required]
         public string MobilePhone { get; protected set; }
-        [Required]
         public string HashedPassword { get; protected set; }
-        [Required]
-        public DateTime CreatedAt { get; protected set; }
-        [Required]
-        public bool Deleted { get; protected set; }
 
         public virtual List<Project> Projects { get; set; }
         public virtual List<Comment> Comments { get; set; }
@@ -31,17 +23,12 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public User(Guid id, string login, string email, string mobilePhone, string password)
+        public User(string login, string email, string mobilePhone, string password) : base()
         {
-            Id = id;
-            CreatedAt = DateTime.UtcNow;
-            Deleted = false;
-
             SetLogin(login);
             SetEmail(email);
             SetMobilePhone(mobilePhone);
             SetPassword(password);
-
         }
 
         #region Public
@@ -50,17 +37,13 @@ namespace AutomobileWebService.Business_Logic.Models
         {
             SetLogin(login);
             SetMobilePhone(mobilePhone);
+            UpdatedAt = DateTime.UtcNow;
         }
 
         public void UpdatePassword(string password)
         {
             SetPassword(password);
-        }
-
-        public static User Delete(User user)
-        {
-            user.Deleted = true;
-            return user;
+            UpdatedAt = DateTime.UtcNow;
         }
 
         #endregion

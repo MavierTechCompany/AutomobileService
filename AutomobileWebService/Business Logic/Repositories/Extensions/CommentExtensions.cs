@@ -10,7 +10,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 {
 	public static class CommentExtensions
 	{
-		public static async Task<Comment> GetOrFailAsync(this ICommentRepository repository, Guid id)
+		public static async Task<Comment> GetOrFailAsync(this ICommentRepository repository, int id)
 		{
 			var comment = await repository.GetAsync(id);
 
@@ -22,7 +22,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 			return await Task.FromResult(comment);
 		}
 
-		public static async Task<IEnumerable<Comment>> GeAllByProjectOrFailAsync(this ICommentRepository repository, Guid projectId)
+		public static async Task<IQueryable<Comment>> GeAllByProjectOrFailAsync(this ICommentRepository repository, int projectId)
 		{
 			var comment = await repository.GetAllByProjectAsync(projectId);
 
@@ -34,16 +34,28 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 			return await Task.FromResult(comment);
 		}
 
-		public static async Task<IEnumerable<Comment>> GetAllByCommenterOrFailAsync(this ICommentRepository repository, Guid commenterId)
+		public static async Task<IQueryable<Comment>> GetAllByCommenterOrFailAsync(this ICommentRepository repository, int commenterId)
 		{
 			var comment = await repository.GetAllByCommenterAsync(commenterId);
 
 			if (comment == null)
 			{
-				throw new ForbiddenValueException($"There is no comment with commenter id: {commenterId}.");
+				throw new NullResponseException($"There is no comment with commenter id: {commenterId}.");
 			}
 
 			return await Task.FromResult(comment);
+		}
+
+		public static async Task DeleteOrFailAsync(this ICommentRepository repository, int id)
+		{
+			var comment = await repository.GetAsync(id);
+
+			if (comment == null)
+			{
+				throw new NullResponseException($"There is no comment with id: {id}.");
+			}
+
+			await repository.DeleteAsync(comment);
 		}
 	}
 }	

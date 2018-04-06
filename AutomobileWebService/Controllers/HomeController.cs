@@ -10,7 +10,7 @@ namespace AutomobileWebService.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("WorkInProgress");
         }
 
         [Route("regulations")]

@@ -8,11 +8,11 @@ namespace AutomobileWebService.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<UserDto> GetAsync(Guid id);
+        Task<UserDto> GetAsync(int id);
         Task<UserDto> GetAsync(string login);
         Task<UserDto> GetByEmailAsync(string email);
         Task<IEnumerable<UserDto>> BrowseAsync(string login = null);
-        Task CreateAsync(Guid id, string login, string email, string mobilePhone, string password);
+        Task CreateAsync(string login, string email, string mobilePhone, string password);
         //Task UpdateAsync(User user);
         //Task DeleteAsync(User user);
     }

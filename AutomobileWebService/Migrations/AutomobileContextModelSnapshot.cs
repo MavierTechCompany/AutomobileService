@@ -26,6 +26,8 @@ namespace AutomobileWebService.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<bool>("Deleted");
+
                     b.Property<DateTime?>("EndDate")
                         .IsRequired();
 
@@ -48,6 +50,8 @@ namespace AutomobileWebService.Migrations
 
                     b.Property<string>("BrandName")
                         .IsRequired();
+
+                    b.Property<bool>("Deleted");
 
                     b.Property<int>("Generation");
 

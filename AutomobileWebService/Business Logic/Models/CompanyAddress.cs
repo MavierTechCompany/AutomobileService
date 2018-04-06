@@ -10,24 +10,14 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class CompanyAddress : Entity
     {
-        [Required]
         public string Country { get; protected set; }
-        [Required]
         public string State { get; protected set; }
-        [Required]
         public string Town { get; protected set; }
-        [Required]
         public string Street { get; protected set; }
-        [Required]
         public int BuildingNumber { get; protected set; }
-        [Required]
         public int FlatNumber { get; protected set; }
-        [Required]
         public string ZipCode { get; protected set; }
-        [Required]
-        public bool Deleted { get; protected set; }
-        [Required]
-        public Guid CompanyId { get; protected set; }
+        public int CompanyId { get; protected set; }
 
         public virtual Company Company { get; set; }
 
@@ -37,12 +27,10 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public CompanyAddress(Guid id, string country, string state, string town, string street, int buildingNumber,
-            int flatNumber, string zipCode, Company company)
+        public CompanyAddress(string country, string state, string town, string street,
+            int buildingNumber, int flatNumber, string zipCode, Company company) : base()
         {
-            Id = id;
             CompanyId = company.Id;
-            Deleted = false;
 
             SetCountry(country);
             SetState(state);
@@ -63,12 +51,6 @@ namespace AutomobileWebService.Business_Logic.Models
             SetBuildingNumber(buildingNumber);
             SetFlatNumber(flatNumber);
             SetZipCode(zipCode);
-        }
-
-        public static CompanyAddress Delete(CompanyAddress address)
-        {
-            address.Deleted = true;
-            return address;
         }
 
         private void SetCountry(string country)

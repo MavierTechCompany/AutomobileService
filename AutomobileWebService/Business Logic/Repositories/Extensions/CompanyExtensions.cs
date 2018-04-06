@@ -10,7 +10,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 {
     public static class CommpanyExtensions
     {
-        public static async Task<Company> GetOrFailAsync(this ICompanyRepository repository, Guid id)
+        public static async Task<Company> GetOrFailAsync(this ICompanyRepository repository, int id)
         {
             var company = await repository.GetAsync(id);
 
@@ -46,7 +46,7 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             return await Task.FromResult(company);
         }
 
-        public static async Task<IEnumerable<Company>> BrowseOrFailAsync(this ICompanyRepository repository, string name = null)
+        public static async Task<IQueryable<Company>> BrowseOrFailAsync(this ICompanyRepository repository, string name = null)
         {
             var companies = await repository.BrowseAsync(name);
 
@@ -56,6 +56,45 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
             }
 
             return await Task.FromResult(companies);
+        }
+
+        public static async Task CreateOrFailAsync(this ICompanyRepository repository,
+            Company _company)
+        {
+            var company = await repository.GetAsync(_company.Name);
+
+            if (company != null)
+            {
+                throw new ForbiddenValueException($"There is already a company with name: {_company.Name}");
+            }
+
+            await repository.CreateAsync(company);
+        }
+
+        public static async Task UpdateOrFailAsync(this ICompanyRepository repository,
+            Company _company)
+        {
+            var company = await repository.GetAsync(_company.Id);
+
+            if (company == null)
+            {
+                throw new NullResponseException($"There is no company with id: {_company.Id}.");
+            }
+
+            await repository.UpdateAsync(_company);
+        }
+
+        public static async Task DeleteOrFailAsync(this ICompanyRepository repository,
+            int id)
+        {
+            var company = await repository.GetAsync(id);
+
+            if (company == null)
+            {
+                throw new NullResponseException($"There is no company with id: {id}");
+            }
+
+            await repository.DeleteAsync(company);
         }
     }
 }

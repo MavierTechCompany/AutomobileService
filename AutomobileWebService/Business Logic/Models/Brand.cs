@@ -10,11 +10,8 @@ namespace AutomobileWebService.Business_Logic.Models
 {
     public class Brand : Entity
     {
-        [Required]
         public string Name { get; protected set; }
-        [Required]
         public DateTime StartDate { get; protected set; }
-        [Required]
         public DateTime? EndDate { get; protected set; }
 
         public virtual List<Car> Cars { get; set; }
@@ -25,9 +22,8 @@ namespace AutomobileWebService.Business_Logic.Models
 
         }
 
-        public Brand(Guid id, string name, DateTime startDate, DateTime? endDate)
+        public Brand(string name, DateTime startDate, DateTime? endDate) : base()
         {
-            Id = id;
             SetName(name);
             SetStartDate(startDate);
             SetEndDate(endDate);

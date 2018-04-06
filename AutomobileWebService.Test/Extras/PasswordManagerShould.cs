@@ -1,10 +1,10 @@
 ﻿using AutomobileWebService.Business_Logic.Extras;
 using AutomobileWebService.Business_Logic.Models;
-using AutomobileWebService.Tests.CustomAttributes;
+using AutomobileWebService.Test.CustomAttributes;
 using System;
 using Xunit;
 
-namespace AutomobileWebService.Tests.Extras
+namespace AutomobileWebService.Test.Extras
 {
     public class PasswordManagerShould
     {

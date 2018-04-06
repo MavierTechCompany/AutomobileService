@@ -3,153 +3,120 @@
 <head>
     <title>AutomobileService</title>
     <meta charset="utf-8" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
-    <!-- Material Design 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/css/Home/main.css" type="text/css" />
     <link rel="stylesheet" href="~/css/Shared/layout.css" type="text/css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">  
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a href="@Url.Action("index")"><img class="navbar-brand" src="~/images/logos/ServiceLogo.svg" alt="AutomotiveService"></a>
+        <nav id="navigation">
+            <div id="page-cover"></div>
+            <div id="side-menu" class="side-nav">
+                    <div class="side-nav__search">
+                        <input class="side-nav__search__input" placeholder="Szukaj">
+                        <button class="side-nav__search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                <div class="side-nav__mobile-links">
+                    <a href="#">Projekty</a>
+                    <a href="#">Baza wiedzy</a>
                 </div>
-                <button class="navbar-toggler nav-hamburger-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projekty</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Baza wiedzy</a>
-                        </li>
-                        <li class="nav-item">
-                            <div class="container">
-                                <button class="login-button-mobile" data-toggle="modal" data-target="#myModal">Zaloguj</button>
-                                <div class="modal fade" id="myModal" role="dialog">
-                                    <div class="modal-dialog modal-md">
-                                        <div class="modal-content">
-                                            <div class="modal-body">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>                                                
-                                                <div>
-                                                    <form class="px-4 py-3">
-                                                        <div class="form-group">
-                                                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <div class="form-check">
-                                                                    <label class="form-check-label">
-                                                                        <input type="checkbox" class="form-check-input">
-                                                                        Zapamiętaj mnie
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <button type="submit" class="button button--white">Zaloguj</button>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <a class="dropdown-item" href="@Url.Action("registration","Home")">Zarejestruj się</a>
-                                                    </div>
-                                                    <div class="col">
-                                                        <a class="dropdown-item" href="#">Zapomniałeś hasła?</a>                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                <a class="" href="#"></a>
+                <a class="" href="#"></a>
+                <a class="" href="#"></a>
+            </div>            
+            <div class="navbar">
+                <div class="navbar__hamburger" id="hamburger--closed">
+                    <svg width="30" height="26" class="navbar__hamburger__icon" id="hamburger">
+                        <path d="M0,5 30,5" stroke="#324a5e" stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#324a5e" stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#324a5e" stroke-width="5"/>
+                    </svg>
                 </div>
-                <ul class="navbar-nav ml-auto nav-flex-icons">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <button class="fa fa-user-circle fa-2x user-nav-right-menu-button" aria-hidden="true"></button> 
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-unique" aria-labelledby="navbarDropdownMenuLink" style="position: absolute;">
-                                <form class="px-4 py-3">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input">
-                                            Zapamiętaj mnie
-                                        </label>
-                                    </div>
-                                    <button type="submit" class="button button--white">Zaloguj</button>
-                                </form>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="@Url.Action("registration","Home")">Zarejestruj się</a>
-                                <a class="dropdown-item" href="#">Zapomniałeś hasła?</a>
-                            </div>
-                        </li>
-                    </ul>
-
-            </div>
-            
-        </nav>   
-    </header>
-    <main class="page-content"></mainc>
-        @RenderBody()
-    </main>
-    <footer>
-        <p>&copy; 2017 - AutomobileService</p>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-3">
+                <div class="navbar__brand">
+                    <a href="@Url.Action("index")"><img src="~/images/logos/ServiceLogoBlack.svg" alt="AutomotiveService"></a>
                 </div>
-                <div class="col-6">
-                    <div class="row footer-texts">
-                        <div class="col-sm footer-left-text">
-                            <a class="footer-links" href="#">O nas</a>
+                <div class="navbar__search">
+                    <input class="navbar__search__input" placeholder="Szukaj">
+                    <button class="navbar__search__button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="navbar__links">
+                    <a href="#">Projekty</a>
+                    <a href="#">Baza wiedzy</a>
+                </div>
+                <div class="navbar__user-menu" id="dropdown--closed">
+                    <div class="navbar__user-menu__container"  id="navbar__user-menu__container">
+                        <p class="navbar__user-menu__container__text" >Moje konto</p>
+                        <i class="fas fa-chevron-down navbar__user-menu__container__button"></i>
+                        <i class="fas fa-user fa-2x navbar__user-menu__container__button"></i>
+                    </div>
+                    <div class="dropdown__content" id="dropdown__content" style="display: none">
+                        <div class="dropdown__content__input">
+                            <input type="email" class="input input--white" id="exampleDropdownFormEmail1" placeholder="Adres e-mail" required>
+                            <input type="password" class="input input--white" id="exampleDropdownFormPassword1" placeholder="Hasło" minlength="7" maxlength="50" required>
                         </div>
-                        <div class="col-sm">
-                            <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
+                        <div class="dropdown__content__check">
+                            <label class="">
+                                <input type="checkbox" class="form-check-input">
+                                Zapamiętaj mnie
+                            </label>
                         </div>
-                        <div class="col-sm footer-right-text">
-                            <a class="footer-links" href="#">Kontakt</a>
+                        <div class="dropdown__content__login">
+                            <button type="submit" class="button button--white dropdown__content__login__button">
+                                Zaloguj
+                            </button>
+                        </div>
+                        <div class="dropdown__content__links">
+                            <a class="" href="@Url.Action("registration","Home")">Zarejestruj się</a>
+                            <a class="" href="#">Zapomniałeś hasła?</a>
                         </div>
                     </div>
-                </div>
-                <div class="col-3">
+                    <div class="dropdown__content-mobile" id="dropdown__content-mobile" style="display: none">
+                        <a href="#">
+                            <div class="dropdown__content-mobile__login border-button">
+                                <p class="">ZALOGUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-key fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="@Url.Action("registration","Home")">
+                            <div class="dropdown__content-mobile__register border-button">
+                                <p class="">ZAREJESTRUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </nav>
+    </header>
+    <main>
+        <div class="page-content" id="page-content">
+            @RenderBody()
         </div>
-
+    </main>
+    <footer>
+        <div class="footer">
+            <p>&copy; 2018 - AutomobileService</p>
+            <div class="footer-texts">
+                <a class="footer-links footer-left-text" href="#">O nas</a>
+                <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
+                <a class="footer-links footer-right-text" href="#">Kontakt</a>
+            </div>
+        </div>
     </footer>
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <!-- ajax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <!-- Material Design 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/js/mdb.min.js"></script> -->
+    <!--Font awesome icons-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!-- custom script -->
+    <script src="~/js/Shared/layout.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

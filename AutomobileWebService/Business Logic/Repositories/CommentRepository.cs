@@ -17,14 +17,17 @@ namespace AutomobileWebService.Business_Logic.Repositories
             _context = context;
         }
 
-        public async Task<Comment> GetAsync(Guid id)
-               => await Task.FromResult(_context.Comments.SingleOrDefault(x => x.Id == id && x.Deleted == false));
+        public async Task<Comment> GetAsync(int id)
+               => await Task.FromResult(_context.Comments.SingleOrDefault(x => x.Id == id &&
+                x.Deleted == false));
 
-        public async Task<IEnumerable<Comment>> GetAllByProjectAsync(Guid projectId)
-               => await Task.FromResult(_context.Comments.Where(x => x.ProjectId == projectId && x.Deleted == false).AsEnumerable());
+        public async Task<IQueryable<Comment>> GetAllByProjectAsync(int projectId)
+               => await Task.FromResult(_context.Comments.Where(x => x.ProjectId ==
+                projectId && x.Deleted == false).AsQueryable());
 
-        public async Task<IEnumerable<Comment>> GetAllByCommenterAsync(Guid commenterid)
-               => await Task.FromResult(_context.Comments.Where(x => x.CommenterId == commenterid && x.Deleted == false).AsEnumerable());
+        public async Task<IQueryable<Comment>> GetAllByCommenterAsync(int commenterid)
+               => await Task.FromResult(_context.Comments.Where(x =>
+               x.CommenterId == commenterid && x.Deleted == false).AsQueryable());
 
         public async Task CreateAsync(Comment comment)
         {
@@ -40,8 +43,8 @@ namespace AutomobileWebService.Business_Logic.Repositories
 
         public async Task DeleteAsync(Comment comment)
         {
-            var deletedComment = Comment.Delete(comment);
-            await Task.FromResult(_context.Comments.Update(deletedComment));
+            comment.Delete();
+            await Task.FromResult(_context.Comments.Update(comment));
             await _context.SaveChangesAsync();
         }
     }
