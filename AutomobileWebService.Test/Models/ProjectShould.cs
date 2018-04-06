@@ -25,15 +25,15 @@ namespace AutomobileWebService.Test.Models
                 carMock, userMock);
 
             //Assert
-            Assert.Equal(projectName, sut.ProjectName);
             Assert.Equal(category, sut.Category);
             Assert.Equal(horsepower, sut.Horsepower);
-            Assert.Equal(topSpeedInKilometers, sut.TopSpeedInKilometers);
-            Assert.Equal(topSpeedInMiles, sut.TopSpeedInMiles);
-            Assert.Equal(zeroToHundreds, sut.ZeroToHundreds);
             Assert.Equal(engineModel, sut.EngineModel);
+            Assert.Equal(projectName, sut.ProjectName);
+            Assert.Equal(zeroToHundreds, sut.ZeroToHundreds);
+            Assert.Equal(topSpeedInMiles, sut.TopSpeedInMiles);
             Assert.Equal(hasTurbocharger, sut.HasSupercharger);
             Assert.Equal(hasSupercharger, sut.HasSupercharger);
+            Assert.Equal(topSpeedInKilometers, sut.TopSpeedInKilometers);
         }
 
         [Theory]
