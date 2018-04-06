@@ -12,7 +12,7 @@ namespace AutomobileWebService.Business_Logic.Models
         public int Id { get; protected set; }
         public DateTime CreatedAt { get; protected set; }
         public DateTime UpdatedAt { get; protected set; }
-        public bool Deleted {get; protected set;}
+        public bool Deleted { get; protected set; }
 
         protected Entity()
         {
