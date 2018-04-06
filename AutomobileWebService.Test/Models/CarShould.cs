@@ -9,7 +9,6 @@ namespace AutomobileWebService.Test.Models
 {
     public class CarShould
     {
-
         [Theory]
         [CarValidData]
         public void CreateItself(string model, int horsepower, int generation, DateTime productionDate)
