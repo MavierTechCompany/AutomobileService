@@ -29,7 +29,6 @@ namespace AutomobileWebService.Business_Logic.Models
         public Car(string model, int horsepower, int generation,
             DateTime productionDate, Brand brand) : base()
         {
-
             SetBrandName(brand.Name);
             SetModel(model);
             SetHorsepower(horsepower);
@@ -157,13 +156,13 @@ namespace AutomobileWebService.Business_Logic.Models
             {
                 int hash = 17;
 
-                hash = hash * 23 + Id.GetHashCode();
-                hash = hash * 23 + BrandName.GetHashCode();
-                hash = hash * 23 + Model.GetHashCode();
-                hash = hash * 23 + Horsepower.GetHashCode();
-                hash = hash * 23 + Generation.GetHashCode();
-                hash = hash * 23 + ProdutionDate.GetHashCode();
-                hash = hash * 23 + BrandId.GetHashCode();
+                hash = (hash * 23) + Id.GetHashCode();
+                hash = (hash * 23) + BrandName.GetHashCode();
+                hash = (hash * 23) + Model.GetHashCode();
+                hash = (hash * 23) + Horsepower.GetHashCode();
+                hash = (hash * 23) + Generation.GetHashCode();
+                hash = (hash * 23) + ProdutionDate.GetHashCode();
+                hash = (hash * 23) + BrandId.GetHashCode();
 
                 return hash;                            
             }
