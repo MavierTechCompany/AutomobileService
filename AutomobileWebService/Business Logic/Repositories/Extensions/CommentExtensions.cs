@@ -58,13 +58,4 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 			await repository.DeleteAsync(comment);
 		}
 	}
-}	
-
-
-
-
-
-
-
-
-
+}
