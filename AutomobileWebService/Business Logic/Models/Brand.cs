@@ -16,11 +16,7 @@ namespace AutomobileWebService.Business_Logic.Models
 
         public virtual List<Car> Cars { get; set; }
 
-
-        protected Brand()
-        {
-
-        }
+        protected Brand() { }
 
         public Brand(string name, DateTime startDate, DateTime? endDate) : base()
         {
@@ -62,6 +58,5 @@ namespace AutomobileWebService.Business_Logic.Models
             }
             EndDate = endDate;
         }
-
     }
 }
