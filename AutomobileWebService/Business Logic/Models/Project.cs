@@ -29,10 +29,7 @@ namespace AutomobileWebService.Business_Logic.Models
 
         //wiele do wielu z userami - tabela pośrednia
 
-        protected Project()
-        {
-
-        }
+        protected Project() { }
 
         public Project(string projectName, string category, int horsepower,
             float topSpeedInKilometers, float topSpeedInMiles, float zeroToHundreds,
