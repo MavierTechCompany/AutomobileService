@@ -18,10 +18,7 @@ namespace AutomobileWebService.Business_Logic.Models
         public virtual User Commenter { get; set; }
         public virtual Project Project { get; set; }
 
-        protected Comment()
-        {
-
-        }
+        protected Comment() { }
 
         public Comment(string commentText, User user,
             Project project) : base()
