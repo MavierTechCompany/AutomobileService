@@ -18,10 +18,7 @@ namespace AutomobileWebService.Business_Logic.Models
         public virtual List<Project> Projects { get; set; }
         public virtual List<Comment> Comments { get; set; }
 
-        protected User()
-        {
-
-        }
+        protected User() { }
 
         public User(string login, string email, string mobilePhone, string password) : base()
         {
