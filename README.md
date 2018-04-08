@@ -5,8 +5,20 @@
 * You can also pesonalize your profile by adding avatar, yout dream car, your current car, name, surname, place of residence.
 
 
-## Technologies
-TDD, DDD and a bunch of technologies, like: Angular4, Entity Framework Core, TypeScript, SASS etc.
+## Languages and technologies
+Backend:
+* C#
+* ASP.NET Core 2.0
+* Entity Framework Core
+* MS SQL
+* AutoMapper
+
+Frontend:
+* CSS
+* HTML
+* JavaScript
+* SASS (.scss)
+* React.js
 
 //more in future
 
