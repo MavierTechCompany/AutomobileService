@@ -1,10 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutomobileWebService.Business_Logic.Repositories.Interfaces;
@@ -31,7 +30,7 @@ namespace AutomobileWebService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
-
+			
             #region DatabaseConnection
 
             var connection = @"Server=(LocalDb)\MSSQLLocalDB;Initial Catalog=Automobile;Integrated Security=True;Trusted_Connection=True;";
@@ -67,10 +66,7 @@ namespace AutomobileWebService
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
-                {
-                    HotModuleReplacement = true
-                });
+                app.UseBrowserLink();
             }
             else
             {
@@ -78,8 +74,8 @@ namespace AutomobileWebService
             }
 
             app.UseStaticFiles();
-            app.UseErrorHandler();
-            
+			app.UseErrorHandler();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
