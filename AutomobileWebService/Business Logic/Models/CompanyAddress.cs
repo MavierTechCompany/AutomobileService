@@ -21,11 +21,7 @@ namespace AutomobileWebService.Business_Logic.Models
 
         public virtual Company Company { get; set; }
 
-
-        protected CompanyAddress()
-        {
-
-        }
+        protected CompanyAddress() { }
 
         public CompanyAddress(string country, string state, string town, string street,
             int buildingNumber, int flatNumber, string zipCode, Company company) : base()
