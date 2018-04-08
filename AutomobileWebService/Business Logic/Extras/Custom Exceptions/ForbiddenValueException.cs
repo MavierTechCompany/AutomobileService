@@ -7,19 +7,10 @@ namespace AutomobileWebService.Business_Logic.Extras.Custom_Exceptions
 {
     public class ForbiddenValueException : Exception
     {
-        public ForbiddenValueException()
-        {
+        public ForbiddenValueException() { }
 
-        }
+        public ForbiddenValueException(string message) : base(message) { }
 
-        public ForbiddenValueException(string message) : base(message)
-        {
-
-        }
-
-        public ForbiddenValueException(string message, Exception inner) : base(message, inner)
-        {
-
-        }
+        public ForbiddenValueException(string message, Exception inner) : base(message, inner) { }
     }
 }
