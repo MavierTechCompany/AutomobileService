@@ -21,10 +21,7 @@ namespace AutomobileWebService.Business_Logic.Models
         public virtual Brand Brand { get; set; }
         public virtual List<Project> Projects { get; set; }
 
-        protected Car()
-        {
-
-        }
+        protected Car() { }
 
         public Car(string model, int horsepower, int generation,
             DateTime productionDate, Brand brand) : base()
