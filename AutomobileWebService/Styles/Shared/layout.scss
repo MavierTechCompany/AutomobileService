@@ -31,21 +31,22 @@ main{
 nav{
     background-color: $orange;
     box-shadow: 0 2px 10px $black;
+    width: 100%;
 }
 
 .navbar {
     display: flex;
     flex-wrap: wrap;
     // width: 90%;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
     height: 56px;
     max-width: 1920px;
     
     &__hamburger{
         margin-left: 30px;
-        padding-right: 40px;        
-        margin-top: auto; 
+        padding-right: 40px;
+        margin-top: auto;
         margin-bottom: auto;
         &__icon{
             cursor: pointer;
@@ -53,12 +54,12 @@ nav{
     }
     &__brand{
         height: 45px;
-        margin-top: auto; 
+        margin-top: auto;
         margin-bottom: auto;
     }
     &__search{
         margin-left: 50px;
-        margin-top: auto; 
+        margin-top: auto;
         margin-bottom: auto;
         &__input{
             width: 350px;
@@ -67,7 +68,7 @@ nav{
             background: lighten($orange, 20%);
             border: 0;
             border-radius: 3px;
-            padding-left: 10px;    
+            padding-left: 10px;
         }
         &__button{
             width: 40px;
@@ -98,7 +99,7 @@ nav{
         //display: none;
         margin-left: auto;
         margin-right: 30px;
-        margin-top: auto; 
+        margin-top: auto;
         margin-bottom: auto;
         display: flex;
 
@@ -142,9 +143,9 @@ nav{
                 .fa-user, .fa-2x{
                     display: none;
                 }
-            } 
+            }
         }
-    }    
+    }
 }
 
 
@@ -152,7 +153,7 @@ nav{
     .navbar{
         // width: 95%;
         &__brand{
-            margin: 5.5px 5.5px;
+            margin: 5.5px;
             position: absolute;
             left: 50%;
             -webkit-transform: translateX(-50%);
@@ -174,7 +175,7 @@ nav{
                 .fa-chevron-down, .fa-chevron-up{
                     display: none;
                 }
-            } 
+            }
         }
     }
 }
@@ -202,7 +203,7 @@ nav{
         flex-direction: column;
         input{
             padding: 5px;
-            margin: 5px 5px;
+            margin: 5px;
         }
     }
     &__check{
@@ -221,7 +222,7 @@ nav{
             flex-direction: row;
             margin-left: auto;
             margin-right: auto;
-            padding: 1px 1px;
+            padding: 1px;
             p{
                 margin-right: 15px;
             }
@@ -248,7 +249,7 @@ nav{
         right: 5%;
         margin-top: 20%;
         position: absolute;
-        padding: 30px 20px 30px 20px;
+        padding: 30px 20px;
 
         .border-button{
             p{
@@ -296,15 +297,11 @@ nav{
             margin-top: 120px;
 
         }
-    }     
+    }
 }
 
 
 /*----------------- SCROLL -----------------------------*/
-
-  nav {
-    width: 100%;
-  }
   
   /* applied after scroll height reached */
   .fixed-nav nav {
