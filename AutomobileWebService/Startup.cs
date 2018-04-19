@@ -15,7 +15,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
-using React.AspNet;
 
 namespace AutomobileWebService
 {
@@ -32,7 +31,6 @@ namespace AutomobileWebService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddReact();
 
             services.AddMvc().AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
 
@@ -77,17 +75,6 @@ namespace AutomobileWebService
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
-            #region React
-
-            // app.UseReact(config =>
-            // {
-            //     config
-            //         .SetLoadBabel(false)
-            //         .AddScriptWithoutTransform("~/Scripts/bundle.server.js");
-            // });
-
-            #endregion
 
             app.UseStaticFiles();
             app.UseErrorHandler();
