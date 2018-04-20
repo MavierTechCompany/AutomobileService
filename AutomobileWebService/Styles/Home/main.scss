@@ -6,6 +6,8 @@ $black: #373739;
 $grey: #ccc;
 $white: #fff;
 
+$lime: #b5e555;
+
 
 .wrapper {
     max-width: 90%;
@@ -14,17 +16,17 @@ $white: #fff;
 }
 
 .links {
-    color: $orange;
+    color: $lime;
     &--white{
         text-decoration:none;
         color: $white;
         &:hover {
-            color: $orange;
+            color: $lime;
         }
 
     }
     &:hover {
-        color: $orange;
+        color: $lime;
     }
 }
 
@@ -54,30 +56,33 @@ button:focus {
 
 .button {
     border-radius: 50px;
-    &--orange {
+    &--lime {
         font-size: 95%;
-        color: $white;
-        background-color: $orange;
+        font-weight: bold;
+        color: $purple;
+        background-color: $lime;
         border: 0;
+        // border-color: $white;
+        // border-style: solid;
         padding: 30px;
         text-align: center;
         &:hover {
-            background-color: darken($orange, 3%);
-            color: $white;
+            background-color: darken($lime, 6%);
+            color: $purple;
         }
     }
     &--white {
-        color: $orange;
+        color: $purple;
         font-weight: 600;
         background: $white;
-        border-color: $orange;
+        border-color: $lime;
         border-style: solid;
         padding: 10px;
         padding-left: 40px;
         padding-right: 40px;
         &:hover {
-            background: $orange;
-            color: $white;
+            background: $lime;
+            color: $purple;
         }
     }
 }
