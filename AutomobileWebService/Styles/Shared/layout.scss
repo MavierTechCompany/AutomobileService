@@ -29,7 +29,7 @@ main{
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVBAR @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 nav{
-    background-color: $orange;
+    background-color: $lime;
     box-shadow: 0 2px 10px $black;
     width: 100%;
 }
@@ -65,7 +65,7 @@ nav{
             width: 350px;
             height: 30px;
             margin-right: 0;
-            background: lighten($orange, 20%);
+            background: lighten($lime, 20%);
             border: 0;
             border-radius: 3px;
             padding-left: 10px;
@@ -74,9 +74,9 @@ nav{
             width: 40px;
             height: 32px;
             margin-left: 0;
-            background: $dark-blue;
+            background: $purple;
             border: 0;
-            // color: lighten($orange, 20%);
+            // color: lighten($lime, 20%);
             color: $white;
             border-radius: 3px;
             cursor: pointer;
@@ -116,7 +116,7 @@ nav{
                 margin-top: auto;
                 margin-bottom: auto;
                 margin-left: 5px;
-                color: $dark-blue;
+                color: $purple;
                 background: none;
                 border: 0;
             }
@@ -264,7 +264,7 @@ nav{
                 
             }
             .icon{
-                background: $orange;
+                background: $lime;
                 padding: 20px;
                 width: 40px;
                 height: 40px;
@@ -272,7 +272,7 @@ nav{
                 margin-top: -40px;
                 right: 10%;
                 border-radius: 50px;
-                color: $white;
+                color: $purple;
                 text-align: center;
                 .fa-key{
                     padding: 0;
@@ -281,13 +281,13 @@ nav{
             }
             
             .border{
-                border-bottom: 2px solid $orange;
+                border-bottom: 2px solid $lime;
                 margin-left: 15.8px;
                 margin-right: 50px;
             }
             .rotated-border{
                 transform: rotate(45deg);
-                border-bottom: 2px solid $orange;
+                border-bottom: 2px solid $lime;
                 height: 1px;
                 width: 20px;
                 margin-bottom: 4.8px;
@@ -346,7 +346,7 @@ nav{
             width: 40px;
             height: 36px;
             margin-left: 0;
-            background: $dark-blue;
+            background: $purple;
             border: 0;
             color: $white;
             border-radius: 3px;
@@ -428,6 +428,6 @@ nav{
     color: #fff;
     text-decoration:none;
     &:hover {
-        color: $orange;
+        color: $lime;
     }
 }
