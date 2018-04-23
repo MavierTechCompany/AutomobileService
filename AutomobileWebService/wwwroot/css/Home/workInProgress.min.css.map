@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "workInProgress.css",
+	"file": "workInProgress.min.css",
 	"sources": [
 		"../../../Styles/Home/workInProgress.scss",
 		"../../../Styles/Home/main.scss"

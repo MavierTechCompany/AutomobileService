@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "regulations.css",
+	"file": "regulations.min.css",
 	"sources": [
 		"../../../Styles/Home/regulations.scss",
 		"../../../Styles/Home/main.scss"

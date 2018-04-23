@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "contact.css",
+	"file": "contact.min.css",
 	"sources": [
 		"../../../Styles/Home/contact.scss",
 		"../../../Styles/Home/main.scss"

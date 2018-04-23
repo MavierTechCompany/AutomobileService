@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "layout.css",
+	"file": "layout.min.css",
 	"sources": [
 		"../../../Styles/Shared/layout.scss",
 		"../../../Styles/Home/main.scss"

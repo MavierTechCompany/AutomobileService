@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "registration.css",
+	"file": "registration.min.css",
 	"sources": [
 		"../../../Styles/Home/registration.scss",
 		"../../../Styles/Home/main.scss"

@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "main.css",
+	"file": "main.min.css",
 	"sources": [
 		"../../../Styles/Home/main.scss"
 	],
