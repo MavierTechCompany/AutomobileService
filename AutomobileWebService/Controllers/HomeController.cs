@@ -24,5 +24,17 @@ namespace AutomobileWebService.Controllers
         {
             return View();
         }
+
+        [Route("contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [Route("about")]
+        public IActionResult About()
+        {
+            return View("WorkInProgress");
+        }                
     }
 }

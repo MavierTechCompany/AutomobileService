@@ -1,0 +1,45 @@
+@import 'main';
+
+.container__input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    // max-width: 400px;
+    // padding: 5px;
+    width: 100%;
+
+    &--message{
+        height: 150px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+.user-info{
+    margin-top: 2em;
+}
+
+.check {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.container__button-block {
+    width: 7.5em;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 511px) {
+    .container__button-block {
+        margin-left: auto;
+        margin-right: 15%;
+    }
+
+    .user-info{
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    }    
+}
