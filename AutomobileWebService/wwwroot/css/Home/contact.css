@@ -86,14 +86,15 @@ button:focus {
   margin-bottom: 10px;
   width: 100%; }
   .container__input--message {
+    margin-top: 1em;
     height: 150px;
     max-width: 100%;
     min-width: 100%; }
 
-.user-info {
-  margin-top: 2em; }
-
 .check {
+  width: 30%;
+  margin-left: 0;
+  margin-right: auto;
   margin-top: 20px;
   display: flex;
   flex-direction: row; }
@@ -106,9 +107,9 @@ button:focus {
 
 @media (min-width: 511px) {
   .container__button-block {
-    margin-left: auto;
-    margin-right: 15%; }
+    margin-left: 0;
+    margin-right: auto; }
   .user-info {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
     width: 70%; } }
