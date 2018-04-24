@@ -7,11 +7,22 @@ module.exports = function (grunt) {
 
         // Sass
         sass: {
-            options: {
-                sourceMap: true, // Create source map
-                outputStyle: 'compressed' // Minify output
-            },
             dist: {
+				options: {
+					sourceMap: true, // Create source map
+					outputStyle: 'compressed' // Minify output
+				},
+                files: [
+                    {
+                        expand: true, // Recursive
+                        cwd: "Styles", // The startup directory
+                        src: ["**/*.scss"], // Source files
+                        dest: "wwwroot/css", // Destination
+                        ext: ".min.css" // File extension
+                    }
+                ]
+            },
+            dev: {
                 files: [
                     {
                         expand: true, // Recursive
@@ -21,7 +32,8 @@ module.exports = function (grunt) {
                         ext: ".css" // File extension
                     }
                 ]
-            }
+            }			
+			
         }
     });
 
@@ -29,5 +41,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sass');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['sass:dist', 'sass:dev']);
 };

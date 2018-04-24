@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="~/css/Shared/layout.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/Shared/layout.min.css" type="text/css" />
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">  
 </head>
@@ -107,9 +107,9 @@
         <div class="footer">
             <p>&copy; 2018 - AutomobileService</p>
             <div class="footer-texts">
-                <a class="footer-links footer-left-text" href="#">O nas</a>
+                <a class="footer-links footer-left-text" href="@Url.Action("about","Home")">O nas</a>
                 <a class="footer-links" href="@Url.Action("regulations","Home")">Regulamin</a>
-                <a class="footer-links footer-right-text" href="#">Kontakt</a>
+                <a class="footer-links footer-right-text" href="@Url.Action("contact","Home")">Kontakt</a>
             </div>
         </div>
     </footer>

@@ -80,3 +80,36 @@ button:focus {
     max-width: 80%; }
   .wrapper--small {
     max-width: 600px; } }
+
+.container__input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%; }
+  .container__input--message {
+    margin-top: 1em;
+    height: 150px;
+    max-width: 100%;
+    min-width: 100%; }
+
+.check {
+  width: 30%;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row; }
+
+.container__button-block {
+  width: 7.5em;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 511px) {
+  .container__button-block {
+    margin-left: 0;
+    margin-right: auto; }
+  .user-info {
+    margin-left: 0;
+    margin-right: auto;
+    width: 70%; } }
