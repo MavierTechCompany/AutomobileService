@@ -2,7 +2,8 @@
 const pageContent = document.querySelector('#page-content');
 const pageCover = document.querySelector('#page-cover');
 const hamburger = document.querySelector('#hamburger');
-const mobileWidth = window.matchMedia( "(max-width: 720px)" );
+const mobileWidth = window.matchMedia( "(max-width: 720px)");
+const mediumWidth = window.matchMedia('(min-width: 740px)');
 const sidebar = document.querySelector('#side-menu');
 const navbar = document.querySelector('.navbar');
 
@@ -136,6 +137,10 @@ function hasScrolled() {
     
   previousScrollTop = scrollTop;
   
+  if(mediumWidth.matches){
+    navbar.classList.add('navbar__shadow');
+  }
+
 }
 
 document.addEventListener('scroll', function() {

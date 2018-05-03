@@ -102,7 +102,11 @@ body {
 main {
   flex: 1 0 auto;
   padding-bottom: 50px;
-  margin-top: 56px; }
+  margin-top: 112px; }
+
+@media (min-width: 740px) {
+  main {
+    margin-top: 56px; } }
 
 nav {
   background-color: #b5e555;
