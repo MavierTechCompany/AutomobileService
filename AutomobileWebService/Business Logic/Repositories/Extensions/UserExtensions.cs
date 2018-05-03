@@ -1,10 +1,10 @@
-﻿using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
-using AutomobileWebService.Business_Logic.Models;
-using AutomobileWebService.Business_Logic.Repositories.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutomobileWebService.Business_Logic.Extras.Custom_Exceptions;
+using AutomobileWebService.Business_Logic.Models;
+using AutomobileWebService.Business_Logic.Repositories.Interfaces;
 
 namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 {
@@ -64,7 +64,14 @@ namespace AutomobileWebService.Business_Logic.Repositories.Extensions
 
             if (user != null)
             {
-                throw new ForbiddenValueException($"There is already user with login: {_user.Login}.");
+                throw new NullResponseException($"There is already user with login: {_user.Login}.");
+            }
+
+            user = await repository.GetByEmailAsync(_user.Email);
+
+            if (user != null)
+            {
+                throw new NullResponseException($"There is already user with email: {_user.Email}.");
             }
 
             await repository.CreateAsync(_user);
