@@ -1,0 +1,24 @@
+@import 'main';
+
+.project{
+    &__content{
+        display: flex;
+        // max-width: 90%;
+        flex-direction: row;
+    }
+}
+
+.column{
+    &__left{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}

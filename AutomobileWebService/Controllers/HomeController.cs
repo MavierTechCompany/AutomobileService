@@ -35,6 +35,12 @@ namespace AutomobileWebService.Controllers
         public IActionResult About()
         {
             return View("WorkInProgress");
+        }
+
+        [Route("project")]
+        public IActionResult Project()
+        {
+            return View();
         }                
     }
 }
