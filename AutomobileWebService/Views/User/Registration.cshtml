@@ -10,6 +10,7 @@
 
             @Html.TextBoxFor(model => model.Login, new {@type = "login", @class = "input input--white container__input",
                 @placeholder = "Login", required = "required", minlength = 6, maxlength = 25})
+                <p class="input-error">Ten login jest zajęty</p>
             @Html.TextBoxFor(model => model.Email, new {@type = "email", @class = "input input--white container__input",
                 @placeholder = "E-mail", required = "required", minlength = 7, maxlength = 50})
             @Html.TextBoxFor(model => model.MobilePhone, new {@type = "phone", @class = "input input--white container__input",

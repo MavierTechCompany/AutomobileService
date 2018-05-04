@@ -1,3 +1,5 @@
+/*#region COLORS*/
+/*#endregion COLORS*/
 .wrapper {
   max-width: 90%;
   margin: 0 auto; }
@@ -101,3 +103,12 @@ button:focus {
 @media (min-width: 511px) {
   .container__button-block {
     text-align: left; } }
+
+/*#region ERROR*/
+.input-error {
+  color: #f55b5b;
+  font-size: 14px;
+  margin-top: -10px;
+  padding-left: 5px; }
+
+/*#endregion ERROR*/
