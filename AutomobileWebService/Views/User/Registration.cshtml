@@ -8,31 +8,70 @@
     <div class="container--white container--small">
         <form class="register-form" action="../User/Registration" method="post">
 
-            @Html.TextBoxFor(model => model.Login, new {@type = "login", @class = "input input--white container__input",
-                @placeholder = "Login", required = "required", minlength = 6, maxlength = 25})
+            @Html.TextBoxFor(model => model.Login, new
+            {
+                @type = "login",
+                @class = "input input--white container__input",
+                @placeholder = "Login",
+                required = "required",
+                minlength = 6,
+                maxlength = 25
+            })
+            @if (ViewBag.Message == true)
+            {
                 <p class="input-error">Ten login jest zajęty</p>
-            @Html.TextBoxFor(model => model.Email, new {@type = "email", @class = "input input--white container__input",
-                @placeholder = "E-mail", required = "required", minlength = 7, maxlength = 50})
-            @Html.TextBoxFor(model => model.MobilePhone, new {@type = "phone", @class = "input input--white container__input",
-                @placeholder = "Numer telefonu", required = "required", minlength = 9, maxlength = 9})
-            @Html.TextBoxFor(model => model.Password, new {@type = "password", @class = "input input--white container__input",
-                @placeholder = "Hasło", required = "required", minlength = 8, maxlength = 50})
-            @Html.TextBox("RepeatPassword", null, new {@type = "password", @class = "input input--white container__input",
-                @placeholder = "Powtórz hasło", required = "required", minlength = 8, maxlength = 50})
+            }
+
+            @Html.TextBoxFor(model => model.Email, new
+            {
+                @type = "email",
+                @class = "input input--white container__input",
+                @placeholder = "E-mail",
+                required = "required",
+                minlength = 7,
+                maxlength = 50
+            })
+            @Html.TextBoxFor(model => model.MobilePhone, new
+            {
+                @type = "phone",
+                @class = "input input--white container__input",
+                @placeholder = "Numer telefonu",
+                required = "required",
+                minlength = 9,
+                maxlength = 9
+            })
+            @Html.TextBoxFor(model => model.Password, new
+            {
+                @type = "password",
+                @class = "input input--white container__input",
+                @placeholder = "Hasło",
+                required = "required",
+                minlength = 8,
+                maxlength = 50
+            })
+            @Html.TextBox("RepeatPassword", null, new
+            {
+                @type = "password",
+                @class = "input input--white container__input",
+                @placeholder = "Powtórz hasło",
+                required = "required",
+                minlength = 8,
+                maxlength = 50
+            })
 
             <div class="check">
                 <label class="check__label">
-                    @Html.CheckBox("Regulations", false, new {required = "required"}) Oświadczam, iż zapoznałem(-am) się z <a class="links" href="@Url.Action("regulations","Home")">regulaminem</a> portalu Automobile Service i akceptuję jego treść.
+                    @Html.CheckBox("Regulations", false, new { required = "required" }) Oświadczam, iż zapoznałem(-am) się z <a class="links" href="@Url.Action("regulations","Home")">regulaminem</a> portalu Automobile Service i akceptuję jego treść.
                 </label>
             </div>
             <div class="check">
                 <label class="check__label">
-                    @Html.CheckBox("Consent", false, new {required = "required"}) Wyrażam zgodę na przetwarzanie moich danych osobowych przez MaVier Tech Company w celu korzystania z serwisu Automobile Service.
+                    @Html.CheckBox("Consent", false, new { required = "required" }) Wyrażam zgodę na przetwarzanie moich danych osobowych przez MaVier Tech Company w celu korzystania z serwisu Automobile Service.
                 </label>
             </div>
             <div class="container__button-block">
                 <button class="container__button button button--white" type="submit">Zarejestruj</button>
-            </form>
+        </form>
         </div>
     </div>
 </div>

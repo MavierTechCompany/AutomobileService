@@ -21,6 +21,7 @@ namespace AutomobileWebService.Controllers
         [HttpGet("registration")]
         public IActionResult Registration()
         {
+            ViewBag.Message = false;
             return View();
         }
 
@@ -34,11 +35,13 @@ namespace AutomobileWebService.Controllers
 
             try
             {
+                ViewBag.Message = false;
                 await _userService.CreateAsync(command);
                 return View(); // go to user profile view
             }
             catch (NullResponseException)
             {
+                ViewBag.Message = true;
                 return View(); //register view with info about user existance
             }
             catch (ForbiddenValueException)
