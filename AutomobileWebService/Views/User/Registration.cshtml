@@ -7,6 +7,10 @@
     <h1 class="headline headline--small">Rejestracja</h1>
     <div class="container--white container--small">
         <form class="register-form" action="../User/Registration" method="post">
+            <div class="error-info">
+                <i class="far fa-times-circle fa-3x"></i>
+                <p class="error-info__text">Wprowadzone dane są nieprawidłowe</p>
+            </div>
 
             @Html.TextBoxFor(model => model.Login, new
             {
