@@ -10,14 +10,10 @@
             {
             <div class="error-info">
                 <i class="far fa-times-circle fa-3x"></i>
-                <p class="error-info__text">@ViewBag.Message</p>
+                <p class="error-info__text">@ViewBag.ErrorMessage</p>
             </div>
             }
         <form class="register-form" action="../User/Registration" method="post">
-            <div class="error-info">
-                <i class="far fa-times-circle fa-3x"></i>
-                <p class="error-info__text">Wprowadzone dane są nieprawidłowe</p>
-            </div>
 
             @Html.TextBoxFor(model => model.Login, new
             {
