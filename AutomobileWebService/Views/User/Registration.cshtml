@@ -6,6 +6,13 @@
 <div class="wrapper wrapper--small">
     <h1 class="headline headline--small">Rejestracja</h1>
     <div class="container--white container--small">
+        @if (ViewBag.ShowErrorMessage == true)
+            {
+            <div class="error-info">
+                <i class="far fa-times-circle fa-3x"></i>
+                <p class="error-info__text">@ViewBag.Message</p>
+            </div>
+            }
         <form class="register-form" action="../User/Registration" method="post">
 
             @Html.TextBoxFor(model => model.Login, new
@@ -17,10 +24,7 @@
                 minlength = 6,
                 maxlength = 25
             })
-            @if (ViewBag.Message == true)
-            {
-                <p class="input-error">Ten login jest zajęty</p>
-            }
+            
 
             @Html.TextBoxFor(model => model.Email, new
             {

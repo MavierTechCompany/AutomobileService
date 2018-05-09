@@ -21,7 +21,6 @@ namespace AutomobileWebService.Controllers
         [HttpGet("registration")]
         public IActionResult Registration()
         {
-            ViewBag.Message = false;
             return View();
         }
 
@@ -30,24 +29,34 @@ namespace AutomobileWebService.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(); // return to register view with information about wrong parameters
+                ViewBag.ShowErrorMessage = true;
+                ViewBag.ErrorMessage = "Coś poszło nie tak.";
+                return View();
             }
 
             try
             {
-                ViewBag.Message = false;
                 await _userService.CreateAsync(command);
                 return View(); // go to user profile view
             }
             catch (NullResponseException)
             {
-                ViewBag.Message = true;
+                ViewBag.ShowErrorMessage = true;
+                ViewBag.ErrorMessage = "Podany użytkownik już istnieje!";
                 return View(); //register view with info about user existance
             }
             catch (ForbiddenValueException)
             {
+                ViewBag.ShowErrorMessage = true;
+                ViewBag.ErrorMessage = "Podano nieprawidłowe dane!";
                 return View(); //register view with info about wrong parameters
             }
+        }
+
+        [HttpGet("../user/profile")]
+        private async Task<IActionResult> UserProfile(User user)
+        {
+            return View(user);
         }
     }
 }
