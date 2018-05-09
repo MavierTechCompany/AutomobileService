@@ -1,8 +1,15 @@
 @import '../Home/main';
 
+.register-form{
+    display: flex;
+    flex-direction: column;
+}
+
 .container__input {
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 400px;
     padding: 5px;
     width: 90%;
@@ -27,6 +34,20 @@
 }
 
 /*#region ERROR*/
+.error-info{
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 10px;
+    color: $red;
+    margin-left: auto;
+    margin-right: auto;
+    &__text{
+        padding-left: 6px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
 .input-error{
     color: $red;
     font-size: 14px;

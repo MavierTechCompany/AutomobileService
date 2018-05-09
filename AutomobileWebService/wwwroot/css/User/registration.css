@@ -83,9 +83,15 @@ button:focus {
   .wrapper--small {
     max-width: 600px; } }
 
+.register-form {
+  display: flex;
+  flex-direction: column; }
+
 .container__input {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 400px;
   padding: 5px;
   width: 90%; }
@@ -105,6 +111,18 @@ button:focus {
     text-align: left; } }
 
 /*#region ERROR*/
+.error-info {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 10px;
+  color: #f55b5b;
+  margin-left: auto;
+  margin-right: auto; }
+  .error-info__text {
+    padding-left: 6px;
+    margin-top: auto;
+    margin-bottom: auto; }
+
 .input-error {
   color: #f55b5b;
   font-size: 14px;
