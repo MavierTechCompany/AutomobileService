@@ -1,0 +1,83 @@
+@import 'main';
+
+.account-settings{
+    &--component{
+        // border-bottom: 1px solid $grey;
+        padding-bottom: 1em;
+        margin-top: 0.5em;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        // justify-content: center;
+        input{
+            height: 2em;
+            
+            margin: auto auto auto 0;
+        }
+        p{
+            font-weight: bold;
+            margin: auto 0 auto auto;
+            text-align: right;
+        }
+
+    }
+}
+
+.avatar{
+    &__image{
+        border-radius: 100px;
+        border-style: solid;
+        width: 7rem;
+        border-color: $lime;
+    }
+    &__button{
+        position: absolute;
+        margin: 0;
+        top: 0.5em;
+        right: 0.5em;
+        height: 2em;
+        width: 2em;
+        border: none;
+        color: $white;
+        background: $purple;
+
+    }
+}
+
+.avatar-container{
+    display: flex;
+    position: relative;
+    margin: auto 0 auto auto;
+}
+
+.component{
+    &__name{
+        width: 45%;
+        display: flex;
+        margin: auto 2rem auto auto;
+    }
+    &__action{
+        width: 55%;
+    }
+}
+
+.text-login{
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.send-data{
+    display: flex;
+    &__button{
+        margin: 2em auto auto auto;
+    }
+}
+
+.password-change{
+    &__title{
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: bolder;
+        font-size: 2em;
+    }
+}

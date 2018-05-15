@@ -32,6 +32,7 @@ nav{
     background-color: $lime;
     box-shadow: 0 2px 10px $black;
     width: 100%;
+    z-index: 1000;
 }
 
 .navbar {

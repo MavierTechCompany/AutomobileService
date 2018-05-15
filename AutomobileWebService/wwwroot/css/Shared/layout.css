@@ -106,7 +106,8 @@ main {
 nav {
   background-color: #b5e555;
   box-shadow: 0 2px 10px #373739;
-  width: 100%; }
+  width: 100%;
+  z-index: 1000; }
 
 .navbar {
   display: flex;

@@ -1,0 +1,52 @@
+@import 'main';
+
+.profile{
+    &__about{
+        position: relative;
+        height: 13.5rem;
+        &__name{
+            color: $white;
+            position: absolute;
+            left: 20%;
+            font-size: 1.414rem;
+        }
+
+        &__avatar{
+            position: absolute;
+            z-index: 2;
+            left: 6%;
+            &__image{
+                border-radius: 100px;
+                border-style: solid;
+                width: 9rem;
+                // border: 2rem;
+                border-color: $lime;
+            }
+        }
+        &__bar{
+            background: $purple;
+            position: absolute;
+            height: 9rem;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            border-radius: 3px;
+            // margin-top: auto;
+            // margin-bottom: 0;
+            &__icons{
+                color: $white;
+                display: flex;
+                flex-flow: row;
+                margin-top: auto;
+                margin-bottom: auto;
+                margin-left: auto;
+                margin-right: 10%;
+            }
+        }
+    }
+    &__content{
+        margin-top: 2rem;
+        background: $white;
+        height: 600px;
+    } 
+}
