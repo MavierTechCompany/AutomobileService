@@ -1,26 +1,10 @@
 @import 'main';
 
-.account-settings{
-    &--component{
-        // border-bottom: 1px solid $grey;
-        padding-bottom: 1em;
-        margin-top: 0.5em;
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-        // justify-content: center;
-        input{
-            height: 2em;
-            
-            margin: auto auto auto 0;
-        }
-        p{
-            font-weight: bold;
-            margin: auto 0 auto auto;
-            text-align: right;
-        }
-
-    }
+.avatar-container{
+    display: flex;
+    position: relative;
+    margin: auto;
+    width: 7rem;
 }
 
 .avatar{
@@ -40,30 +24,13 @@
         border: none;
         color: $white;
         background: $purple;
-
-    }
-}
-
-.avatar-container{
-    display: flex;
-    position: relative;
-    margin: auto 0 auto auto;
-}
-
-.component{
-    &__name{
-        width: 45%;
-        display: flex;
-        margin: auto 2rem auto auto;
-    }
-    &__action{
-        width: 55%;
     }
 }
 
 .text-login{
     font-weight: bolder;
     font-size: 2em;
+    text-align: center;
 }
 
 .send-data{
@@ -73,11 +40,98 @@
     }
 }
 
+.account-settings{
+    &--component{
+        padding-bottom: 1em;
+        margin-top: 0.5em;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        input{
+            height: 2em;
+            width: 100%;
+            margin: auto auto auto 0;
+        }
+        p{
+            font-weight: bold;
+            margin: auto;
+        }
+    }
+    &__form{
+        padding-top: 1em;
+        width: 70%;
+        margin: auto;
+    }
+}
+
+.component{
+    &__name{
+        &--order{
+            order: 2;
+        }
+        
+    }
+    &__action{
+        &--order{
+            order: 1;
+        }
+        
+    }
+}
+
 .password-change{
     &__title{
         text-align: center;
         margin-bottom: 2rem;
         font-weight: bolder;
         font-size: 2em;
+    }
+}
+
+@media (min-width: 440px){
+
+    .text-login{
+        text-align: left;
+    }
+
+    .avatar-container{
+        margin: auto 0 auto auto;
+    }
+
+    .account-settings{
+        &--component{
+            padding-bottom: 1em;
+            margin-top: 0.5em;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            input{
+                height: 2em;
+                margin: auto auto auto 0;
+                width: 10em;
+            }
+            p{
+                margin: auto 0 auto auto;
+                text-align: right;
+            }
+        }
+    }
+    
+    .component{
+        &__name{
+            width: 45%;
+            display: flex;
+            margin: auto 2rem auto auto;
+            &--order{
+                order: 1;
+            }
+        }
+        &__action{
+            width: 55%;
+            &--order{
+                order: 2;
+            }
+        }
     }
 }

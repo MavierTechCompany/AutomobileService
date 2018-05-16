@@ -86,45 +86,19 @@ button:focus {
   .wrapper--small {
     max-width: 600px; } }
 
-.progress {
-  max-width: 1920px; }
-  .progress__title {
-    padding-top: 50px;
-    color: #fff;
-    font-size: 30px;
-    text-align: center; }
-    .progress__title img {
-      height: 200px; }
-    .progress__title h1 {
-      margin-top: -20px; }
-  .progress__links {
-    margin-top: 30px;
-    padding-top: 20px;
-    color: #fff;
-    text-align: center; }
-    .progress__links li {
-      color: #b5e555; }
-    .progress__links ul {
-      text-align: left;
-      margin-left: 20%;
-      margin-right: 20%; }
+.button-container {
+  margin-top: 25px;
+  display: block;
+  text-align: center; }
 
-@media (min-width: 940px) {
-  .progress {
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex; }
-    .progress__title {
-      margin-right: 10%;
-      padding-top: 50px;
-      font-size: 40px; }
-      .progress__title img {
-        height: 300px; }
-      .progress__title h1 {
-        margin-top: -20px; }
-    .progress__links {
-      border-left: 1px solid #fff;
-      padding-left: 10%; }
-      .progress__links ul {
-        margin-left: 0;
-        margin-right: 0; } }
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@-RESPONSIVE-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (min-width: 768px) {
+  .button-container {
+    text-align: right; } }
+
+@media (min-width: 900px) {
+  .text {
+    height: 400px;
+    overflow: auto; } }
