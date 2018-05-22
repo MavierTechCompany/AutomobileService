@@ -80,17 +80,6 @@ nav{
             border-radius: 3px;
             padding-left: 10px;
         }
-        &__button{
-            width: 40px;
-            height: 32px;
-            margin-left: 0;
-            background: $purple;
-            border: 0;
-            // color: lighten($lime, 20%);
-            color: $white;
-            border-radius: 3px;
-            cursor: pointer;
-        }
     }
     &__links{
         margin-top: auto;
@@ -161,17 +150,6 @@ nav{
             border-radius: 3px;
             padding-left: 10px;
             width: 75%;
-        }
-        &__button{
-            width: 40px;
-            height: 32px;
-            margin-left: 0;
-            background: $purple;
-            border: 0;
-            // color: lighten($lime, 20%);
-            color: $white;
-            border-radius: 3px;
-            cursor: pointer;
         }
     }
 }
@@ -415,7 +393,7 @@ nav{
             border-radius: 3px;
             padding-left: 10px;
         }
-        &__button{
+        .button__search{
             width: 40px;
             height: 36px;
             margin-left: 0;

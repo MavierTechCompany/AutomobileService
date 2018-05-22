@@ -54,6 +54,15 @@ button:focus {
     .button--white:hover {
       background: #b5e555;
       color: #3f3956; }
+  .button__search {
+    width: 40px;
+    height: 32px;
+    margin-left: 0;
+    background: #3f3956;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer; }
 
 .headline {
   color: #fff;

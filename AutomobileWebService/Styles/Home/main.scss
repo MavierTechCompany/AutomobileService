@@ -86,6 +86,16 @@ button:focus {
             color: $purple;
         }
     }
+    &__search{
+        width: 40px;
+        height: 32px;
+        margin-left: 0;
+        background: $purple;
+        border: 0;
+        color: $white;
+        border-radius: 3px;
+        cursor: pointer;
+    }
 }
 
 

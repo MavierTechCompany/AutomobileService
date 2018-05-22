@@ -54,6 +54,15 @@ button:focus {
     .button--white:hover {
       background: #b5e555;
       color: #3f3956; }
+  .button__search {
+    width: 40px;
+    height: 32px;
+    margin-left: 0;
+    background: #3f3956;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer; }
 
 .headline {
   color: #fff;
@@ -149,15 +158,6 @@ nav {
       border: 0;
       border-radius: 3px;
       padding-left: 10px; }
-    .navbar__search__button {
-      width: 40px;
-      height: 32px;
-      margin-left: 0;
-      background: #3f3956;
-      border: 0;
-      color: #fff;
-      border-radius: 3px;
-      cursor: pointer; }
   .navbar__links {
     margin-top: auto;
     margin-bottom: auto;
@@ -214,15 +214,6 @@ nav {
       border-radius: 3px;
       padding-left: 10px;
       width: 75%; }
-    .searchbar__search__button {
-      width: 40px;
-      height: 32px;
-      margin-left: 0;
-      background: #3f3956;
-      border: 0;
-      color: #fff;
-      border-radius: 3px;
-      cursor: pointer; }
 
 .searchbar--up {
   top: -56px; }
@@ -376,7 +367,7 @@ nav {
     border: 0;
     border-radius: 3px;
     padding-left: 10px; }
-  .side-nav__search__button {
+  .side-nav__search .button__search {
     width: 40px;
     height: 36px;
     margin-left: 0;
