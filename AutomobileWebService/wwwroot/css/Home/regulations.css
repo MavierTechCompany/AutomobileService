@@ -89,3 +89,20 @@ button:focus {
     max-width: 80%; }
   .wrapper--small {
     max-width: 600px; } }
+
+.button-container {
+  margin-top: 25px;
+  display: block;
+  text-align: center; }
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@-RESPONSIVE-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@media (min-width: 768px) {
+  .button-container {
+    text-align: right; } }
+
+@media (min-width: 900px) {
+  .text {
+    height: 400px;
+    overflow: auto; } }
