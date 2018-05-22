@@ -77,7 +77,7 @@ namespace AutomobileWebService
             }
 
             app.UseStaticFiles();
-            app.UseErrorHandler();
+            //app.UseErrorHandler();
 
             app.UseMvc(routes =>
             {
