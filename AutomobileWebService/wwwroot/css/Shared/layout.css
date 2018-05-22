@@ -103,7 +103,12 @@ body {
 
 main {
   flex: 1 0 auto;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  margin-top: 112px; }
+
+@media (min-width: 740px) {
+  main {
+    margin-top: 56px; } }
 
 nav {
   background-color: #b5e555;
@@ -111,12 +116,16 @@ nav {
   width: 100%; }
 
 .navbar {
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: 56px;
-  max-width: 1920px; }
+  max-width: 1920px;
+  z-index: 10;
+  background-color: #b5e555; }
   .navbar__hamburger {
     margin-left: 30px;
     padding-right: 40px;
@@ -164,7 +173,8 @@ nav {
     margin-right: 30px;
     margin-top: auto;
     margin-bottom: auto;
-    display: flex; }
+    display: flex;
+    z-index: 11; }
     .navbar__user-menu__container {
       display: flex;
       cursor: pointer; }
@@ -180,6 +190,52 @@ nav {
         color: #3f3956;
         background: none;
         border: 0; }
+  .navbar__shadow {
+    box-shadow: 0 2px 10px #373739; }
+
+.searchbar {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 56px;
+  top: 56px;
+  background-color: #b5e555;
+  transition: top 200ms ease-in-out;
+  box-shadow: 0 2px 10px #373739;
+  z-index: 9; }
+  .searchbar__search {
+    margin: auto;
+    width: 80%; }
+    .searchbar__search__input {
+      height: 30px;
+      background: #dcf3ad;
+      border: 0;
+      border-radius: 3px;
+      padding-left: 10px;
+      width: 75%; }
+    .searchbar__search__button {
+      width: 40px;
+      height: 32px;
+      margin-left: 0;
+      background: #3f3956;
+      border: 0;
+      color: #fff;
+      border-radius: 3px;
+      cursor: pointer; }
+
+.searchbar--up {
+  top: -56px; }
+
+@media (min-width: 390px) {
+  .searchbar__search {
+    width: 70%; }
+    .searchbar__search__input {
+      width: 80%; } }
+
+@media (min-width: 740px) {
+  .searchbar {
+    display: none; } }
 
 @media (min-width: 790px) {
   .navbar__search__input {
@@ -254,7 +310,7 @@ nav {
   .dropdown__content-mobile {
     left: 5%;
     right: 5%;
-    margin-top: 20%;
+    margin-top: 156px;
     position: absolute;
     padding: 30px 20px; }
     .dropdown__content-mobile .border-button p {
@@ -303,7 +359,8 @@ nav {
   top: 56px;
   overflow-x: hidden;
   text-align: center;
-  padding-top: 30px; }
+  padding-top: 30px;
+  z-index: 11; }
   .side-nav a {
     text-decoration: none;
     font-size: 22px;
@@ -334,7 +391,8 @@ nav {
   position: fixed;
   top: 56px;
   background: #202022;
-  opacity: 0.95; }
+  opacity: 0.95;
+  z-index: 10; }
 
 @media (min-width: 721px) {
   .side-nav {
