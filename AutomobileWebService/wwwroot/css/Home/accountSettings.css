@@ -63,6 +63,14 @@ button:focus {
   font-size: 300%;
   text-align: center; }
 
+#page-cover {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 56px;
+  background: #202022;
+  opacity: 0.95; }
+
 @media (min-width: 510px) {
   .wrapper--small {
     max-width: 500px; }
@@ -179,3 +187,15 @@ button:focus {
     width: 55%; }
     .component__action--order {
       order: 2; } }
+
+#drag-drop-window {
+  background: #fff;
+  position: fixed;
+  height: 60%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 6%;
+  border-radius: 3px;
+  z-index: 100;
+  display: none; }

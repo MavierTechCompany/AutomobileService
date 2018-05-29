@@ -355,15 +355,6 @@ nav{
     }
 }
 
-
-#page-cover{
-    height:100%;
-    width:0;
-    position:fixed;
-    top:56px;
-    background: darken($black, 9%);
-    opacity: 0.95;
-}
     
 @media (min-width: 721px){
     .side-nav{

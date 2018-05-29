@@ -63,6 +63,14 @@ button:focus {
   font-size: 300%;
   text-align: center; }
 
+#page-cover {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 56px;
+  background: #202022;
+  opacity: 0.95; }
+
 @media (min-width: 510px) {
   .wrapper--small {
     max-width: 500px; }
@@ -331,14 +339,6 @@ nav {
     border: 0;
     color: #fff;
     border-radius: 3px; }
-
-#page-cover {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 56px;
-  background: #202022;
-  opacity: 0.95; }
 
 @media (min-width: 721px) {
   .side-nav {

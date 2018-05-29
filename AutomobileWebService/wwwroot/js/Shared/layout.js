@@ -8,6 +8,7 @@ const sidebar = document.querySelector('#side-menu');
 const nav = document.querySelector('#navigation');
 const navTop = nav.offsetTop;
 
+import pageCoverHide from '../Home/main.js';
 
 function stickyNavigation() {
     console.log('navTop = ' + navTop);

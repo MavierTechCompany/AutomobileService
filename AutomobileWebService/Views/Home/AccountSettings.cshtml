@@ -2,15 +2,21 @@
     Layout = "~/Views/Shared/_HomePageLayout.cshtml";
 }
 <link rel="stylesheet" href="~/css/Home/accountSettings.min.css" type="text/css" />
+<div id="drag-drop-window">
+    <button class="drag-drop-window__close">
+        <i class="fas fa-times"></i>
+    </button>
+</div>
 <div class="wrapper wrapper--small">
     <h1 class="headline--center">Ustawienia</h1>
     <div class=" container container--white container--small">
         <div class="account-settings">
             <div class="avatar account-settings--component">
                 <div class="component__name component__name--order">
-                    <div class="avatar-container">
+                    <div class="avatar-container" id="drag-drop--closed">
                         <img class="avatar__image" src="http://via.placeholder.com/150x150">
-                        <button class="avatar__button button"><i class="fas fa-cog"></i></button>
+                        <button class="avatar__button button" id="drag-drop"><i class="fas fa-cog"></i></button>
+                        <div id="page-cover"></div>
                     </div>
                 </div>
                 <div class="component__action component__action--order">
@@ -53,21 +59,21 @@
                     <div class="component__name">
                         <p>Stare hasło</p></div>
                     <div class="component__action">
-                        <input class="input input--white" type="text" name="Name" value="Mickey" />
+                        <input class="input input--white" type="password" name="Name" />
                     </div>
                 </div>
                 <div class="new-password account-settings--component">
                     <div class="component__name">
                         <p>Nowe hasło</p></div>
                     <div class="component__action">
-                        <input class="input input--white" type="text" name="Name" value="Mickey" />
+                        <input class="input input--white" type="password" name="Name" />
                     </div>
                 </div>
                 <div class="repeate-password account-settings--component">
                     <div class="component__name">
                         <p>Powtórz hasło</p></div>
                     <div class="component__action">
-                        <input class="input input--white" type="text" name="Name" value="Mickey" />
+                        <input class="input input--white" type="password" name="Name" />
                     </div>
                 </div>
             </div>
@@ -78,3 +84,7 @@
         </div>
     </div>
 </div>
+@section Scripts{
+    <script type="text/javascript" src="~/js/Home/accountSettings.js"></script>
+    <script type="module" src="~/js/Home/main.js"></script>
+}
