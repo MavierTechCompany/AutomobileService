@@ -114,6 +114,7 @@ button:focus {
     top:56px;
     background: darken($black, 9%);
     opacity: 0.95;
+    z-index: 800;
 }
 
 
@@ -127,6 +128,12 @@ button:focus {
         padding: 50px 30px;
     }
 
+}
+
+@media (min-width: 721px){
+    #page-cover{
+        opacity: 0.5;
+    }
 }
 
 @media (min-width: 768px) {

@@ -1,9 +1,9 @@
 const dragDrop = document.querySelector('#drag-drop');
 const windowCloseButton = document.querySelector('.drag-drop-window__close');
-const pageCover = document.querySelector('#page-cover');
 const dragDropWindow = document.querySelector('#drag-drop-window')
 let dragDropClosed = document.querySelector('#drag-drop--closed');
 let dragDropOpened = document.querySelector('#drag-drop--opened');
+
 
 function dragDropOpen(){
     let dragDropClosed = document.querySelector('#drag-drop--closed');

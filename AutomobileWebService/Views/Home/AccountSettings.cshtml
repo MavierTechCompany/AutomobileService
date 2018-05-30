@@ -6,9 +6,19 @@
     <button class="drag-drop-window__close">
         <i class="fas fa-times"></i>
     </button>
+    <div class="avatar-component__choose">
+        <h2 class="avatar-component__choose__text">Dodaj nowe zdjęcie</h2>
+        <input type="file" name="pic" accept="image/*">
+        <input type="submit" class="button button--white avatar-component__choose__button">
+    </div>
+    <div class="avatar-component__sent">
+        <h2 class="avatar-component__sent__text">Usuń zdjęcie</h2>
+        <button class="button button--white avatar-component__sent__button">Usuń</button>
+    </div>
+    
 </div>
 <div class="wrapper wrapper--small">
-    <h1 class="headline--center">Ustawienia</h1>
+    <h1 class="headline--center">Ustawienia konta</h1>
     <div class=" container container--white container--small">
         <div class="account-settings">
             <div class="avatar account-settings--component">
@@ -85,6 +95,5 @@
     </div>
 </div>
 @section Scripts{
-    <script type="text/javascript" src="~/js/Home/accountSettings.js"></script>
-    <script type="module" src="~/js/Home/main.js"></script>
+    <script type="module" src="~/js/Home/accountSettings.js"></script>
 }

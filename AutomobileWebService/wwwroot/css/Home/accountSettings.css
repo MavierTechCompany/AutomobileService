@@ -69,13 +69,18 @@ button:focus {
   position: fixed;
   top: 56px;
   background: #202022;
-  opacity: 0.95; }
+  opacity: 0.95;
+  z-index: 800; }
 
 @media (min-width: 510px) {
   .wrapper--small {
     max-width: 500px; }
   .container--small {
     padding: 50px 30px; } }
+
+@media (min-width: 721px) {
+  #page-cover {
+    opacity: 0.5; } }
 
 @media (min-width: 768px) {
   .headline {
@@ -98,12 +103,14 @@ button:focus {
   display: flex;
   position: relative;
   margin: auto;
-  width: 7rem; }
+  width: 7rem;
+  height: 7rem; }
 
 .avatar__image {
   border-radius: 100px;
   border-style: solid;
   width: 7rem;
+  height: 7rem;
   border-color: #b5e555; }
 
 .avatar__button {
@@ -198,4 +205,26 @@ button:focus {
   margin-top: 6%;
   border-radius: 3px;
   z-index: 100;
-  display: none; }
+  display: none;
+  z-index: 900; }
+  #drag-drop-window .drag-drop-window__close {
+    background: none;
+    border-color: none;
+    border: 0;
+    color: #373739;
+    display: flex;
+    margin-left: auto;
+    margin-right: 1em;
+    margin-top: 1em; }
+  #drag-drop-window .avatar-component__choose {
+    text-align: center; }
+    #drag-drop-window .avatar-component__choose__text {
+      text-align: center; }
+    #drag-drop-window .avatar-component__choose__button {
+      display: flex;
+      margin: auto; }
+  #drag-drop-window .avatar-component__sent__text {
+    text-align: center; }
+  #drag-drop-window .avatar-component__sent__button {
+    display: flex;
+    margin: auto; }

@@ -198,6 +198,7 @@ nav{
     background-color: #fff;
     border: 1px solid $grey;
     border-radius: 3px;
+    z-index: 1000;
     //overflow: auto;
     &__input{
         display: flex;
@@ -251,6 +252,7 @@ nav{
         margin-top: 20%;
         position: absolute;
         padding: 30px 20px;
+        z-index: 900;
 
         .border-button{
             p{
@@ -321,6 +323,7 @@ nav{
     overflow-x:hidden;
     text-align: center;
     padding-top:30px;
+    z-index: 900;
     
     a{
         text-decoration:none;
@@ -377,13 +380,6 @@ nav{
             background-color: darken($black, 6%);
         }
     }
-
-
-    #page-cover{
-        background: darken($black, 9%);
-        opacity: 0.5;
-    }
-
 }
 
 @media (min-width: 1060px){
