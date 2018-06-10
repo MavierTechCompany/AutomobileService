@@ -15,10 +15,6 @@
         <nav id="navigation">
             <div id="page-cover"></div>
             <div id="side-menu" class="side-nav">
-                    <div class="side-nav__search">
-                        <input class="side-nav__search__input" placeholder="Szukaj">
-                        <button class="side-nav__search__button"><i class="fas fa-search"></i></button>
-                    </div>
                 <div class="side-nav__mobile-links">
                     <a href="#">Projekty</a>
                     <a href="#">Baza wiedzy</a>
@@ -40,7 +36,8 @@
                 </div>
                 <div class="navbar__search">
                     <input class="navbar__search__input" placeholder="Szukaj">
-                    <button class="navbar__search__button"><i class="fas fa-search"></i></button>
+                    <!-- <button class="navbar__search__button"><i class="fas fa-search"></i></button> -->
+                    <button class="button__search"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="navbar__links">
                     <a href="#">Projekty</a>
@@ -69,7 +66,7 @@
                             </button>
                         </div>
                         <div class="dropdown__content__links">
-                            <a class="" href="@Url.Action("registration","Home")">Zarejestruj się</a>
+                            <a class="" href="@Url.Action("registration","User")">Zarejestruj się</a>
                             <a class="" href="#">Zapomniałeś hasła?</a>
                         </div>
                     </div>
@@ -84,7 +81,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="@Url.Action("registration","Home")">
+                        <a href="@Url.Action("registration","User")">
                             <div class="dropdown__content-mobile__register border-button">
                                 <p class="">ZAREJESTRUJ</p>
                                 <div class="rotated-border"></div>
@@ -95,6 +92,12 @@
                             </div>
                         </a>
                     </div>
+                </div>
+            </div>
+            <div class="searchbar">
+                <div class="searchbar__search">
+                    <input class="searchbar__search__input" placeholder="Szukaj">
+                    <button class="button__search"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </nav>

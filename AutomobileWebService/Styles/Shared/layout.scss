@@ -23,6 +23,13 @@ body {
 main{
     flex: 1 0 auto;
     padding-bottom: 50px;
+    margin-top: 112px;
+}
+
+@media (min-width: 740px){
+    main{
+        margin-top: 56px;
+    }
 }
 
 
@@ -36,13 +43,16 @@ nav{
 }
 
 .navbar {
+    position: fixed;
     display: flex;
     flex-wrap: wrap;
-    // width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     height: 56px;
     max-width: 1920px;
+    z-index: 10;
+    background-color: $lime;
     
     &__hamburger{
         margin-left: 30px;
@@ -71,17 +81,6 @@ nav{
             border-radius: 3px;
             padding-left: 10px;
         }
-        &__button{
-            width: 40px;
-            height: 32px;
-            margin-left: 0;
-            background: $purple;
-            border: 0;
-            // color: lighten($lime, 20%);
-            color: $white;
-            border-radius: 3px;
-            cursor: pointer;
-        }
     }
     &__links{
         margin-top: auto;
@@ -103,6 +102,7 @@ nav{
         margin-top: auto;
         margin-bottom: auto;
         display: flex;
+        z-index: 11;
 
         &__container{
             display: flex;
@@ -122,6 +122,56 @@ nav{
                 border: 0;
             }
         }
+    }
+    &__shadow{
+        box-shadow: 0 2px 10px $black;
+    }
+}
+
+.searchbar{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 56px;
+    top: 56px;
+    background-color: $lime;
+    transition: top 200ms ease-in-out;
+    box-shadow: 0 2px 10px $black;
+    z-index: 9;
+
+    &__search{
+        margin: auto;
+        width: 80%;
+
+        &__input{
+            height: 30px;
+            background: lighten($lime, 20%);
+            border: 0;
+            border-radius: 3px;
+            padding-left: 10px;
+            width: 75%;
+        }
+    }
+}
+
+.searchbar--up {
+    top: -56px;
+}
+
+@media (min-width: 390px){
+    .searchbar__search{
+        width: 70%;
+        &__input{
+            width: 80%;
+        }
+
+    }
+}
+
+@media (min-width: 740px){
+    .searchbar{
+        display: none;
     }
 }
 
@@ -249,7 +299,7 @@ nav{
     .dropdown__content-mobile {
         left: 5%;
         right: 5%;
-        margin-top: 20%;
+        margin-top: 156px;
         position: absolute;
         padding: 30px 20px;
         z-index: 900;
@@ -323,7 +373,11 @@ nav{
     overflow-x:hidden;
     text-align: center;
     padding-top:30px;
+<<<<<<< HEAD
     z-index: 900;
+=======
+    z-index: 11;
+>>>>>>> master-milestone02
     
     a{
         text-decoration:none;
@@ -346,7 +400,7 @@ nav{
             border-radius: 3px;
             padding-left: 10px;
         }
-        &__button{
+        .button__search{
             width: 40px;
             height: 36px;
             margin-left: 0;
@@ -358,6 +412,19 @@ nav{
     }
 }
 
+<<<<<<< HEAD
+=======
+
+#page-cover{
+    height:100%;
+    width:0;
+    position:fixed;
+    top:56px;
+    background: darken($black, 9%);
+    opacity: 0.95;
+    z-index: 10;
+}
+>>>>>>> master-milestone02
     
 @media (min-width: 721px){
     .side-nav{

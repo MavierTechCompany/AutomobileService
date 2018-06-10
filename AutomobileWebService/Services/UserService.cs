@@ -1,54 +1,52 @@
-﻿using AutoMapper;
-using AutomobileWebService.Business_Logic.Infrastructure.DTO;
-using AutomobileWebService.Business_Logic.Repositories.Interfaces;
-using AutomobileWebService.Business_Logic.Repositories.Extensions;
-using AutomobileWebService.Services.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutomobileWebService.Business_Logic.Commands.User;
+using AutomobileWebService.Business_Logic.Models;
+using AutomobileWebService.Business_Logic.Repositories.Extensions;
+using AutomobileWebService.Business_Logic.Repositories.Interfaces;
+using AutomobileWebService.Services.Interfaces;
 
 namespace AutomobileWebService.Services
 {
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        private readonly IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, IMapper mapper)
+        public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
-            _mapper = mapper;
         }
 
-        public async Task<UserDto> GetAsync(int id)
+        public async Task<User> GetAsync(int id)
         {
             var user = await _userRepository.GetOrFailAsync(id);
-
-            return _mapper.Map<UserDto>(user);
+            return user;
         }
 
-        public async Task<UserDto> GetAsync(string login)
+        public async Task<User> GetAsync(string login)
         {
             var user = await _userRepository.GetOrFailAsync(login);
-
-            return _mapper.Map<UserDto>(user);
+            return user;
         }
 
-        public async Task<UserDto> GetByEmailAsync(string email)
+        public async Task<User> GetByEmailAsync(string email)
         {
             var user = await _userRepository.GetByEmailOrFailAsync(email);
-
-            return _mapper.Map<UserDto>(user);
+            return user;
         }
 
-        public async Task<IEnumerable<UserDto>> BrowseAsync(string login = null)
+        public async Task<IQueryable<User>> BrowseAsync(string login = null)
         {
             var users = await _userRepository.BrowseOrFailAsync(login);
-
-            return _mapper.Map<IEnumerable<UserDto>>(users);
+            return users;
         }
 
-        public async Task CreateAsync(string login, string email, string mobilePhone, string password) { }
+        public async Task CreateAsync(CreateCommand command)
+        {
+            var user = new User(command.Login, command.Email, command.MobilePhone, command.Password);
+            await _userRepository.CreateOrFailAsync(user);
+        }
     }
 }
