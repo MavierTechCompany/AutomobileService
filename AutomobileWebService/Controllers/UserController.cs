@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AutomobileWebService.Controllers
 {
+    [Route("[controller]")]
     public class UserController : Controller
     {
         public readonly IUserService _userService;
@@ -19,9 +20,9 @@ namespace AutomobileWebService.Controllers
         }
 
         [HttpGet("registration")]
-        public IActionResult Registration()
+        public async Task<IActionResult> Registration()
         {
-            return View();
+            return await Task.FromResult(View());
         }
 
         [HttpPost]
@@ -56,7 +57,13 @@ namespace AutomobileWebService.Controllers
         [HttpGet("../user/profile")]
         private async Task<IActionResult> UserProfile(User user)
         {
-            return View(user);
+            return await Task.FromResult(View("User", user));
+        }
+
+        [Route("settings")]
+        public async Task<IActionResult> AccountSettings()
+        {
+            return await Task.FromResult(View());
         }
     }
 }
