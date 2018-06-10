@@ -69,11 +69,29 @@ button:focus {
   font-size: 300%;
   text-align: center; }
 
+.headline--center {
+  color: #fff;
+  font-size: 300%;
+  text-align: center; }
+
+#page-cover {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 56px;
+  background: #202022;
+  opacity: 0.95;
+  z-index: 800; }
+
 @media (min-width: 510px) {
   .wrapper--small {
     max-width: 500px; }
   .container--small {
     padding: 50px 30px; } }
+
+@media (min-width: 721px) {
+  #page-cover {
+    opacity: 0.5; } }
 
 @media (min-width: 768px) {
   .headline {

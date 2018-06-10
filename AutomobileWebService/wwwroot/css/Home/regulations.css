@@ -69,6 +69,11 @@ button:focus {
   font-size: 300%;
   text-align: center; }
 
+.headline--center {
+  color: #fff;
+  font-size: 300%;
+  text-align: center; }
+
 @media (min-width: 510px) {
   .wrapper--small {
     max-width: 500px; }

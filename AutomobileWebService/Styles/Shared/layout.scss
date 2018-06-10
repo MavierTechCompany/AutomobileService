@@ -39,6 +39,7 @@ nav{
     background-color: $lime;
     box-shadow: 0 2px 10px $black;
     width: 100%;
+    z-index: 1000;
 }
 
 .navbar {
@@ -247,6 +248,7 @@ nav{
     background-color: #fff;
     border: 1px solid $grey;
     border-radius: 3px;
+    z-index: 1000;
     //overflow: auto;
     &__input{
         display: flex;
@@ -300,6 +302,7 @@ nav{
         margin-top: 156px;
         position: absolute;
         padding: 30px 20px;
+        z-index: 900;
 
         .border-button{
             p{
@@ -370,7 +373,11 @@ nav{
     overflow-x:hidden;
     text-align: center;
     padding-top:30px;
+<<<<<<< HEAD
+    z-index: 900;
+=======
     z-index: 11;
+>>>>>>> master-milestone02
     
     a{
         text-decoration:none;
@@ -405,6 +412,8 @@ nav{
     }
 }
 
+<<<<<<< HEAD
+=======
 
 #page-cover{
     height:100%;
@@ -415,6 +424,7 @@ nav{
     opacity: 0.95;
     z-index: 10;
 }
+>>>>>>> master-milestone02
     
 @media (min-width: 721px){
     .side-nav{
@@ -437,13 +447,6 @@ nav{
             background-color: darken($black, 6%);
         }
     }
-
-
-    #page-cover{
-        background: darken($black, 9%);
-        opacity: 0.5;
-    }
-
 }
 
 @media (min-width: 1060px){

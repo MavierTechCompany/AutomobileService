@@ -31,6 +31,11 @@ $red: #f55b5b;
     }
 }
 
+// .container{
+//     display: flex;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
 
 .container--white {
     margin-top: 20px;
@@ -107,6 +112,22 @@ button:focus {
     text-align: center;
 }
 
+.headline--center{
+    color: $white;
+    font-size: 300%;
+    text-align: center;
+}
+
+#page-cover{
+    height:100%;
+    width:0;
+    position:fixed;
+    top:56px;
+    background: darken($black, 9%);
+    opacity: 0.95;
+    z-index: 800;
+}
+
 
 @media (min-width: 510px) {
 
@@ -118,6 +139,12 @@ button:focus {
         padding: 50px 30px;
     }
 
+}
+
+@media (min-width: 721px){
+    #page-cover{
+        opacity: 0.5;
+    }
 }
 
 @media (min-width: 768px) {

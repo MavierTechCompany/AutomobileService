@@ -69,11 +69,29 @@ button:focus {
   font-size: 300%;
   text-align: center; }
 
+.headline--center {
+  color: #fff;
+  font-size: 300%;
+  text-align: center; }
+
+#page-cover {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 56px;
+  background: #202022;
+  opacity: 0.95;
+  z-index: 800; }
+
 @media (min-width: 510px) {
   .wrapper--small {
     max-width: 500px; }
   .container--small {
     padding: 50px 30px; } }
+
+@media (min-width: 721px) {
+  #page-cover {
+    opacity: 0.5; } }
 
 @media (min-width: 768px) {
   .headline {
@@ -122,7 +140,8 @@ main {
 nav {
   background-color: #b5e555;
   box-shadow: 0 2px 10px #373739;
-  width: 100%; }
+  width: 100%;
+  z-index: 1000; }
 
 .navbar {
   position: fixed;
@@ -265,7 +284,8 @@ nav {
   padding: 30px 20px;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  border-radius: 3px;
+  z-index: 1000; }
   .dropdown__content__input {
     display: flex;
     flex-direction: column; }
@@ -303,7 +323,8 @@ nav {
     right: 5%;
     margin-top: 156px;
     position: absolute;
-    padding: 30px 20px; }
+    padding: 30px 20px;
+    z-index: 900; }
     .dropdown__content-mobile .border-button p {
       position: fixed;
       margin-left: 30px;
@@ -351,7 +372,11 @@ nav {
   overflow-x: hidden;
   text-align: center;
   padding-top: 30px;
+<<<<<<< HEAD
+  z-index: 900; }
+=======
   z-index: 11; }
+>>>>>>> master-milestone02
   .side-nav a {
     text-decoration: none;
     font-size: 22px;
@@ -376,6 +401,8 @@ nav {
     color: #fff;
     border-radius: 3px; }
 
+<<<<<<< HEAD
+=======
 #page-cover {
   height: 100%;
   width: 0;
@@ -385,6 +412,7 @@ nav {
   opacity: 0.95;
   z-index: 10; }
 
+>>>>>>> master-milestone02
 @media (min-width: 721px) {
   .side-nav {
     left: 0;
@@ -399,10 +427,7 @@ nav {
     .side-nav__search {
       display: none; }
     .side-nav a:hover {
-      background-color: #282829; }
-  #page-cover {
-    background: #202022;
-    opacity: 0.5; } }
+      background-color: #282829; } }
 
 @media (min-width: 1060px) {
   .side-nav__mobile-links {

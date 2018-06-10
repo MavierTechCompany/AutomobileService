@@ -1,5 +1,3 @@
-/*#region COLORS*/
-/*#endregion COLORS*/
 .wrapper {
   max-width: 90%;
   margin: 0 auto; }
@@ -54,15 +52,6 @@ button:focus {
     .button--white:hover {
       background: #b5e555;
       color: #3f3956; }
-  .button__search {
-    width: 40px;
-    height: 32px;
-    margin-left: 0;
-    background: #3f3956;
-    border: 0;
-    color: #fff;
-    border-radius: 3px;
-    cursor: pointer; }
 
 .headline {
   color: #fff;
@@ -110,50 +99,41 @@ button:focus {
   .wrapper--small {
     max-width: 600px; } }
 
-.register-form {
-  display: flex;
-  flex-direction: column; }
+.profile__about {
+  position: relative;
+  height: 13.5rem; }
+  .profile__about__name {
+    color: #fff;
+    position: absolute;
+    left: 20%;
+    font-size: 1.414rem; }
+  .profile__about__avatar {
+    position: absolute;
+    z-index: 2;
+    left: 6%; }
+    .profile__about__avatar__image {
+      border-radius: 100px;
+      border-style: solid;
+      width: 9rem;
+      border-color: #b5e555; }
+  .profile__about__bar {
+    background: #3f3956;
+    position: absolute;
+    height: 9rem;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    border-radius: 3px; }
+    .profile__about__bar__icons {
+      color: #fff;
+      display: flex;
+      flex-flow: row;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      margin-right: 10%; }
 
-.container__input {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 400px;
-  padding: 5px;
-  width: 90%; }
-
-.check {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row; }
-
-.container__button-block {
-  padding-top: 20px;
-  display: block;
-  text-align: center; }
-
-@media (min-width: 511px) {
-  .container__button-block {
-    text-align: left; } }
-
-/*#region ERROR*/
-.error-info {
-  display: flex;
-  flex-flow: row;
-  margin-bottom: 10px;
-  color: #f55b5b;
-  margin-left: auto;
-  margin-right: auto; }
-  .error-info__text {
-    padding-left: 6px;
-    margin-top: auto;
-    margin-bottom: auto; }
-
-.input-error {
-  color: #f55b5b;
-  font-size: 14px;
-  margin-top: -10px;
-  padding-left: 5px; }
-
-/*#endregion ERROR*/
+.profile__content {
+  margin-top: 2rem;
+  background: #fff;
+  height: 600px; }

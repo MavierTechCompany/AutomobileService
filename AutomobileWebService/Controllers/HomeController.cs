@@ -30,5 +30,20 @@ namespace AutomobileWebService.Controllers
         {
             return View("WorkInProgress");
         }
+<<<<<<< HEAD
+
+        [Route("user")]
+        public IActionResult User()
+        {
+            return View();
+        }
+
+        [Route("account-settings")]
+        public IActionResult AccountSettings()
+        {
+            return View();
+        }                          
+=======
+>>>>>>> master-milestone02
     }
 }

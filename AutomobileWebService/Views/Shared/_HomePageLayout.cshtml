@@ -3,6 +3,7 @@
 <head>
     <title>AutomobileService</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/css/Shared/layout.min.css" type="text/css" />
@@ -18,7 +19,7 @@
                     <a href="#">Projekty</a>
                     <a href="#">Baza wiedzy</a>
                 </div>
-                <a class="" href="#"></a>
+                <li><a class="links--white" href="@Url.Action("account-settings","Home")">Ustawienia konta</a></li>
                 <a class="" href="#"></a>
                 <a class="" href="#"></a>
             </div>            
@@ -119,7 +120,7 @@
     <!--Font awesome icons-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <!-- custom script -->
-    <script src="~/js/Shared/layout.js"></script>
+    <script type="application/javascript" src="~/js/Shared/layout.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
