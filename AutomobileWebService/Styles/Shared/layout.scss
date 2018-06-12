@@ -373,11 +373,7 @@ nav{
     overflow-x:hidden;
     text-align: center;
     padding-top:30px;
-<<<<<<< HEAD
     z-index: 900;
-=======
-    z-index: 11;
->>>>>>> master-milestone02
     
     a{
         text-decoration:none;
@@ -412,19 +408,6 @@ nav{
     }
 }
 
-<<<<<<< HEAD
-=======
-
-#page-cover{
-    height:100%;
-    width:0;
-    position:fixed;
-    top:56px;
-    background: darken($black, 9%);
-    opacity: 0.95;
-    z-index: 10;
-}
->>>>>>> master-milestone02
     
 @media (min-width: 721px){
     .side-nav{
