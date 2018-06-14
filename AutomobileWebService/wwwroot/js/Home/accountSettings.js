@@ -8,18 +8,18 @@ let dragDropOpened = document.querySelector('#drag-drop--opened');
 function dragDropOpen(){
     let dragDropClosed = document.querySelector('#drag-drop--closed');
     dragDropClosed.id="drag-drop--opened";
-    pageCover.style.width = '100%';
+    // pageCover.style.width = '100%';
     dragDropWindow.style.display = 'inline';
 }
 
 function dragDropClose(){
     let dragDropOpened = document.querySelector('#drag-drop--opened');
     dragDropOpened.id="drag-drop--closed";
-    pageCover.style.width = '0';
+    // pageCover.style.width = '0';
     dragDropWindow.style.display = "none";
 }
 
 dragDrop.onclick = dragDropOpen;
 windowCloseButton.onclick = dragDropClose;
-pageCover.onclick = dragDropClose;
+// pageCover.onclick = dragDropClose;
 document.addEventListener('keydown', function(event) { if (event.keyCode == 27) dragDropClose(); }, true);
