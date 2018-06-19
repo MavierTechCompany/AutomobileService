@@ -19,10 +19,16 @@ namespace AutomobileWebService.Controllers
             return View();
         }
 
-        [Route("registration")]
-        public IActionResult Registration()
+        [Route("contact")]
+        public IActionResult Contact()
         {
             return View();
+        }
+
+        [Route("about")]
+        public IActionResult About()
+        {
+            return View("WorkInProgress");
         }
     }
 }

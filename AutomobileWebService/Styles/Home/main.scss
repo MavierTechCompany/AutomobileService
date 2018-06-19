@@ -1,3 +1,4 @@
+/*#region COLORS*/
 $orange: #ff8067;
 $brown: #af4339;
 $purple: #3f3956;
@@ -5,7 +6,9 @@ $dark-blue: #324a5e;
 $black: #373739;
 $grey: #ccc;
 $white: #fff;
-
+$lime: #b5e555;
+$red: #f55b5b;
+/*#endregion COLORS*/
 
 .wrapper {
     max-width: 90%;
@@ -14,20 +17,25 @@ $white: #fff;
 }
 
 .links {
-    color: $orange;
+    color: $lime;
     &--white{
         text-decoration:none;
         color: $white;
         &:hover {
-            color: $orange;
+            color: $lime;
         }
 
     }
     &:hover {
-        color: $orange;
+        color: $lime;
     }
 }
 
+// .container{
+//     display: flex;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
 
 .container--white {
     margin-top: 20px;
@@ -54,31 +62,44 @@ button:focus {
 
 .button {
     border-radius: 50px;
-    &--orange {
+    &--lime {
         font-size: 95%;
-        color: $white;
-        background-color: $orange;
+        font-weight: bold;
+        color: $purple;
+        background-color: $lime;
         border: 0;
+        // border-color: $white;
+        // border-style: solid;
         padding: 30px;
         text-align: center;
         &:hover {
-            background-color: darken($orange, 3%);
-            color: $white;
+            background-color: darken($lime, 6%);
+            color: $purple;
         }
     }
     &--white {
-        color: $orange;
+        color: $purple;
         font-weight: 600;
         background: $white;
-        border-color: $orange;
+        border-color: $lime;
         border-style: solid;
         padding: 10px;
         padding-left: 40px;
         padding-right: 40px;
         &:hover {
-            background: $orange;
-            color: $white;
+            background: $lime;
+            color: $purple;
         }
+    }
+    &__search{
+        width: 40px;
+        height: 32px;
+        margin-left: 0;
+        background: $purple;
+        border: 0;
+        color: $white;
+        border-radius: 3px;
+        cursor: pointer;
     }
 }
 
@@ -91,6 +112,22 @@ button:focus {
     text-align: center;
 }
 
+.headline--center{
+    color: $white;
+    font-size: 300%;
+    text-align: center;
+}
+
+#page-cover{
+    height:100%;
+    width:0;
+    position:fixed;
+    top:56px;
+    background: darken($black, 9%);
+    opacity: 0.95;
+    z-index: 800;
+}
+
 
 @media (min-width: 510px) {
 
@@ -99,9 +136,15 @@ button:focus {
     }
 
     .container--small {
-        padding: 50px 30px 30px 50px;
+        padding: 50px 30px;
     }
 
+}
+
+@media (min-width: 721px){
+    #page-cover{
+        opacity: 0.5;
+    }
 }
 
 @media (min-width: 768px) {

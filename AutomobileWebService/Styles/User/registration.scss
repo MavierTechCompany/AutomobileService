@@ -1,0 +1,57 @@
+@import '../Home/main';
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    padding: 5px;
+    width: 90%;
+}
+
+.check {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.container__button-block {
+    padding-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 511px) {
+    .container__button-block {
+        text-align: left;
+    }
+}
+
+/*#region ERROR*/
+.error-info{
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 10px;
+    color: $red;
+    margin-left: auto;
+    margin-right: auto;
+    &__text{
+        padding-left: 6px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.input-error{
+    color: $red;
+    font-size: 14px;
+    margin-top: -10px;
+    padding-left: 5px;
+}
+/*#endregion ERROR*/

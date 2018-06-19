@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "index.min.css",
+	"sources": [
+		"../../../Styles/Home/index.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

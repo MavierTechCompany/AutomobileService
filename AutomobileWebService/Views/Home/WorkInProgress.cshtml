@@ -1,7 +1,7 @@
 @{
     Layout = "~/Views/Shared/_HomePageLayout.cshtml";
 }
-<link rel="stylesheet" href="~/css/Home/workInProgress.css" type="text/css" />
+<link rel="stylesheet" href="~/css/Home/workInProgress.min.css" type="text/css" />
 <div class="progress">
     <div class="progress__title">
         <img src="~/images/icons/excavator.svg" alt="AutomotiveService">
@@ -11,7 +11,8 @@
         <h1>Check other subpages:</h1>
         <ul>
             <li><a class="links--white" href="@Url.Action("regulations","Home")">Regulamin</a></li>
-            <li><a class="links--white" href="@Url.Action("registration","Home")">Rejestracja</a></li>
+            <li><a class="links--white" href="@Url.Action("registration","User")">Rejestracja</a></li>
+            <li><a class="links--white" href="@Url.Action("contact","Home")">Kontakt</a></li>
         </ul>
     </div>
 </div>
