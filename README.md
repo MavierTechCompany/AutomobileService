@@ -1,5 +1,9 @@
 # AutomobileService
 
+<aside class="warning">
+The project is closed 'as it is' due to the lack of people needed for its development and other circumstances.
+</aside>
+
 ## Idea
 * The idea is to create a interesting webservice where you can share, comment and rate car projects. You can also compare one project to another (or to a mass-produced version) via special comparison tool.
 * You can also pesonalize your profile by adding avatar, yout dream car, your current car, name, surname, place of residence.
