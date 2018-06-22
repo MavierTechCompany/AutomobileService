@@ -51,7 +51,7 @@ nav{
     margin-right: auto;
     height: 56px;
     max-width: 1920px;
-    z-index: 10;
+    z-index: 1100;
     background-color: $lime;
     
     &__hamburger{
@@ -138,7 +138,7 @@ nav{
     background-color: $lime;
     transition: top 200ms ease-in-out;
     box-shadow: 0 2px 10px $black;
-    z-index: 9;
+    z-index: 1000;
 
     &__search{
         margin: auto;
