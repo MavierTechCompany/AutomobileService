@@ -21,7 +21,29 @@
                 <li><a class="links--white" href="@Url.Action("account-settings","Home")">Ustawienia konta</a></li>
                 <a class="" href="#"></a>
                 <a class="" href="#"></a>
-            </div>            
+            </div>
+                                <div class="dropdown__content-mobile" id="dropdown__content-mobile" style="display: none">
+                        <a href="#">
+                            <div class="dropdown__content-mobile__login border-button">
+                                <p class="">ZALOGUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-key fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="@Url.Action("registration","User")">
+                            <div class="dropdown__content-mobile__register border-button">
+                                <p class="">ZAREJESTRUJ</p>
+                                <div class="rotated-border"></div>
+                                <div class="border"></div>
+                                <div class="icon">
+                                    <i class="fas fa-users fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>            
             <div class="navbar">
                 <div class="navbar__hamburger" id="hamburger--closed">
                     <svg width="30" height="26" class="navbar__hamburger__icon" id="hamburger">
@@ -69,28 +91,7 @@
                             <a class="" href="#">Zapomniałeś hasła?</a>
                         </div>
                     </div>
-                    <div class="dropdown__content-mobile" id="dropdown__content-mobile" style="display: none">
-                        <a href="#">
-                            <div class="dropdown__content-mobile__login border-button">
-                                <p class="">ZALOGUJ</p>
-                                <div class="rotated-border"></div>
-                                <div class="border"></div>
-                                <div class="icon">
-                                    <i class="fas fa-key fa-2x"></i>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="@Url.Action("registration","User")">
-                            <div class="dropdown__content-mobile__register border-button">
-                                <p class="">ZAREJESTRUJ</p>
-                                <div class="rotated-border"></div>
-                                <div class="border"></div>
-                                <div class="icon">
-                                    <i class="fas fa-users fa-2x"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+
                 </div>
             </div>
             <div class="searchbar">
