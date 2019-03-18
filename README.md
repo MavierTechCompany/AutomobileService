@@ -20,7 +20,6 @@ Frontend:
 * HTML
 * JavaScript
 * SASS (.scss)
-* React.js
 
 //more in future
 
