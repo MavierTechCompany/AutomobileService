@@ -21,8 +21,6 @@ Frontend:
 * JavaScript
 * SASS (.scss)
 
-//more in future
-
 ## Team
 The original team consists of three members:
 * <a href="https://github.com/MadTiger2409">Michał B. (MadTiger2409)</a>
